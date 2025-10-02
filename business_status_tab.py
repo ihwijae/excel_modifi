@@ -176,6 +176,8 @@ class BusinessStatusTab(QWidget):
         table.setColumnCount(2)
         table.setRowCount(len(self.fields_to_extract))
         table.verticalHeader().setVisible(False)
+        # [핵심] 각 행이 테이블의 세로 공간을 균등하게 채우도록 Stretch 모드를 적용
+        table.verticalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
         table.horizontalHeader().setVisible(False)
         table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeMode.ResizeToContents)
         table.horizontalHeader().setSectionResizeMode(1, QHeaderView.ResizeMode.Stretch)
@@ -273,7 +275,7 @@ class BusinessStatusTab(QWidget):
 
         self.save_button = QPushButton("3. 확정 및 엑셀 저장");
         self.save_button.setEnabled(False);
-        self.save_button.setStyleSheet("font-weight: bold; background-color: #A93226;")
+        self.save_button.setStyleSheet("font-weight: bold; background-color: #C0392B; color: white;")
         action_layout.addWidget(self.run_ocr_button);
         action_layout.addWidget(self.compare_button)
         action_layout.addWidget(self.data_only_checkbox)  # 체크박스 추가
@@ -735,8 +737,7 @@ class BusinessStatusTab(QWidget):
         if not table: return
 
         from PySide6.QtGui import QFont, QColor
-        data_font = QFont()
-        data_font.setPointSize(11)
+        data_font = QFont("Pretendard", 14)
 
         for row, key in enumerate(self.fields_to_extract.keys()):
             label_item = QTableWidgetItem(key)
@@ -785,8 +786,6 @@ class BusinessStatusTab(QWidget):
             value_item.setTextAlignment(Qt.AlignRight | Qt.AlignVCenter)
             value_item.setFont(data_font)
             table.setItem(row, 1, value_item)
-
-        table.resizeRowsToContents()
 
 
     def start_color_update(self):

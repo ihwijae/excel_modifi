@@ -200,7 +200,7 @@ class CreditRatingTab(QWidget):
         self.lookup_button = QPushButton("2. 사업자번호로 업체 조회")
         self.data_only_checkbox = QCheckBox("자료 파일 없이 데이터만 저장")
         self.update_button = QPushButton("3. 업데이트 및 파일 보관");
-        self.update_button.setStyleSheet("font-weight: bold; background-color: #1E8449;")
+        self.update_button.setStyleSheet("font-weight: bold; background-color: #1E8449; color: white;")
         self.log_display = QTextEdit();
         self.log_display.setReadOnly(True)
         action_layout.addWidget(self.run_ocr_button);

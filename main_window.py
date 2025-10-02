@@ -30,3 +30,10 @@ class MainWindow(QMainWindow):
         # 2. 신용평가 업데이트 탭 추가
         self.credit_tab = CreditRatingTab(self.reader)
         self.tabs.addTab(self.credit_tab, "✨ 신용평가 일괄 업데이트")
+
+        # [핵심] 프로그램 내 모든 위젯의 폰트를 Pretendard로 강제 적용
+        from PySide6.QtGui import QFont
+        from PySide6.QtWidgets import QWidget
+        font = QFont("Pretendard")
+        for widget in self.findChildren(QWidget):
+            widget.setFont(font)
