@@ -2,13 +2,13 @@ from openpyxl import load_workbook
 
 # --- [사용자 설정] ---
 # 1. 색상을 확인할 엑셀 파일의 전체 경로를 입력하세요.
-FILE_PATH = r"C:\Users\user\Desktop\전기테스트.xlsx" 
+FILE_PATH = r"C:\Users\user\Desktop\테스트.xlsx" 
 
 # 2. 해당 셀이 있는 시트의 정확한 이름을 입력하세요.
 SHEET_NAME = "서울"
 
 # 3. 색상을 확인할 셀의 주소를 입력하세요 (예: "H11").
-CELL_ADDRESS = "L156"
+CELL_ADDRESS = "B18"
 # --------------------
 
 try:

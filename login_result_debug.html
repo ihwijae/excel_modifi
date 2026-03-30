@@ -1,0 +1,6539 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<!--[if IE 7 ]><html lang="ko" class="ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="ko" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="ko" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="ko">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>중소기업제품 공공구매 종합정보망</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="subject" content="">
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+
+
+
+<!-- 자바스크립트 -->
+<!-- 제이쿼리 -->
+<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="//ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/css/smpp/layout_2017.css">
+<link rel="stylesheet" type="text/css" href="/css/smpp/smpp_2017.css">
+
+<script type="text/javascript" src="/js/smpp/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/smpp/jquery.flow.1.1.min.js"></script>
+<script type="text/javascript" src="/js/smpp/jquery.number.min.js" ></script>
+<script type="text/javascript" src="/js/smpp/jquery.form.min.js" ></script>
+<script type="text/javascript" src="/js/smpp/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="/js/smpp/jquery.maskedinput.js"></script>
+<script type="text/javascript" src="/plugin/jquery-ui-1.11.3/jquery-ui.min.js"></script>
+
+<script src="/js/modernizr.custom.js"></script><!-- 신규추가 -->
+<script src="/js/classie.js"></script><!-- 신규추가 -->
+<script src="/js/smpp_ui.js?ver=20241220"></script><!-- 신규추가 -->
+
+<!-- 메인스크립트  -->
+<script type="text/javascript" src="/js/smpp/CommUtil.js?v=20250909" ></script>
+<!-- 공통스크립트  -->
+<script type="text/javascript" src="/js/smpp/contents.js?ver=20241220" ></script>
+<!-- Validation 스크립트 -->
+<script type="text/javascript" src="/js/smpp/validUtil.js?ver=8"></script>
+<!-- 멀티셀렉트 -->
+<script type="text/javascript" src="/js/smpp/multiselect.js?v=20250514"></script>
+<!-- jquery cookie plugin -->
+<script type="text/javascript" src="/js/smpp/jquery.cookie.js"></script>
+<!-- 팝업JS -->
+<!-- fancybox 팝업 및 섬네일 이미지처리 스크립트 -->
+<script type="text/javascript" src="/plugin/fancy/jquery.fancybox.js?v=2.1.5"></script>
+<script type="text/javascript" src="/plugin/fancy/helpers/jquery.fancybox-buttons.js"></script>
+<!-- 리스트 폼 생성 스크립트 -->
+<script type="text/javascript" src="/js/smpp/dynamic_list_helper.js"></script>
+<!-- 전자정부프레임워크 파일업로드 -->
+<script type="text/javascript" src="/js/egovframework/com/cmm/fms/EgovMultiFile.js" ></script>
+<!-- 전자정부프레임워크 달력 -->
+<script type="text/javascript" src="/js/egovframework/com/sym/cal/EgovCalPopup.js"></script>
+<!-- lnb 트리메뉴 -->
+<script type="text/javascript" src="/js/smpp/treemenu.js?ver=20250923"></script>
+<!-- Morris 차트 (그래프) -->
+<script type="text/javascript" src="/plugin/morris/raphael-min.js"></script>
+<script type="text/javascript" src="/plugin/morris/prettify.min.js"></script>
+<script type="text/javascript" src="/plugin/morris/morris.min.js"></script>
+<!-- 기업변경 정보 팝업 스크립트 -->
+<script type="text/javascript" src="/js/smpp/popOver.js" ></script>
+<script type="text/javascript" src="/js/jquery.fileDownload.js" ></script>
+
+<!-- 파일업로드 start-->
+<script type="text/javascript" src="/js/fileUpload/jquery.knob.js"></script>
+<script type="text/javascript" src="/js/fileUpload/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="/js/fileUpload/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="/js/fileUpload/jquery.fileupload.js"></script>
+<!-- 파일업로드 end-->
+
+<!-- 작업요청 로딩 레이어JS -->
+<script type="text/javascript" src="/js/smpp/loading-task.js"></script>
+
+<!-- 자바스크립트 끝 -->
+
+<!-- 스타일시트 -->
+<!-- fancybox 팝업 및 섬네일 이미지처리 스타일시트 -->
+<link rel="stylesheet" type="text/css" href="/plugin/fancy/jquery.fancybox.css?v=2.1.5" media="screen" />
+<link rel="stylesheet" type="text/css" href="/plugin/fancy/helpers/jquery.fancybox-buttons.css" media="screen" />
+<!-- Morris 차트 스타일시트 -->
+<link rel="stylesheet" type="text/css" href="/plugin/morris/prettify.min.css"/>
+<link rel="stylesheet" type="text/css" href="/plugin/morris/morris.css"/>
+<!-- 폰트 -->
+
+<!-- 메인 CSS -->
+<link rel="stylesheet" type="text/css" href="/plugin/jquery-ui-1.11.3/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/smpp/introduce.css" />
+<!-- <link rel="stylesheet" type="text/css" href="/css/smpp/style.css?ver=240620" /> -->
+<link rel="stylesheet" type="text/css" href="/css/smpp/print.css" media="print">
+<!-- <link rel="stylesheet" type="text/css" href="/css/smpp/layout.css?ver=230821" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="/css/smpp/common.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="/css/smpp/smpp.css" /> -->
+ 
+<!-- 2024 디자인리뉴얼 css -->
+<link rel="stylesheet" type="text/css" href="/css/smpp/epart_style.css" />
+<link rel="stylesheet" type="text/css" href="/css/smpp/epart_layout.css?ver=20251112" />
+<link rel="stylesheet" type="text/css" href="/css/smpp/epart_common.css?ver=20250102" />
+<link rel="stylesheet" type="text/css" href="/css/smpp/epart_smpp.css?ver=20250102" />
+<link rel="stylesheet" type="text/css" href="/css/smpp/epart_m_smpp.css?ver=20250513" />
+<link rel="stylesheet" type="text/css" href="/css/smpp/epart_member.css" />
+<link rel="stylesheet" type="text/css" href="/css/smpp/epart_institution.css" />
+<link rel="stylesheet" type="text/css" href="/css/smpp/epart_dpcnfirmstdr.css" />
+<link rel="stylesheet" type="text/css" href="/css/smpp/epart_iou_2020.css" />
+
+
+<!-- <link rel="stylesheet" type="text/css" media="(max-width:1100px)" href="/css/smpp/m_smpp.css"> 신규추가 (반응형페이지에서만 노출) -->
+<link rel="stylesheet" type="text/css" href="/css/smpp/component.css"><!-- 신규추가 -->
+<!-- 기업변경 정보 팝업 스타일 -->
+<link rel="stylesheet" type="text/css" href="/css/smpp/popOver.css" />
+<!-- 스타일시트 끝 -->
+
+<!-- 파입업로드 -->
+ <link rel="stylesheet" href="/css/smpp/edmsUpload.css?ver=241219" />
+
+ <!-- 작업요청 로딩 레이어CSS -->
+ <link rel="stylesheet" type="text/css" href="/css/smpp/loading-task.css" />
+ 
+<!-- 반응형 테이블 -->
+<link rel="stylesheet" type="text/css" href="/css/smpp/responsive-table.css?ver-=20250512" />
+<!-- Breadcrumb -->
+<link rel="stylesheet" type="text/css" href="/css/smpp/breadcrumb.css?ver-=20250512" /> 
+<script type="text/javascript">
+$(function(){
+	if(parseInt(get_version_of_IE()) < 9){
+		alert('IE9 이하 브라우저에서는 본 홈페이지를 정상적으로 이용할수가 없습니다. \n 최신브라우저로 업데이트 해주세요 ');
+	}
+	
+	$("div.skip").find("a").click(function (e) {
+		$("div.main_top_area>div.inner").find("ul li a").first().focus();
+		document.getElementById("main_wrap").scrollIntoView();
+	});
+})
+/* ********************************************************
+* 메인화면 팝업창  오픈
+*********************************************************/
+var mobilePopup = null;
+function fn_egov_init_PopupManage(){
+	var device = 'PC';
+	var popupGbn = (window.innerWidth > 767) ? "popPc" : "popMbl" ;
+	
+	if( $.cookie('viewNoticePopup') == 'Y' ) {
+		fnPopupBeforeClose();
+		return;
+	}
+	
+	var popListCnt = Number('0');
+	switch(popupGbn){
+		case "popPc" :
+			if(popListCnt > 0){
+				var querry = '';
+				
+				popup('/smpp/cmm/pop/mainPopupOpenNew.do', 'iframe', '690', '765', '', '', querry);
+			}
+			break;
+		case "popMbl" :
+			var popListCnt = '0';
+			$.fancybox([
+				
+			]);
+			if(popListCnt > 1){ setTimeout( "$.fancybox.play(true)" , 5000 ); }
+			break;
+		default :
+			break;
+	}
+	
+	
+}
+/* ********************************************************
+* 팝업창  하루안보기
+******************************************************** */
+function fn_egov_popup_oneDayCookie(){
+	$.cookie('viewNoticePopup' , 'Y', { expires : 1, path : '/' });
+}
+
+/* ********************************************************
+* 팝업창  오픈
+******************************************************** */
+function fn_egov_popupOpen_PopupManage(popupId,fileUrl,width,height,top,left,stopVewAt){
+
+	var url = "/uss/ion/pwm/openPopupManage.do?";
+	url = url + "fileUrl=" + fileUrl;
+	url = url + "&popupId=" + popupId;
+	url = url + "&stopVewAt=" + stopVewAt;
+	var name = popupId;
+	//var openWindows = window.open(url,name,"width="+width+",height="+height+",top="+top+",left="+left+",toolbar=no,status=no,location=no,scrollbars=yes,menubar=no,resizable=yes");
+	popup(url,'iframe',width,height,'','','');
+	/* if (window.focus) {
+		if(openWindows != null)
+			openWindows.focus()
+	} */
+}
+
+function fnPopupBeforeClose() {
+	setTimeout( "$.fancybox.play(false)" , 5000 );
+	
+		
+			
+				$.fancybox({
+					href : '/mgr/indvdlinfoupdt/smlpzInfoUpdateVw.do?mberId=jium2635'
+			        , width 	: '800'
+			        , minWidth 	: '800'
+			        , height 	: '800'
+		        	, minHeight : '800'
+		      		, type		: 'iframe'
+		        	, fitToView	: true
+				});
+			
+			
+	    		$.fancybox({
+	    			href : '/mgr/indvdlinfoupdt/updatePwdVwPVw.do?mberId=jium2635&type=1'
+			        , width 	: '700'
+		        	, minWidth 	: '700'
+			        , height 	: '400'
+		        	, minHeight : '400'
+			        , type : 'iframe'
+		        	, fitToView	: true	
+				});
+			
+			
+		
+		
+	
+}
+
+/* ********************************************************
+* 팝업창  오픈 쿠키 정보 OPEN
+* Cookie가 있을 경우 사용자가 보지 않겠다고 Cookie가 생성되었기 때문에
+* Cookie가 없을 때만 연다.
+******************************************************** */
+function fnGetCookie(name) {	
+   if($.cookie(name) == null){
+		return true;
+   }else{
+	   return false;
+   }
+}
+</script>
+
+
+</head>
+<body onload="javascript: fn_egov_init_PopupManage();">
+	<!-- 본문바로가기 -->
+	<div class="skip">
+		<dl>
+			<dt class="hide">바로가기 메뉴</dt>
+			<dd>
+				<a href="#">본문 바로가기</a>
+			</dd>
+		</dl>
+	</div>
+	<!-- 화면 로딩 처리용 -->
+	<div id="loading-overlay" style="display: none"></div>
+	
+	<!--  contents  -->
+	<div id="contents">
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/js/smpp/pgr/pgrCommon.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+	/* 20230422 탑배너 BANNER_TYPE 4 미사용으로 인해 주석
+	fn_topBanner();
+	*/
+
+	// SSO 인증을 통해 로그인
+	goLoginSSO();	
+	
+});
+function goBigMenu(menuIdx){
+	var redirectURI = '/smpp/index.do';
+	if(menuIdx == '3') {
+		redirectURI = '/mpe/home/user/selectPrDpRedirectView.do';
+	}
+	var $form = $('<form name="bigMenuForm"></form>').attr('action',redirectURI).attr('method', 'post').appendTo('body');
+	$form.submit();
+//     let f = document.createElement('form');
+//     f.setAttribute('method', 'post');
+//     f.setAttribute('action', '/mpe/home/user/selectPrDpRedirectView.do');
+//     document.body.appendChild(f);
+//     f.submit();
+}
+/* 대분류 메뉴 : 직접생산만 하드코딩 20230309 레드마인 23269, 23270 요청 */
+$(window).load(function() {
+	if($("#topMenu3_a > div > div > ul > li").length < 7) {
+
+		//$("#topMenu3_a > div > div > ul > li > a").css("max-width", "100px");
+	
+		// start of each
+		$("#topMenu3_a > div > div > ul > li").each(function () {
+			
+			// start of 중분류 메뉴 체크
+			//if ($(this).children('a').text().replace(/\s/gi, "") == "직접생산확인안내") {
+			//	$(this).children('a').html('직접생산<br>확인안내');
+			//}
+			
+			//if ($(this).children('a').text().replace(/\s/gi, "") == "직접생산증명서신청") {
+			//	$(this).children('a').html('직접생산<br>증명서 신청');
+			//	
+			//	// 소분류 메뉴 체크 및 css 변경 : 직접생산 증명서 신청 - 신청
+			//	$(this).children('div').children('ul').children('li').children('a').each(function () {
+			//		if ($(this).text().replace(/\s/gi, "") == "신청") {
+			//			$(this).css("font-weight", "bold");					
+			//			$(this).css("color", "rgba(255, 153, 0)");					
+			//		}
+			//	});
+			//}
+			
+			//if ($(this).children('a').text().replace(/\s/gi, "") == "직접생산증명서조회") {
+			//	$(this).children('a').html('직접생산<br>증명서 조회');
+			//}
+			
+			//if ($(this).children('a').text().replace(/\s/gi, "") == "직접생산확인업무") {
+			//	$(this).children('a').html('직접생산<br>확인업무');
+			//}
+			
+			//if ($(this).children('a').text().replace(/\s/gi, "") == "직접생산정기조사") {
+			//	$(this).children('a').html('직접생산<br>정기조사');
+			//}
+			// end of 중분류 메뉴 체크
+			
+		}); // end of each
+	}
+	
+});
+
+// 뒤로가기시 브라우저캐시에서 불러왔으면 로딩레이어 숨기기
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+    	fn_hide_loading();
+    }
+});
+
+
+$(document).ready(function() {
+	console.log('http://www.smpp.go.kr');
+
+	// 헤더메뉴 클릭 이벤트_직접생산추가
+	//alert("1");
+ 	if(($(".subTitle").text() == "직접생산확인") || ("1" == "3")){
+		$("#topMenu3_a").attr("class", "on");
+		$("#topMenu2_a").removeClass();
+		$("#topMenu1_a").removeClass();
+		
+// 		$("#topMenu3_a > div > div > ul").addClass("v3");	
+	} else if("1" == "2"){
+		$("#topMenu2_a").attr("class", "on");
+		$("#topMenu3_a").removeClass();
+		$("#topMenu1_a").removeClass();
+	}
+	
+	if('' != null && '' != ''){
+	 	alert("");
+	} 
+
+/* 	//나의업무 클릭시 이벤트
+    $("#myMenuLink").click(function(){
+        if($("#myMenuLink").attr('class') != 'a2 on'){
+            location.href='/mpe/roleuser/selectMpeRedirectView.do';
+            fn_show_loading();
+        }
+    });
+    //SMPP서비스 클릭시 이벤트
+    $("#smppHomeLink").click(function(){
+        if($("#smppHomeLink").attr('class') != 'a1 on'){
+            location.href='/smpp/index.do';
+            fn_show_loading();
+        }
+    });
+ */
+    //권한목록 처리
+    
+        var roleList = [];
+        
+            roleList.push({code:'ROLE_SMLPZ',name:'중소기업'});
+        
+            roleList.push({code:'ROLE_SMLPZ',name:'중소기업'});
+        
+
+        var roleListAreaIndex = '';
+        $(roleList).each(function(index,entry) {
+            if (entry.code == 'ROLE_SMLPZ') {
+                $('#roleAuthorNmArea').text(entry.name);
+            }
+            if (index % 12 == 0) {
+                $('#roleListArea').append('<ul id="roleListArea'+index+'"></ul>');
+                roleListAreaIndex =  'roleListArea'+index;
+            }
+            $('#'+roleListAreaIndex).append('<li><a href="#" onClick="javascript:fn_changeAuthRole(\'' + entry.code + '\');">'+entry.name+'</a></li>')
+        });
+    
+
+    //상단배너 조회
+//     fn_topBanner();
+
+    /* if($('.ly_banner').css('display') == 'block') {
+        $(this).siblings('.btn_bn').addClass('active');
+    } else {
+        $(this).siblings('.btn_bn').removeClass('active');
+    } */
+
+    $(document).on('click', '#bannerBtn', function() {
+        //배너가 열려있을 경우
+        if($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).children('em').text('열기');
+            saveTopBannerCheckCookie();
+            $('.ly_banner').slideUp(600);
+        }
+        //배너가 닫혀있을 경우
+        else{
+            $(this).addClass('active');
+            $(this).children('em').text('닫기');
+            $('.ly_banner').slideDown(600);
+        }
+    });
+
+    $(document).on('click', '.ly_banner_wrap .btn_area button', function(){
+        var btnBn = $(this).parent().parent().parent().siblings('.btn_bn');
+        btnBn.removeClass('active');
+        btnBn.children('em').text('열기');
+        saveTopBannerCheckCookie();
+        $('.ly_banner').slideUp(600);
+    });
+    
+    //헤더함수호출
+    $(document).on('fn_tabChange', function(event, paramAuthrole) {
+        //alert("권한변경! 전달된 데이터: " + paramAuthrole);
+        
+        var $form = $('<form></form>');
+        $form.attr('action', "/smpp/index.do");
+        $form.attr('method', 'post');
+        $form.appendTo('body');
+
+        var param_authRole = $('<input type="hidden" value="' + paramAuthrole + '" name="param_authRole">');
+        var tabValue = $('<input type="hidden" value="'+ paramAuthrole +'" name="tabValue">');
+
+        $form.append(param_authRole);
+        $form.append(tabValue);
+        $form.submit();
+    });
+    
+    /* function fn_changeAuthRole(paramAuthrole)
+    {
+        var $form = $('<form></form>');
+        $form.attr('action', "/smpp/index.do");
+        $form.attr('method', 'post');
+        $form.appendTo('body');
+
+        var param_authRole = $('<input type="hidden" value="' + paramAuthrole + '" name="param_authRole">');
+
+        $form.append(param_authRole);
+        $form.submit();
+    } */
+
+    //enter key press event
+    $("form[name=login_form").find('#password').keypress
+    (
+        function(e)
+        {
+            if(e.keyCode == 13)//enter key
+                goLogin2();
+        }
+    );
+
+	$(document).keydown(function (event) {
+		if ( event.keyCode == 27 ) {
+			if( $("iframe[name^=fancybox]").length > 0 ) {
+				if ( $("iframe[name^=fancybox]").contents().find("input:hidden[name=sessionExp]").val() == "true" ) {
+					fnSessionExp();
+		
+				}
+			}
+		}
+	});
+});
+
+$(window).load(function () {
+ 	appendToBody();
+ 	
+ 	//세션만료 팝업 연장
+ 	$("div#container_modal > div > div > div > #mainSessionRefreshBtn").click(function () {
+ 		sessionExpMask('off');
+ 	});
+ 	
+ 	//세션만료 팝업 로그아웃
+ 	$("div#container_modal > div > div > div > #mainSessionLogoutBtn").click(function () {
+ 		document.location.href = "/uat/uia/actionLogout.do";
+ 	});
+ 	
+ 	//세션만료 팝업 닫기
+ 	$("div#container_modal > div > div > div > #mainSessionCloseBtn").click(function () {
+		document.location.href = "/uat/uia/actionLogout.do";
+// 		sessionExpMask('off');
+	});
+ 	
+});
+
+function appendToBody() {
+	var mask = document.createElement("div");
+	mask.setAttribute('class','session-exp-mask');
+	mask.setAttribute('style','display: none;');
+	
+	var div = document.createElement("div");
+	div.setAttribute('class','session-exp-div');
+
+	mask.appendChild(div);
+	
+	document.body.appendChild(mask);
+	
+	let html = '';
+	
+	html += '<div id="container_modal">';
+	html += '	<h2>로그인 세션 만료 안내</h2>';
+	html += '		<div class="popConents pop10_1">';
+	html += '			<div class="section a1">';
+	html += '				<div id="refresh" style="display: block;">';
+	html += '					<h3 style="color : red; font-size: x-large; text-align: center;"><em id="timer" style="color: red;">05 : 00</em></h3><br>';
+	html += '					<h3>이후 로그인이 만료 되어 메인페이지로 이동합니다.</h3> <br/>';
+	html += "				<h3>로그인 연장을 원하시면 '연장' 버튼을 눌러주시기 바랍니다.</h3> <br/>";
+	html += '				</div>';
+	html += '				<div id="close" style="display: none;">';
+	html += '					<h3>로그인이 만료 되어 로그아웃 되었습니다</h3> <br/>';
+	html += "				<h3>'닫기' 버튼을 누르시면 메인페이지로 이동합니다.</h3> <br/>";
+	html += '				</div>';
+	html += '			</div>';
+	html += '			<div class="section a2">';
+	html += '				<div class="btnBox">';
+	html += '					<button type="button" class="btnType1 a2" id="mainSessionRefreshBtn">연장</button>';
+	html += '					<button type="button" class="btnType1 a1" id="mainSessionLogoutBtn">로그아웃</button>';
+	html += '					<button type="button" class="btnType1 a1" id="mainSessionCloseBtn" style="display: none;">닫기</button>';
+	html += '				</div>';
+	html += '			</div>';
+	html += '		</div>';
+	html += '	</div>';
+	
+	$('.session-exp-div').append(html);
+}
+
+function quicMenuMove()
+{
+	$("#topMenu3_a").attr("class", "on");
+	$("#topMenu2_a").removeClass();
+	$("#topMenu1_a").removeClass();
+}
+
+function goLoginSSO()
+{
+	if ( $("form[name=login_form").length > 0 && $.trim(document.login_form.sUserCi.value) != "") {
+		document.login_form.loginSe.value= "2";
+		if ('PRODUCT' === 'PRODUCT') {
+            document.login_form.action="https://www.smpp.go.kr/uat/uia/actionLogin.do";
+        } else {
+            document.login_form.action="/uat/uia/actionLogin.do";
+        }
+		document.login_form.submit();
+	}
+}
+
+// 권한변경
+function fn_changeAuthRole(paramAuthrole)
+{
+    var $form = $('<form></form>');
+    $form.attr('action', "/smpp/index.do");
+    $form.attr('method', 'post');
+    $form.appendTo('body');
+
+    var param_authRole = $('<input type="hidden" value="' + paramAuthrole + '" name="param_authRole">');
+
+    $form.append(param_authRole);
+    $form.submit();
+}
+
+/* 세션연장 */
+var expFlag = true; //세션연장팝업플래그
+var iSecond; //초단위로 환산
+var timerchecker = null;
+
+function fn_refreshTimer()
+{
+    $.ajax({
+        url:'/smpp/sessionMaxTime.do',
+        type:'POST',
+        //통신의 결과로 넘어올 데이터의 종류
+        dataType: 'json',
+        //비동기 여부
+        async: 'false',
+        //전송파라미터
+//         data: requestData,
+        success: function(data){
+
+            if(data.result =="success"){
+                fncClearTime();
+                fncClearTime2();
+                alert('연장되었습니다.');
+            }else{
+                alert('시간 연장에 실패하였습니다.');
+                parent.location.reload(true);
+            }
+        },
+        error: function(xhr, status, error){
+            alert('시간 연장에 실패하였습니다.');
+            parent.location.reload(true);
+        },
+        complete: function(){
+
+        }
+    });
+}
+
+function fncClearTime()
+{
+	iSecond = 60*60*2;
+	expFlag = true;
+    
+		if (worker != null) {
+			// WEB WORKER 종료
+			worker.terminate();
+			worker = undefined;
+		}
+		worker = new Worker('/js/worker/session-check-worker.js?ver=20231213');
+	    worker.postMessage('1000');
+    
+
+    return;
+}
+
+function initTimer()
+{
+	var timer = "";
+	var topTimer = "";
+	
+   	
+		worker.onmessage = function(e) {
+			iSecond = e.data;
+		}
+   		timer = $("div#container_modal").find("em#timer");
+   	
+    rHour = parseInt(iSecond / 3600);
+    rHour = rHour % 60;
+
+    rMinute = parseInt(iSecond / 60);
+    rMinute = rMinute % 60;
+
+    rSecond = iSecond % 60;
+
+    if (iSecond > 0) {
+    	
+        
+        
+	        timer.html( Lpad(rMinute, 2) + " : " + Lpad(rSecond, 2) );
+	        timer.css("color", "red");
+        
+        timerchecker = setTimeout("initTimer()", 1000); // 1초 간격으로 체크
+    	if (iSecond <= 300 && expFlag) {
+	    	
+	    	// ESC EVENT BLOCK
+	    		expFlag = false;
+// 	    		popup("/com/search/sessionExpP.do", "iframe-noneClose", 400, 270, "fnSessionExp", "", "", "", "");
+				sessionExpMask('on');
+	   		
+	        /**로그 아웃 시킨다. 팝업 닫음**/
+	//         opener.location.reload(true);
+    	}
+    } else {
+    	if (expFlag) {
+    		sessionExpMask('on');
+    	}
+    	$("div#container_modal").find("button#mainSessionRefreshBtn").hide();
+    	$("div#container_modal").find("div#refresh").hide();
+    	$("div#container_modal").find("button#mainSessionLogoutBtn").hide();
+    	$("div#container_modal").find("button#mainSessionCloseBtn").show();
+    	$("div#container_modal").find("div#close").show();
+    }
+}
+
+function sessionExpMask(flag) {
+	if(flag == 'on') {
+		$(".session-exp-mask").css("display","flex");
+		$( 'body' ).addClass( 'session-exp-mask-lock' );
+	} else if (flag == 'off') {
+		fn_refreshTimer();
+		$(".session-exp-mask").css("display","none");
+		$( 'body' ).removeClass( 'session-exp-mask-lock' );
+		
+	}
+}
+
+function fnSessionExp () {
+	document.location.href="/smpp/index.do";
+}
+
+function goLogin()
+{
+//     if ($.trim(document.login_form.id.value) == "") {
+//         alert("아이디를 입력하세요");
+//         return false;
+//     } else if ($.trim(document.login_form.password.value) == "") {
+//         alert("비밀번호를 입력하세요");
+//         return false;
+//     } else {
+        if ('PRODUCT' === 'PRODUCT') {
+            document.login_form.action="https://www.smpp.go.kr/uat/uia/actionLogin.do";
+        } else {
+            document.login_form.action="/uat/uia/actionLogin.do";
+        }
+        //$("#loginArea").css("display","none");
+        saveidCookie(document.login_form);
+        document.login_form.submit();
+//     }
+}
+function goLogin2() {
+	var id=document.login_form.id.value;
+	var LC="goLogin";
+  	if ($.trim(document.login_form.id.value) == "") {
+        alert("아이디를 입력하세요");
+        return false;
+    } else if ($.trim(document.login_form.password.value) == "") {
+        alert("비밀번호를 입력하세요");
+        return false;
+    }else{
+    	if ('PRODUCT' === 'PRODUCT') {	// 20230906 최원석 운영에서만 2차 로그인 팝업창 로직 실행
+    		$.ajax({
+	      		type: "POST"
+	      		, url : "/uat/uia/selectSecondCrtfcAuthorList.do"
+	      		, dataType : "json"
+	      			, async: 'false'
+	      		, data : $("form[name=login_form]").serialize()
+	      		, success : function (result) {
+	      			if (result=="Y"){
+	      				//popup("/uat/uia/selectSecondCrtfcAuthorListP.do", 'iframe-noneClose', '450', '560','','','id=' + id,'LC=' + LC); 20230906 최원석 수정
+	      				popup("/uat/uia/selectSecondCrtfcAuthorListP.do", 'iframe-noneClose', '500', '479','','','id=' + id,'LC=' + LC);
+	      			} else if (result=="N"){ 
+	    				goLogin();
+	    			}
+	      		},error : function(){
+	      			alert("로그인애러발생");
+	      		}
+	      	});
+//     		goLogin();
+    	}else if ('DEV' === 'PRODUCT'){ // 20230906 최원석 개발 기존 로그인 로직 실행
+	      	 /* $.ajax({
+	      		type: "POST"
+	      		, url : "/uat/uia/selectSecondCrtfcAuthorList.do"
+	      		, dataType : "json"
+	      			, async: 'false'
+	      		, data : $("form[name=login_form]").serialize()
+	      		, success : function (result) {
+	      			//if (result=="Y") popup("/uat/uia/selectSecondCrtfcAuthorListP.do", 'iframe-noneClose', '450', '560','','','id=' + id,'LC=' + LC); 20230906 최원석 수정
+	      			if (result=="Y") popup("/uat/uia/selectSecondCrtfcAuthorListP.do", 'iframe-noneClose', '500', '479','','','id=' + id,'LC=' + LC);
+	    			if (result=="N") goLogin();
+	      		},error : function(){
+	      			alert("로그인애러발생");
+	      		}
+	      	}); */ 
+	      	goLogin();
+    	}
+    	
+    }
+}
+function goLoginMbl()
+{
+//     document.login_form.id.value=$.trim($("#inp_tx").val());
+//     document.login_form.password.value=$.trim($("#inp_pw").val());
+//     document.login_form.checkId.value=$.trim($("#inp_chkbx2").val());
+//     if ($.trim(document.login_form.id.value) == "") {
+//         alert("아이디를 입력하세요");
+//         return false;
+//     } else if ($.trim(document.login_form.password.value) == "") {
+//         alert("비밀번호를 입력하세요");
+//         return false;
+//     } else {
+        if ('PRODUCT' === 'PRODUCT') {
+            document.login_form.action="https://www.smpp.go.kr/uat/uia/actionLogin.do";
+        } else {
+            document.login_form.action="/uat/uia/actionLogin.do";
+        }
+
+        //$("#loginArea").css("display","none");
+        saveidCookie(document.login_form_mbl);
+
+        document.login_form.submit();
+//     }
+}
+function goLoginMbl2() {
+	document.login_form.id.value=$.trim($("#inp_tx").val());
+    document.login_form.password.value=$.trim($("#inp_pw").val());
+    document.login_form.checkId.value=$.trim($("#inp_chkbx2").val());
+    var id=document.login_form.id.value;
+	var LC="goLoginMbl";
+    if ($.trim(document.login_form.id.value) == "") {
+        alert("아이디를 입력하세요");
+        return false;
+    } else if ($.trim(document.login_form.password.value) == "") {
+        alert("비밀번호를 입력하세요");
+        return false;
+    } else {
+    	if ('PRODUCT' === 'PRODUCT') {	//운영은 2차 로그인 x
+    		$.ajax({
+	      		type: "POST"
+	      		, url : "/uat/uia/selectSecondCrtfcAuthorList.do"
+	      		, dataType : "json"
+	      		, data : $("form[name=login_form]").serialize()
+	      		, success : function (result) {
+	      		//if (result=="Y") popup("/uat/uia/selectSecondCrtfcAuthorListP.do", 'iframe-noneClose', '450', '560','','','id=' + id,'LC=' + LC); 20230906 최원석 수정
+	      			if (result=="Y") popup("/uat/uia/selectSecondCrtfcAuthorListP.do", 'iframe-noneClose', '390', '520','','','id=' + id,'LC=' + LC);
+	    			if (result=="N") goLoginMbl();
+	      		},error : function(){
+	      			alert("로그인애러발생");
+	      		}
+	      	}); 
+// 	      	goLoginMbl();
+    	}else if ('DEV' === 'PRODUCT'){
+	      	/* $.ajax({
+	      		type: "POST"
+	      		, url : "/uat/uia/selectSecondCrtfcAuthorList.do"
+	      		, dataType : "json"
+	      		, data : $("form[name=login_form]").serialize()
+	      		, success : function (result) {
+	      		//if (result=="Y") popup("/uat/uia/selectSecondCrtfcAuthorListP.do", 'iframe-noneClose', '450', '560','','','id=' + id,'LC=' + LC); 20230906 최원석 수정
+	      			if (result=="Y") popup("/uat/uia/selectSecondCrtfcAuthorListP.do", 'iframe-noneClose', '390', '520','','','id=' + id,'LC=' + LC);
+	    			if (result=="N") goLoginMbl();
+	      		},error : function(){
+	      			alert("로그인애러발생");
+	      		}
+	      	}); */ 
+	      	goLoginMbl();
+    	}
+      	
+    }
+}
+function saveidCookie(form)
+{
+    var expdate = new Date();
+    var formName=form.name;
+
+    if(formName=="login_form"){
+    	// 기본적으로 30일동안 기억하게 함. 일수를 조절하려면 * 30에서 숫자를 조절하면 됨
+        if (form.checkId.checked) {
+            expdate.setTime(expdate.getTime() + 1000 * 3600 * 24 * 30); // 30일
+        } else {
+            expdate.setTime(expdate.getTime() - 1); // 쿠키 삭제조건
+        }
+
+	    setComCookie("saveid", form.id.value, expdate);
+
+    }else if(formName=="login_form_mbl"){
+    	// 기본적으로 30일동안 기억하게 함. 일수를 조절하려면 * 30에서 숫자를 조절하면 됨
+        if (form.inp_chkbx2.checked) {
+            expdate.setTime(expdate.getTime() + 1000 * 3600 * 24 * 30); // 30일
+        } else {
+            expdate.setTime(expdate.getTime() - 1); // 쿠키 삭제조건
+        }
+
+	    setComCookie("saveid", form.inp_tx.value, expdate);
+    }
+
+}
+
+function setComCookie (name, value, expires)
+{
+    document.cookie = name + "=" + escape (value) + "; path=/; expires=" + expires.toGMTString();
+}
+
+function getComCookie(Name)
+{
+    var search = Name + "=";
+
+    if (document.cookie.length > 0) { // 쿠키가 설정되어 있다면
+        offset = document.cookie.indexOf(search);
+        if (offset != -1) { // 쿠키가 존재하면
+            offset += search.length;
+            // set index of beginning of value
+            end = document.cookie.indexOf(";", offset);
+            // 쿠키 값의 마지막 위치 인덱스 번호 설정
+            if (end == -1)
+                end = document.cookie.length;
+            return unescape(document.cookie.substring(offset, end));
+        }
+    }
+    return "";
+}
+
+function setCookieId(form)
+{
+	var formName=form.name;
+
+	if(formName=="login_form"){
+	    if(document.login_form.checkId) {
+	        document.login_form.checkId.checked = ((document.login_form.id.value = getComCookie("saveid")) != "");
+	    }
+	}else if(formName=="login_form_mbl"){
+		if(document.login_form_mbl.inp_chkbx2) {
+	        document.login_form_mbl.inp_chkbx2.checked = ((document.login_form_mbl.inp_tx.value = getComCookie("saveid")) != "");
+	    }
+	}
+}
+
+function saveTopBannerCheckCookie()
+{
+    var expdate = new Date();
+
+    expdate.setDate(expdate.getDate() + 1);
+
+    var val = 0;
+    if ($("#topBannerChk").is(":checked")) {
+        val = 1;
+    }
+
+    setComCookie("topBannerCheck", val, expdate);
+}
+
+function topBannerCookieCheck()
+{
+    var chk = getComCookie("topBannerCheck");
+
+    if (chk != 1) {
+        $("#bannerBtn").addClass('active');
+        $("#bannerBtn").children('em').text('닫기');
+        $('.ly_banner').slideDown(600);
+    } else {
+        $("#topBannerChk").prop("checked", true);
+        $("#bannerBtn").removeClass('active');
+        $("#bannerBtn").children('em').text('열기');
+    }
+}
+/* 세션연장 */
+function certGoTemp(){
+	alert("<준비중>\n\n공공구매론 사용자만 인증서 로그인이 필요하며\n현재 준비중이므로 아이디로 로그인 하여 사용하시기 바랍니다.");
+}
+
+//탑배너 조회 등록
+function fn_topBanner()
+{
+	$.ajax({
+		url:'http://www.smpp.go.kr/smpp/cmm/selectTopBannerList.do',
+        type:'POST',
+        dataType: 'json',
+        async: 'false',
+        beforeSend : function(xhr) {},
+        success: function(data){
+        	var rst = data.result;
+        	if(rst == null){ return; }
+        	var fileName = rst.bannerImageFile;
+        	var linkUrl =  rst.linkUrl;
+        	var ext = 'jpg';
+        	if(fileName != null) {
+        		var topBanner = '<div class="ly_banner">';
+        		topBanner += '<div class="inner">';  
+            
+            	
+    				topBanner += '<a href="#" class="bn_link" onclick="javascript:fn_tel1()">';
+            	
+            	
+            	
+            	
+             
+        		topBanner += '<img src="/cmm/fms/FileDown.do?atchFileId='+fileName+'&fileSn=0&.'+ext+'" alt="'+rst.bannerDc+'">';
+        		topBanner += '<p class="blind">제도관련,긴급. 중소기업자간 경쟁제품 직접생산확인기준 개정고시 안내(2016년 12월 2일)<br>중소기업자간 경쟁제품에 대한 직접생산 확인기준(중소기업청고시 제2016-70호, 2016.12.2 일부 개정)을 게시하오니 참고하시기 바랍니다.<br>동 기준은 고시일(2016.12.2)로 시행되며, 이 고시 시행 전에 직접생산 여부의 확인을 신청한 경우에 관하여는 종전의 규정을 따릅니다.</p>';
+        		topBanner += '</p></a><div class="btn_area">';
+        		topBanner += '<input type="checkbox" id="topBannerChk" name="topBannerChk" onClick="javascript:saveTopBannerCheckCookie();"><label for="topBannerChk">오늘하루 그만보기</label>';
+        		topBanner += '<button><span class="sp">적용 및 닫기</span></button></div></div></div>';
+        		topBanner += '<button class="btn_bn" type="button" id="bannerBtn"><span class="sp">안내배너</span><em>열기</em></button>'; 
+
+        		$('.ly_banner_wrap').html(topBanner);
+
+        		// 상단 배너 체크
+        	    topBannerCookieCheck();
+        	}
+        },
+        complete: function(){}
+    });
+}
+
+
+//연락처팝업
+function fn_tel1()
+{	
+	$.url = "/com/popupsvc/popupLayerChoice1.do";
+	$.target = "iframe";
+	$.width = "1420";
+	$.height = "900";
+	popup($.url, $.target, $.width, $.height);   
+}
+//연락처팝업
+function fn_tel2()
+{	
+	$.url = "/com/popupsvc/popupLayerChoice2.do";
+	$.target = "iframe";
+	$.width = "1420";
+	$.height = "900";
+	popup($.url, $.target, $.width, $.height);   
+}
+//연락처팝업
+function fn_tel3()
+{	
+	$.url = "/com/popupsvc/popupLayerChoice3.do";
+	$.target = "iframe";
+	$.width = "1420";
+	$.height = "900";
+	popup($.url, $.target, $.width, $.height);   
+}
+
+function saveSSOCheckCookie()
+{
+    var expdate = new Date();
+    expdate.setDate(expdate.getDate() + 1);
+    var val = 0;
+    if ($("#checkIdSSO").is(":checked")) {
+        val = 1;
+    }
+    setComCookie("checkIdSSOcheck", val, expdate);
+}
+
+function fn_logoutSSO()
+{
+	// SSO logout 할 때 
+	if ($("#checkIdSSO").is(":checked")) {
+	}else{
+	}
+}
+
+function SSOCookieCheck()
+{
+    var chk = getComCookie("checkIdSSOcheck");
+    if (chk != 1) {
+     	document.login_form.sUserCi.value= '';
+    	document.login_form.sBizrNo.value= '';
+    } else {
+    	$("#checkIdSSO").prop("checked", true);
+    	document.login_form.sUserCi.value= "";
+    	document.login_form.sBizrNo.value= "";
+    }
+}
+
+
+ // 검색창 펼치기
+function headerSerBoxOpen(){
+	$("#headerSearchDiv").css("display", "block");
+	$("#headerSerInput").val('').focus();
+}
+
+// 검색창 닫기
+function headerSerBoxClose(){
+	$("#headerSearchDiv").css("display", "none");
+}
+
+// 검색 아이콘 클릭
+function headerSerImg(){
+	var searchValue = $("#headerSerInput").val().trim();
+	searchBoxOpen(searchValue);
+}
+// 검색 엔터 입력
+function headerSerInput(e){
+	if(e.keyCode == 13){
+		var searchValue = $("#headerSerInput").val().trim();
+		searchBoxOpen(searchValue);
+	}
+}
+
+// 검색
+function searchBoxOpen(searchValue){
+	if(searchValue.length < 2){
+		alert('검색어를 2글자 이상 입력해주세요.');
+		$("#headerSerInput").val('').focus();
+		return false;
+	}
+	 
+	 const $headerSerForm = $('<form></form>');
+     $headerSerForm.attr('action', "/smpp/selectSearchBoxMenuData.do");
+     $headerSerForm.attr('method', 'post');
+     $headerSerForm.appendTo('body');
+
+     var searchValueInput = $('<input type="hidden" value="' + searchValue + '" name="searchValue">');
+     var searchValueInputTab = $('<input type="hidden" value= name="searchTab">');
+	
+	 $headerSerForm.append(searchValueInput);
+	 $headerSerForm.append(searchValueInputTab);
+	 fn_show_loading();
+     $headerSerForm.submit();
+}
+
+
+</script>
+
+<script type="text/javascript">
+
+let worker;
+
+$(document).ready(function(){
+    /**Timer Start**/
+    fncClearTime();
+    
+    // 스크립트 에러로 임시 주석처리
+    initTimer();
+});
+</script>
+
+
+
+
+<!-- <p>header</p> -->
+<div id="header">
+	<!-- 상단 배너 -->
+    <div class="ly_banner_wrap"></div>
+    <!-- //상단 배너 -->
+
+	
+ 		<input name="header_username" type="hidden" value="jium2635"/>
+ 		<input name="menu_id" type="hidden" value=""/>
+	
+
+    <div class="h_area">
+        <div class="inner">
+            <ul class="lnb">
+                <li id="topMenu1_a" class="on">
+
+                    <!-- 미 로그인 이고 메인화면 호출일 경우만 활성 -->
+                    <!-- 로그인 (로그인 후에는 해당영역 미노출)-->
+                    
+                    
+                    <!-- //로그인 -->
+
+                    <!-- 로그인 하던 안하던 메인화면만 아니면 활성 -->
+                    <!-- SMPP 서비스 -->
+                    <a href='/smpp/index.do' id="topMenu1" >SMPP서비스</a>
+                    
+                    
+                        <div class="menu_bx after_login">
+                    
+                    
+                    
+                    		
+                            <h1 class="logo"><a href="/smpp/index.do"><img src="/img/logo.png" alt="공공구매종합정보"></a></h1>                            
+                            
+                                
+                                
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var loginId = 'jium2635';
+$(document).ready(function(){
+	var gnbMenuList=new Array;
+	
+		
+		
+		
+		
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:1,menuNo:2,upperMenuId:0,menuOrdr:2,menuNm:'나의업무',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:1,menuNo:3,upperMenuId:0,menuOrdr:3,menuNm:'직접생산',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:1,menuNo:5,upperMenuId:0,menuOrdr:1,menuNm:'SMPP서비스',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:104,upperMenuId:3,menuOrdr:373,menuNm:'부당행위신고',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:200,upperMenuId:2,menuOrdr:2000,menuNm:'회원서비스',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:201,upperMenuId:3,menuOrdr:200,menuNm:'직접생산 확인안내',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:203,upperMenuId:2,menuOrdr:550,menuNm:'기술개발제품우선구매',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:204,upperMenuId:2,menuOrdr:700,menuNm:'성능인증',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:205,upperMenuId:2,menuOrdr:800,menuNm:'소액수의계약추천',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:206,upperMenuId:2,menuOrdr:900,menuNm:'공동사업제품추천',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:211,upperMenuId:2,menuOrdr:100,menuNm:'기업정보 등록/변경',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:218,upperMenuId:2,menuOrdr:250,menuNm:'기업확인서 신청/발급',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:219,upperMenuId:2,menuOrdr:1100,menuNm:'입찰정보',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:222,upperMenuId:2,menuOrdr:1900,menuNm:'시범구매',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:224,upperMenuId:2,menuOrdr:1901,menuNm:'상생협력',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:227,upperMenuId:2,menuOrdr:1902,menuNm:'실증지원',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:228,upperMenuId:2,menuOrdr:1905,menuNm:'실증지원 매칭서비스',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:280,upperMenuId:2,menuOrdr:1120,menuNm:'공공구매론',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:313,upperMenuId:3,menuOrdr:313,menuNm:'직접생산증명서 신청',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:316,upperMenuId:3,menuOrdr:316,menuNm:'직접생산증명서 조회',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:318,upperMenuId:3,menuOrdr:318,menuNm:'수주 계약 정보',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:501,upperMenuId:5,menuOrdr:1,menuNm:'소개·알림',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:502,upperMenuId:5,menuOrdr:2,menuNm:'공공구매제도',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:503,upperMenuId:5,menuOrdr:3,menuNm:'중소기업 주요서비스',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:504,upperMenuId:5,menuOrdr:4,menuNm:'공공기관 주요서비스',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:2110,upperMenuId:218,menuOrdr:50,menuNm:'기업확인서 신청/발급 안내',progrmFileNm:'SelectMpeJ.do',progrmUrl:'/cst/smppInf/SelectMpeJ.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:2111,upperMenuId:218,menuOrdr:60,menuNm:'여성기업 확인',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:2113,upperMenuId:218,menuOrdr:70,menuNm:'장애인기업 확인',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:2116,upperMenuId:211,menuOrdr:30,menuNm:'기업정보 등록/변경',progrmFileNm:'selectGnrlInfoVw',progrmUrl:'/cop/corpinfomanage/selectGnrlInfoVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:2117,upperMenuId:211,menuOrdr:40,menuNm:'기업정보 등록/변경 내역',progrmFileNm:'SelectUpdateHistList',progrmUrl:'/cop/corpinfomanage/selectUpdateHistList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:2119,upperMenuId:211,menuOrdr:20,menuNm:'기업정보 등록/변경 안내',progrmFileNm:'SelectCstMgrE2',progrmUrl:'/cst/smppInf/SelectCstMgrE2.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:10112,upperMenuId:219,menuOrdr:8,menuNm:'My입찰정보',progrmFileNm:'MyBidList.do',progrmUrl:'/bidding/MyBidList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:10402,upperMenuId:104,menuOrdr:3,menuNm:'공공구매미이행',progrmFileNm:'selectPublicPurchsExecutoryListVw.do',progrmUrl:'/cst/injstcactionsttemnt/publicPurchsExecutory/selectPublicPurchsExecutoryListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:10403,upperMenuId:104,menuOrdr:1,menuNm:'직접생산위반',progrmFileNm:'SelectPrDpvioltMstrAplcntListVw',progrmUrl:'/smpp/cst/injstcactionsttemnt/prDpvioltMstr/selectPrDpvioltMstrAplcntListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:10407,upperMenuId:104,menuOrdr:4,menuNm:'참여제한대상기업(위장중소기업)',progrmFileNm:'SelectPrCmflgCmpnyInfoListVw.do',progrmUrl:'/cst/injstcactionsttemnt/prCmflgCmpnyInfo/SelectPrCmflgCmpnyInfoListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20000,upperMenuId:200,menuOrdr:20,menuNm:'회원정보수정',progrmFileNm:'updateMberInfoVw',progrmUrl:'/mgr/indvdlinfoupdt/updateMberInfoVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20001,upperMenuId:200,menuOrdr:90,menuNm:'회원탈퇴',progrmFileNm:'insertMberSecsnVw',progrmUrl:'/mgr/indvdlinfoupdt/insertMberSecsnVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20301,upperMenuId:203,menuOrdr:3,menuNm:'우선구매요청목록',progrmFileNm:'selectPuTdevprdtppurInfoListApplcntVw',progrmUrl:'/tec/selectPuTdevprdtppurInfoListApplcntVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20302,upperMenuId:203,menuOrdr:2,menuNm:'우선구매요청',progrmFileNm:'insertPuTdevprdtppurInfoVw',progrmUrl:'/tec/insertPuTdevprdtppurInfoVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20305,upperMenuId:203,menuOrdr:1,menuNm:'기술개발제품우선구매 안내',progrmFileNm:'SelectMpeB.do',progrmUrl:'/cst/smppInf/SelectMpeB.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20306,upperMenuId:203,menuOrdr:6,menuNm:'e카탈로그',progrmFileNm:'SelectTdPrdListVw3.do',progrmUrl:'/tec/SelectTdPrdListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20401,upperMenuId:204,menuOrdr:5,menuNm:'신청내역목록',progrmFileNm:'selectCrPfcrtfcInfoApplcntListVw',progrmUrl:'/epc/epc/selectCrPfcrtfcInfoApplcntListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20404,upperMenuId:204,menuOrdr:4,menuNm:'성능인증신청',progrmFileNm:'SelectCrPfcrtfcPblancListVw',progrmUrl:'/epc/epc/SelectCrPfcrtfcPblancListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20407,upperMenuId:204,menuOrdr:8,menuNm:'영문인증서발급신청',progrmFileNm:'selectEngCrPfcrtfctHistListVw',progrmUrl:'/epc/epc/selectEngCrPfcrtfctHistListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20408,upperMenuId:204,menuOrdr:1,menuNm:'성능인증 안내',progrmFileNm:'SelectMpeD3',progrmUrl:'/cst/smppInf/SelectMpeD3.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20411,upperMenuId:204,menuOrdr:44,menuNm:'문의답변',progrmFileNm:'SelectCrPfcrtfcQnaUserListVw.do',progrmUrl:'/epc/epc/qna/SelectCrPfcrtfcQnaUserListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20415,upperMenuId:204,menuOrdr:2,menuNm:'성능인증공지사항',progrmFileNm:'SelectCrPfcrtfcNoticeListVw',progrmUrl:'/epc/epc/notice/SelectCrPfcrtfcNoticeListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20423,upperMenuId:204,menuOrdr:47,menuNm:'성능인증 교육신청',progrmFileNm:'SelectEpcEduApplcntReqstListVw',progrmUrl:'/epc/edu/SelectEpcEduApplcntReqstListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20440,upperMenuId:204,menuOrdr:40,menuNm:'성능인증 수수료 수납',progrmFileNm:'SelectEpcFeeList ',progrmUrl:'/epc/fee/SelectEpcFeeList.do ',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20442,upperMenuId:204,menuOrdr:60,menuNm:'성능인증제품',progrmFileNm:'SelectEpcCertPrductListSmlpzVw',progrmUrl:'/epc/certPrduct/smlpz/SelectEpcCertPrductListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20500,upperMenuId:205,menuOrdr:3,menuNm:'MY신청내역',progrmFileNm:'selectMyApplyListVw',progrmUrl:'/spc/sbiz/selectMyApplyListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20501,upperMenuId:205,menuOrdr:2,menuNm:'신청가능목록',progrmFileNm:'selectPosApplyListVw',progrmUrl:'/spc/sbiz/selectPosApplyListVwNewNew.do?passKey=ok',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20502,upperMenuId:205,menuOrdr:11,menuNm:'알림서비스',progrmFileNm:'insertSmsNtcnSvcVw',progrmUrl:'/spc/sbiz/insertSmsNtcnSvcVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20505,upperMenuId:205,menuOrdr:7,menuNm:'요청목록',progrmFileNm:'selectRequstListSbizVw',progrmUrl:'/spc/sbiz/selectRequstListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20509,upperMenuId:205,menuOrdr:1,menuNm:'소액수의계약 안내',progrmFileNm:'SelectMpeE.do',progrmUrl:'/cst/smppInf/SelectMpeE.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20601,upperMenuId:206,menuOrdr:2,menuNm:'협업승인제품',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20602,upperMenuId:206,menuOrdr:3,menuNm:'공동브랜드지원제품',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20603,upperMenuId:206,menuOrdr:4,menuNm:'공통기술개발지원제품',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20604,upperMenuId:206,menuOrdr:5,menuNm:'특허개발지원제품',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:20605,upperMenuId:206,menuOrdr:6,menuNm:'단체표준인증제품',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:21111,upperMenuId:2111,menuOrdr:1,menuNm:'신청/발급',progrmFileNm:'SelectFnrssCnfirmReqListVw',progrmUrl:'/cop/newcorpreq/SelectFnrssCnfirmReqListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:21113,upperMenuId:2111,menuOrdr:3,menuNm:'담당기관 연락처',progrmFileNm:'SelectMpeF.do',progrmUrl:'/cst/smppInf/SelectMpeF.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:21131,upperMenuId:2113,menuOrdr:1,menuNm:'신청/발급',progrmFileNm:'SelectDsrprCnfirmReqListVw',progrmUrl:'/cop/newcorpreq/SelectDsrprCnfirmReqListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:21133,upperMenuId:2113,menuOrdr:3,menuNm:'장애인기업확인기관 연락처',progrmFileNm:'SelectMpeH.do',progrmUrl:'/cst/smppInf/SelectMpeH.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:21150,upperMenuId:218,menuOrdr:80,menuNm:'간주기업 확인',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:21151,upperMenuId:21150,menuOrdr:1,menuNm:'신청/발급',progrmFileNm:'SelectNfcrCnfirmReqListVw',progrmUrl:'/cop/newcorpreq/SelectNfcrCnfirmReqListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:21152,upperMenuId:21150,menuOrdr:2,menuNm:'간주기업확인기관 연락처',progrmFileNm:'SelectMpeNf.do',progrmUrl:'/cst/smppInf/SelectMpeNf.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:21900,upperMenuId:219,menuOrdr:1,menuNm:'입찰정보 소개',progrmFileNm:'SelectMpeG.do',progrmUrl:'/cst/smppInf/SelectMpeG.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:21901,upperMenuId:219,menuOrdr:4,menuNm:'맞춤 입찰정보신청',progrmFileNm:'MyBidMakeList.do',progrmUrl:'/bidding/MyBidMakeList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:21902,upperMenuId:219,menuOrdr:2,menuNm:'입찰정보',progrmFileNm:'BidCommList.do',progrmUrl:'/bidding/BidCommList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:21910,upperMenuId:219,menuOrdr:5,menuNm:'내서류함',progrmFileNm:'myFilingCabinet.do',progrmUrl:'/bidding/myFilingCabinet.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:21913,upperMenuId:219,menuOrdr:3,menuNm:'맞춤 입찰정보조회',progrmFileNm:'BidList.do',progrmUrl:'/bidding/BidList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:22405,upperMenuId:224,menuOrdr:18,menuNm:'가치창출과제 지원금신청',progrmFileNm:'SelectSprmnyReqstListVw',progrmUrl:'/cop/match/mngr/entrps/SelectSprmnyReqstListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:22412,upperMenuId:224,menuOrdr:14,menuNm:'확인서 신청하기',progrmFileNm:'SelectWnwnCoopPrductListVw',progrmUrl:'/cop/wnwncoop/SelectWnwnCoopApplyListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:22704,upperMenuId:227,menuOrdr:15,menuNm:'실증지원 공지사항',progrmFileNm:'InspNoticeListVw',progrmUrl:'/sol/insp/InspNoticeListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:22705,upperMenuId:227,menuOrdr:16,menuNm:'실증지원 문의답변',progrmFileNm:'InspQnaListVw',progrmUrl:'/sol/insp/InspQnaListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:22715,upperMenuId:227,menuOrdr:6,menuNm:'실증지원 사업신청',progrmFileNm:'SelectInspPrSolveList',progrmUrl:'/sol/insp/SelectInspPrSolveList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:22719,upperMenuId:227,menuOrdr:11,menuNm:'현장검증제품 정보 변경',progrmFileNm:'SelectInspPrductChangeHistListVw',progrmUrl:'/sol/insp/SelectInspPrductChangeHistListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:22720,upperMenuId:227,menuOrdr:14,menuNm:'현장검증 선정 관리',progrmFileNm:'SelectInspPrductListBizVw',progrmUrl:'/sol/insp/SelectInspPrductListBizVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:22721,upperMenuId:227,menuOrdr:10,menuNm:'현장검증비 신청',progrmFileNm:'SelectInspReqstBizListVw',progrmUrl:'/sol/insp/SelectInspReqstBizListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:22801,upperMenuId:228,menuOrdr:5,menuNm:'매칭서비스 매칭현황',progrmFileNm:'SelectSMtchgMainVw1',progrmUrl:'/sol/smatch/public/SelectsMtchgMainVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:22802,upperMenuId:228,menuOrdr:2,menuNm:'매칭서비스 공지사항',progrmFileNm:'SmatchNoticeListVw',progrmUrl:'/sol/smatch/SmatchNoticeListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:22803,upperMenuId:228,menuOrdr:3,menuNm:'매칭서비스 문의답변',progrmFileNm:'smatchQnaListVw',progrmUrl:'/sol/smatch/info/SmatchQnaListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:22805,upperMenuId:228,menuOrdr:6,menuNm:'매칭서비스 나의 의견 관리',progrmFileNm:'SmatchMyQnaListVw',progrmUrl:'/sol/smatch/qna/SmatchMyQnaListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:22806,upperMenuId:228,menuOrdr:7,menuNm:'매칭서비스 나의 스크랩',progrmFileNm:'SelectSmatchSupplyScrapListVw',progrmUrl:'/sol/smatch/private/SelectSMtchgSupplyScrapVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:22807,upperMenuId:228,menuOrdr:8,menuNm:'매칭서비스 공급 제안관리',progrmFileNm:'SelectsMtchgSupplyMngVw',progrmUrl:'/sol/smatch/private/SelectsMtchgSupplyMngVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:28006,upperMenuId:280,menuOrdr:6,menuNm:'마이페이지',progrmFileNm:'glab05_searchLoanEPMain',progrmUrl:'/smpploan/glab05/searchLoanEPMain.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:28007,upperMenuId:280,menuOrdr:7,menuNm:'공공구매론신청',progrmFileNm:'mgaa07_actionForm',progrmUrl:'/smpploan/mgaa07/actionForm.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:28008,upperMenuId:280,menuOrdr:8,menuNm:'진행상태조회',progrmFileNm:'mgaa01_searchLoneMainEp',progrmUrl:'/smpploan/mgaa01/searchLoneMainEP.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:28009,upperMenuId:280,menuOrdr:9,menuNm:'이용실적',progrmFileNm:'mgab05_searchForm',progrmUrl:'/smpploan/mgab05/searchForm.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:28010,upperMenuId:280,menuOrdr:10,menuNm:'임시저장목록',progrmFileNm:'mgaa07_searchTemplate',progrmUrl:'/smpploan/mgaa07/searchTemplate.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50101,upperMenuId:501,menuOrdr:1,menuNm:'개요',progrmFileNm:'SelectSmppInfoA.do',progrmUrl:'/cst/smppInf/SelectSmppInfoA.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50102,upperMenuId:501,menuOrdr:2,menuNm:'이용안내',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50103,upperMenuId:501,menuOrdr:3,menuNm:'공지사항',progrmFileNm:'selectNoticeListVw.do',progrmUrl:'/cst/notice/selectNoticeListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50104,upperMenuId:501,menuOrdr:4,menuNm:'법령정보',progrmFileNm:'selectInfUserListVw.do',progrmUrl:'/cst/inf/selectInfUserListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50105,upperMenuId:501,menuOrdr:5,menuNm:'자료실',progrmFileNm:'selectRecsroomListVw.do',progrmUrl:'/cst/recsroom/selectRecsroomListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50106,upperMenuId:501,menuOrdr:6,menuNm:'행정처분',progrmFileNm:'selectExaathrUserListVw.do',progrmUrl:'/cst/exaathr/selectExaathrUserListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50107,upperMenuId:501,menuOrdr:7,menuNm:'정보조회',progrmFileNm:'SelectSmlpzBtwnCmptprdListVw',progrmUrl:'/prd/prdinfo/smlpzbtwncmptprd/SelectSmlpzBtwnCmptprdListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50201,upperMenuId:502,menuOrdr:1,menuNm:'공공구매제도개요',progrmFileNm:'SelectLawA.do',progrmUrl:'/cst/smppInf/SelectLawA.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50202,upperMenuId:502,menuOrdr:2,menuNm:'구매목표비율제도',progrmFileNm:'selectPurchsPlanTotDetailVw',progrmUrl:'/pgr/smlpzPgrGoalInformation/selectPurchsPlanTotDetailVw.do?paramMenuNo=1011002',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50203,upperMenuId:502,menuOrdr:3,menuNm:'직접생산확인제도',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50204,upperMenuId:502,menuOrdr:4,menuNm:'기술개발제품 우선구매',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50205,upperMenuId:502,menuOrdr:5,menuNm:'시범구매제도',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50206,upperMenuId:502,menuOrdr:6,menuNm:'실증지원사업',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50207,upperMenuId:502,menuOrdr:7,menuNm:'성능인증제도',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50208,upperMenuId:502,menuOrdr:8,menuNm:'상생협력제도',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50209,upperMenuId:502,menuOrdr:9,menuNm:'공공구매 유공자 포상',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50210,upperMenuId:502,menuOrdr:10,menuNm:'소액수의계약',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50211,upperMenuId:502,menuOrdr:11,menuNm:'공동사업제품',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50212,upperMenuId:502,menuOrdr:12,menuNm:'평가/심사 부당행위 신고',progrmFileNm:'selectCstEvlMfcmmInjstcActionSttemntListVw',progrmUrl:'/cst/evl/injstc/selectCstEvlMfcmmInjstcActionSttemntListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50301,upperMenuId:503,menuOrdr:1,menuNm:'기업정보 등록/변경',progrmFileNm:'selectRegistCorpListVw.do',progrmUrl:'/cst/smppInf/SelectCstMgrE.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50302,upperMenuId:503,menuOrdr:2,menuNm:'기업확인서 신청/발급',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50303,upperMenuId:503,menuOrdr:3,menuNm:'공공구매론',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50304,upperMenuId:503,menuOrdr:4,menuNm:'입찰정보',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50401,upperMenuId:504,menuOrdr:1,menuNm:'기업 및 제품정보',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50402,upperMenuId:504,menuOrdr:2,menuNm:'확인서/증명서 정보',progrmFileNm:'SelectMiddlSslentrSchtwrListVw',progrmUrl:'/cop/middlsslentrschtwr/selectMiddlSslentrSchtwrListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50403,upperMenuId:504,menuOrdr:3,menuNm:'구매정보',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50501,upperMenuId:505,menuOrdr:1,menuNm:'개인정보처리방침',progrmFileNm:'SelectCstA.do',progrmUrl:'/cst/smppInf/SelectCstA.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50502,upperMenuId:505,menuOrdr:2,menuNm:'저작권보호정책',progrmFileNm:'SelectCstC.do',progrmUrl:'/cst/smppInf/SelectCstC.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50503,upperMenuId:505,menuOrdr:3,menuNm:'이용약관',progrmFileNm:'SelectCstB.do',progrmUrl:'/cst/smppInf/SelectCstB.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50504,upperMenuId:505,menuOrdr:4,menuNm:'전자우편무단수집거부',progrmFileNm:'SelectCstD.do',progrmUrl:'/cst/smppInf/SelectCstD.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50505,upperMenuId:505,menuOrdr:5,menuNm:'이용방법',progrmFileNm:'SelectSmppInfoUseMethod2.do',progrmUrl:'/cst/smppInf/SelectSmppInfoUseMethod2.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50506,upperMenuId:505,menuOrdr:6,menuNm:'사이트맵',progrmFileNm:'sitemap',progrmUrl:'/smpp/cmm/sitemap.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:50507,upperMenuId:505,menuOrdr:7,menuNm:'공공데이터 이용정책',progrmFileNm:'SelectCstE.do',progrmUrl:'/cst/smppInf/SelectCstE.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:200115,upperMenuId:200,menuOrdr:1,menuNm:'마이홈',progrmFileNm:'selectMpeRedirectView',progrmUrl:'/mpe/home/user/selectMpeRedirectView.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:200300,upperMenuId:200,menuOrdr:100,menuNm:'퀵메뉴관리',progrmFileNm:'selectBkmkMenuManageList',progrmUrl:'/sym/mnu/bmm/selectBkmkMenuManageList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:200400,upperMenuId:318,menuOrdr:100,menuNm:'수주 계약 등록',progrmFileNm:'insertRcvordMntrngVw',progrmUrl:'/dpc/request/insertRcvordMntrngVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:200410,upperMenuId:318,menuOrdr:7000,menuNm:'수주 계약 목록',progrmFileNm:'selectRcvordMntrngSbizListVw',progrmUrl:'/dpc/request/selectRcvordMntrngSbizListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:200500,upperMenuId:201,menuOrdr:40,menuNm:'직접생산 확인기준 개정건의',progrmFileNm:'SelectDpCnfirmStdAssListVw',progrmUrl:'/dpc/dpCnfirmStdAss/SelectDpCnfirmStdAssListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:201003,upperMenuId:313,menuOrdr:100,menuNm:'신청 전 자가진단',progrmFileNm:'SelectSelfDiagnosisVw',progrmUrl:'/dpc/request/SelectSelfDiagnosisVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:201004,upperMenuId:201,menuOrdr:30,menuNm:'직접생산 확인기준',progrmFileNm:'selectDpCnfirmStdrSmlpzListVw',progrmUrl:'/dpc/dpCnfirmCrtrSmlpz/selectDpCnfirmStdrSmlpzListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:201010,upperMenuId:313,menuOrdr:400,menuNm:'제출서류확인',progrmFileNm:'selectReqAttachListVw.do',progrmUrl:'/dpc/request/selectReqAttachListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:201045,upperMenuId:201201,menuOrdr:300,menuNm:'수수료 수납 및 환불',progrmFileNm:'SelectFeeList.do',progrmUrl:'/dpc/fee/SelectFeeList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:2,menuNo:201201,upperMenuId:3,menuOrdr:314,menuNm:'수수료',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:202002,upperMenuId:313,menuOrdr:300,menuNm:'신청발급내역',progrmFileNm:'selectReqList',progrmUrl:'/dpc/request/selectReqList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:202003,upperMenuId:316,menuOrdr:100,menuNm:'증명서 출력',progrmFileNm:'selectDpcCrtSmlpzVw.do',progrmUrl:'/dpc/crtf/selectDpcCrtSmlpzVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:202004,upperMenuId:313,menuOrdr:200,menuNm:'신청',progrmFileNm:'insertStep1.do',progrmUrl:'/dpc/request/insertStep1.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:202103,upperMenuId:316,menuOrdr:200,menuNm:'증명서 반납',progrmFileNm:'selectReturnList.do',progrmUrl:'/dpc/request/selectReturnList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:202203,upperMenuId:316,menuOrdr:150,menuNm:'영문증명서 발급 신청',progrmFileNm:'SelectDpcEngCtftReqstVw',progrmUrl:'/dpc/dpcEngCtft/SelectDpcEngCtftReqstVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:205092,upperMenuId:104,menuOrdr:2,menuNm:'직접생산 민원접수(기타부당행위)',progrmFileNm:'selectSmallBusinessComplainListVw',progrmUrl:'/mgr/smallBusinessComplain/selectSmallBusinessComplainListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:209001,upperMenuId:201,menuOrdr:1,menuNm:'직접생산 확인제도란?',progrmFileNm:'SelectMpeI.do',progrmUrl:'/cst/smppInf/SelectMpeI.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:222001,upperMenuId:222,menuOrdr:100,menuNm:'시범구매 제도소개',progrmFileNm:'SelectDemoPurchaseInfo',progrmUrl:'/exmplPurchs/info/SelectDemoPurchaseInfo.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:222021,upperMenuId:222,menuOrdr:210,menuNm:'시범구매 공지사항',progrmFileNm:'selectDmpcNoticeListVw',progrmUrl:'/exmplPurchs/notice/selectDmpcNoticeListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:222031,upperMenuId:222,menuOrdr:310,menuNm:'시범구매 문의답변',progrmFileNm:'selectQnaUserListVw',progrmUrl:'/exmplPurchs/qna/selectQnaUserListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:222047,upperMenuId:222,menuOrdr:910,menuNm:'선정제품확인',progrmFileNm:'SelectSlctnPrductBizListVw',progrmUrl:'/exmplPurchs/slctnPrduct/SelectSlctnPrductBizListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:222048,upperMenuId:222,menuOrdr:2002,menuNm:'선정제품변경이력',progrmFileNm:'SelectSlctnPrductChangeHistListVw',progrmUrl:'/exmplPurchs/slctnPrduct/SelectSlctnPrductChangeHistListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:222053,upperMenuId:224,menuOrdr:3,menuNm:'상생협력 제도신청',progrmFileNm:'SelectWnwncoop',progrmUrl:'/cop/wnwncoop/SelectWnwncoopList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:222054,upperMenuId:224,menuOrdr:6,menuNm:'상생협력 문의답변',progrmFileNm:'WnwnQnaListVw',progrmUrl:'/cop/wnwncoop/WnwnQnaListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:222055,upperMenuId:224,menuOrdr:4,menuNm:'상생협력 공지사항',progrmFileNm:'WnwnNoticeListVw',progrmUrl:'/cop/wnwncoop/WnwnNoticeListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:222056,upperMenuId:224,menuOrdr:1,menuNm:'상생협력 제도소개',progrmFileNm:'SelectWnwncoopInfoA',progrmUrl:'/cop/wnwncoop/SelectWnwncoopInfoA.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:222061,upperMenuId:222,menuOrdr:610,menuNm:'시범구매 참여신청',progrmFileNm:'SelectExmplPurchsSmlpzListVw',progrmUrl:'/exmplPurchs/exmplPurchs/SelectExmplPurchsSmlpzListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:222063,upperMenuId:224,menuOrdr:2,menuNm:'상생협력 인증마크',progrmFileNm:'SelectWnwncoopInfoB',progrmUrl:'/cop/wnwncoop/SelectWnwncoopInfoB.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:2060101,upperMenuId:20601,menuOrdr:8,menuNm:'MY신청내역',progrmFileNm:'selectJointPpMyApplyListVw',progrmUrl:'/jep/sbiz/pp/selectMyApplyListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:2060103,upperMenuId:20601,menuOrdr:3,menuNm:'우선조달요청목록',progrmFileNm:'selectJointPpRequstListSbizVw',progrmUrl:'/jep/sbiz/pp/selectRequstListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:2060201,upperMenuId:20602,menuOrdr:8,menuNm:'MY신청내역',progrmFileNm:'selectJointCbMyApplyListVw',progrmUrl:'/jep/sbiz/cb/selectMyApplyListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:2060203,upperMenuId:20602,menuOrdr:3,menuNm:'우선조달요청목록',progrmFileNm:'selectJointCbRequstListSbizVw',progrmUrl:'/jep/sbiz/cb/selectRequstListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:2060301,upperMenuId:20603,menuOrdr:8,menuNm:'MY신청내역',progrmFileNm:'selectJointCtMyApplyListVw',progrmUrl:'/jep/sbiz/ct/selectMyApplyListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:2060303,upperMenuId:20603,menuOrdr:3,menuNm:'우선조달요청목록',progrmFileNm:'selectJointCtRequstListSbizVw',progrmUrl:'/jep/sbiz/ct/selectRequstListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:2060401,upperMenuId:20604,menuOrdr:8,menuNm:'MY신청내역',progrmFileNm:'selectJointPaMyApplyListVw',progrmUrl:'/jep/sbiz/pa/selectMyApplyListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:2060403,upperMenuId:20604,menuOrdr:3,menuNm:'우선조달요청목록',progrmFileNm:'selectJointPaRequstListSbizVw',progrmUrl:'/jep/sbiz/pa/selectRequstListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:2060501,upperMenuId:20605,menuOrdr:8,menuNm:'MY신청내역',progrmFileNm:'selectJointOsMyApplyListVw',progrmUrl:'/jep/sbiz/os/selectMyApplyListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:2060503,upperMenuId:20605,menuOrdr:3,menuNm:'우선조달요청목록',progrmFileNm:'selectJointOsRequstListSbizVw',progrmUrl:'/jep/sbiz/os/selectRequstListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5010201,upperMenuId:50102,menuOrdr:1,menuNm:'처음방문하셨나요',progrmFileNm:'SelectSmppFirstVisit',progrmUrl:'/cst/smppInf/SelectSmppFirstVisit.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5010202,upperMenuId:50102,menuOrdr:2,menuNm:'이용 매뉴얼',progrmFileNm:'selectManualListVw.do',progrmUrl:'/edu/eduOnlineAtn/selectManualListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5010301,upperMenuId:50103,menuOrdr:1,menuNm:'공공구매',progrmFileNm:'selectNoticeListVw.do',progrmUrl:'/cst/notice/selectNoticeListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5010302,upperMenuId:50103,menuOrdr:2,menuNm:'시범구매',progrmFileNm:'selectCstDmpcNoticeListVw',progrmUrl:'/cst/exmplPurchs/notice/selectDmpcNoticeListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5010303,upperMenuId:50103,menuOrdr:3,menuNm:'상생협력',progrmFileNm:'WnwnNoticeListVwEve',progrmUrl:'/cst/wnwncoop/info/WnwnNoticeListVwEve.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5010304,upperMenuId:50103,menuOrdr:4,menuNm:'성능인증',progrmFileNm:'SelectCrPfcrtfcNoticeListVw',progrmUrl:'/epc/epc/notice/SelectCrPfcrtfcNoticeListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5010305,upperMenuId:50103,menuOrdr:5,menuNm:'실증지원',progrmFileNm:'InspNoticeListVwEve',progrmUrl:'/cst/insp/info/InspNoticeListVwEve.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5010306,upperMenuId:50103,menuOrdr:6,menuNm:'평가위원',progrmFileNm:'selectEvlMfcmmCstNoticeListVw',progrmUrl:'/cst/evl/notice/selectEvlMfcmmCstNoticeListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5010701,upperMenuId:50107,menuOrdr:1,menuNm:'중소기업자간 경쟁제품',progrmFileNm:'SelectSmlpzBtwnCmptprdListVw',progrmUrl:'/prd/prdinfo/smlpzbtwncmptprd/SelectSmlpzBtwnCmptprdListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5010702,upperMenuId:50107,menuOrdr:2,menuNm:'공사용자재 대상품목',progrmFileNm:'SelectCwmDpurListVw',progrmUrl:'/prd/prdinfo/smlpzbtwncmptprd/SelectCwmDpurListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5010703,upperMenuId:50107,menuOrdr:3,menuNm:'조달청 제품목록',progrmFileNm:'selectB2bVw',progrmUrl:'/ext/g2b/selectG2bVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5010704,upperMenuId:50107,menuOrdr:4,menuNm:'기술개발제품',progrmFileNm:'SelectTdPrdListVw',progrmUrl:'/prd/prdinfo/tdprd/SelectTdPrdListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5010705,upperMenuId:50107,menuOrdr:5,menuNm:'소기업공동사업제품',progrmFileNm:'SelectAsscCopertnBsnsPrdListVw',progrmUrl:'/prd/prdinfo/assccopertnbsnsprd/SelectAsscCopertnBsnsPrdListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5010706,upperMenuId:50107,menuOrdr:6,menuNm:'적격조합현황',progrmFileNm:'SelectProperAsscConListVw',progrmUrl:'/ass/proper/all/SelectProperAsscConListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5010707,upperMenuId:50107,menuOrdr:7,menuNm:'성능인증 공개검증',progrmFileNm:'selectCrPfcrtfcInfoOthbcApplcntListVw',progrmUrl:'/cst/epc/selectCrPfcrtfcInfoOthbcApplcntListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020301,upperMenuId:50203,menuOrdr:1,menuNm:'직접생산 제도소개',progrmFileNm:'SelectMpeI2',progrmUrl:'/cst/smppInf/SelectMpeI2.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020302,upperMenuId:50203,menuOrdr:2,menuNm:'직접생산 확인기준',progrmFileNm:'SelectDpCnfirmStdrInfoListVw.do',progrmUrl:'/dpc/dpCnfirmCrtr/SelectDpCnfirmStdrInfoListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020303,upperMenuId:50203,menuOrdr:3,menuNm:'직접생산 제도신청',progrmFileNm:'insertStep1.do',progrmUrl:'/dpc/request/insertStep1.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020401,upperMenuId:50204,menuOrdr:1,menuNm:'우선구매 제도소개',progrmFileNm:'SelectMpeB2.do',progrmUrl:'/cst/smppInf/SelectMpeB2.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020402,upperMenuId:50204,menuOrdr:2,menuNm:'우선구매 제도신청',progrmFileNm:'insertPuTdevprdtppurInfoVw',progrmUrl:'/tec/insertPuTdevprdtppurInfoVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020501,upperMenuId:50205,menuOrdr:1,menuNm:'시범구매 제도소개',progrmFileNm:'SelectCstDemoPurchaseInfo',progrmUrl:'/cst/exmplPurchs/info/SelectDemoPurchaseInfo.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020502,upperMenuId:50205,menuOrdr:2,menuNm:'시범구매 제도신청',progrmFileNm:'SelectDemoPurchaseSmlpzInfo',progrmUrl:'/cst/exmplPurchs/info/SelectDemoPurchaseSmlpzInfo.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020503,upperMenuId:50205,menuOrdr:3,menuNm:'시범구매 구매기관',progrmFileNm:'selectCstEpPurgovCommList',progrmUrl:'/cst/exmplPurchs/info/selectEpPurgovCommList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020504,upperMenuId:50205,menuOrdr:4,menuNm:'선정제품 확인',progrmFileNm:'cstSelectSlctnPrductBizListVw',progrmUrl:'/cst/exmplPurchs/slctnPrduct/cstSelectSlctnPrductBizListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020601,upperMenuId:50206,menuOrdr:1,menuNm:'실증지원 사업소개',progrmFileNm:'SelectPrSolveInfoAEve',progrmUrl:'/cst/wnwncoop/info/SelectPrSolveInfoAEve.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020602,upperMenuId:50206,menuOrdr:2,menuNm:'실증지원 사업신청',progrmFileNm:'SelectInspPrSolveListEva',progrmUrl:'/sol/insp/SelectInspPrSolveList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020701,upperMenuId:50207,menuOrdr:1,menuNm:'성능인증 제도소개',progrmFileNm:'SelectMpeD.do',progrmUrl:'/cst/smppInf/SelectMpeD.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020702,upperMenuId:50207,menuOrdr:2,menuNm:'성능인증 제도신청',progrmFileNm:'SelectCrPfcrtfcPblancListVw',progrmUrl:'/epc/epc/SelectCrPfcrtfcPblancListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020801,upperMenuId:50208,menuOrdr:1,menuNm:'상생협력 제도소개',progrmFileNm:'SelectSmppInfoAEve',progrmUrl:'/cst/wnwncoop/info/SelectSmppInfoAEve.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020802,upperMenuId:50208,menuOrdr:2,menuNm:'상생협력 제도신청',progrmFileNm:'SelectWnwncoopListEve',progrmUrl:'/cst/wnwncoop/info/SelectWnwncoopListEve.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020901,upperMenuId:50209,menuOrdr:1,menuNm:'포상안내',progrmFileNm:'SelectLawC',progrmUrl:'/cst/smppInf/SelectLawC.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5020902,upperMenuId:50209,menuOrdr:2,menuNm:'포상신청',progrmFileNm:'SelectMerlterRwdReq',progrmUrl:'/rwd/rwdrequest/SelectMerlterRwdReq.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5021001,upperMenuId:50210,menuOrdr:1,menuNm:'소액수의계약 제도소개',progrmFileNm:'SelectMpeE2',progrmUrl:'/cst/smppInf/SelectMpeE2.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5021002,upperMenuId:50210,menuOrdr:2,menuNm:'소액수의계약 추천신청',progrmFileNm:'selectPosApplyListVw',progrmUrl:'/spc/sbiz/selectPosApplyListVwNewNew.do?passKey=ok',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5021003,upperMenuId:50210,menuOrdr:3,menuNm:'소액수의계약 추천요청',progrmFileNm:'insertRequstRegistVw',progrmUrl:'/spc/gov/insertRequstRegistVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5021101,upperMenuId:50211,menuOrdr:1,menuNm:'공동사업제품 제도소개',progrmFileNm:'selectRequstListVw.do',progrmUrl:'/cst/smppInf/SelectMpeL.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5021102,upperMenuId:50211,menuOrdr:2,menuNm:'공동사업제품 추천신청',progrmFileNm:'selectJointPpRequstListSbizVw',progrmUrl:'/jep/sbiz/pp/selectRequstListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5021103,upperMenuId:50211,menuOrdr:3,menuNm:'공동사업제품 추천요청',progrmFileNm:'insertJointPpRequstRegistVw',progrmUrl:'/jep/gov/pp/insertRequstRegistVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5030201,upperMenuId:50302,menuOrdr:1,menuNm:'중소기업확인서 신청/출력',progrmFileNm:'openSmba',progrmUrl:'/cop/corpinfomanage/openSmba.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5030202,upperMenuId:50302,menuOrdr:2,menuNm:'여성기업확인서 신청/출력',progrmFileNm:'SelectFnrssCnfirmReqListVw',progrmUrl:'/cop/newcorpreq/SelectFnrssCnfirmReqListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5030203,upperMenuId:50302,menuOrdr:3,menuNm:'장애인기업확인서 신청/출력',progrmFileNm:'SelectDsrprCnfirmReqListVw',progrmUrl:'/cop/newcorpreq/SelectDsrprCnfirmReqListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5030204,upperMenuId:50302,menuOrdr:4,menuNm:'창업기업확인서 신청/출력',progrmFileNm:'SelectFepcListVw2',progrmUrl:'/cop/SelectFepcListVw2.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5030301,upperMenuId:50303,menuOrdr:1,menuNm:'공공구매론 소개',progrmFileNm:'SelectSmppLoan.do',progrmUrl:'/cst/smppInf/SelectSmppLoan.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5030302,upperMenuId:50303,menuOrdr:2,menuNm:'공공구매론 신청',progrmFileNm:'mgaa07_actionFormMG',progrmUrl:'/smpploan/mgaa07/actionFormMG.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5030401,upperMenuId:50304,menuOrdr:1,menuNm:'입찰정보 소개',progrmFileNm:'SelectMpeG.do',progrmUrl:'/cst/smppInf/SelectMpeG.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5030402,upperMenuId:50304,menuOrdr:4,menuNm:'맞춤 입찰정보신청',progrmFileNm:'MyBidMakeList.do',progrmUrl:'/bidding/MyBidMakeList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5030403,upperMenuId:50304,menuOrdr:3,menuNm:'맞춤 입찰정보조회',progrmFileNm:'BidList.do',progrmUrl:'/bidding/BidList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5030404,upperMenuId:50304,menuOrdr:5,menuNm:'내서류함',progrmFileNm:'myFilingCabinet.do',progrmUrl:'/bidding/myFilingCabinet.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5030405,upperMenuId:50304,menuOrdr:2,menuNm:'입찰정보',progrmFileNm:'BidCommList.do',progrmUrl:'/bidding/BidCommList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5040101,upperMenuId:50401,menuOrdr:1,menuNm:'중소기업 정보조회',progrmFileNm:'SelectRegistCorpListVw',progrmUrl:'/cop/registcorp/selectRegistCorpListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5040102,upperMenuId:50401,menuOrdr:3,menuNm:'통합기업조회',progrmFileNm:'selectUnityCorpCnfirmInfoInqireListVw',progrmUrl:'/cop/unitycorpcnfirminfoinqire/selectUnityCorpCnfirmInfoInqireListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5040103,upperMenuId:50401,menuOrdr:4,menuNm:'제품통합검색',progrmFileNm:'SelectsTSearchMainVw',progrmUrl:'/sol/tsearch/public/SelectTotalSearchMainVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5040201,upperMenuId:50402,menuOrdr:1,menuNm:'중.소기업.소상공인',progrmFileNm:'SelectMiddlSslentrSchtwrListVw',progrmUrl:'/cop/middlsslentrschtwr/selectMiddlSslentrSchtwrListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5040202,upperMenuId:50402,menuOrdr:2,menuNm:'중견기업',progrmFileNm:'SelectMidCorpListVw',progrmUrl:'/cop/midcorp/selectMidCorpListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5040203,upperMenuId:50402,menuOrdr:3,menuNm:'여성기업',progrmFileNm:'SelectFnrssListVw',progrmUrl:'/cop/fnrss/selectFnrssListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5040204,upperMenuId:50402,menuOrdr:4,menuNm:'장애인기업',progrmFileNm:'SelectDsrprListVw',progrmUrl:'/cop/dsrpr/selectDsrprListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5040205,upperMenuId:50402,menuOrdr:5,menuNm:'직접생산',progrmFileNm:'SelectDpCnfrmnListVw',progrmUrl:'/cop/dpcnfrmn/selectDpCnfrmnListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5040206,upperMenuId:50402,menuOrdr:6,menuNm:'성능인증',progrmFileNm:'selectCrPfcrtfcInfoViewList',progrmUrl:'/cop/prdomnccrtfc/selectCrPfcrtfcInfoViewList.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5040207,upperMenuId:50402,menuOrdr:7,menuNm:'창업기업',progrmFileNm:'SelectFepcListVw',progrmUrl:'/cop/fepc/SelectFepcListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5040208,upperMenuId:50402,menuOrdr:8,menuNm:'간주기업',progrmFileNm:'SelectNprmListVw',progrmUrl:'/cop/nprm/SelectNprmListVw.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5040301,upperMenuId:50403,menuOrdr:1,menuNm:'구매정보 입력 안내',progrmFileNm:'selectPgrInformation.do',progrmUrl:'/pgr/pgrInformation/selectPgrInformation.do',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5040302,upperMenuId:50403,menuOrdr:2,menuNm:'구매계획 입력',progrmFileNm:'selectPurchsPlanRegistSummaryVw',progrmUrl:'/pgr/purchsPlanRegist/selectPurchsPlanSummaryVw.do?paramMenuNo=2080004',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:4,menuNo:5040303,upperMenuId:50403,menuOrdr:3,menuNm:'구매실적 입력',progrmFileNm:'selectTdprdPurchsAcmsltSumarryVw',progrmUrl:'/pgr/tdprdPurchsAcmsltRegist/selectTdprdPurchsAcmsltSumarryVw.do?paramMenuNo=2080114',gnbMenuNm:''});
+					
+					
+				
+			
+				
+					
+					
+						gnbMenuList.push({menuDepth:3,menuNo:21100001,upperMenuId:218,menuOrdr:57,menuNm:'중.소기업(소상공인) 확인',progrmFileNm:'openSmba',progrmUrl:'/cop/corpinfomanage/openSmba.do',gnbMenuNm:''});
+					
+					
+				
+			
+		
+		
+	
+	
+	createGnbMenu(gnbMenuList,Number('5'), '');
+   });
+
+function indexRediect(){
+	if(navigator.userAgent.match(/Android|Mobile|iP(hone|od|ad)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
+		 if($.cookie('pcView') != null){
+     			 location.href='/smpp/index.do';
+     		 }else{
+     			 location.href='/html/m.html';
+     		 }
+	 }else{
+	 	location.href='/smpp/index.do';
+	 }
+}
+</script>
+
+<div id="sub_menu_area_5" class="sub_menu_area">
+	<!-- 대메뉴 (메뉴가 7개 이상인 경우 'v2' 클래스 추가) -->
+	<ul class="sub_menu">
+			 
+	</ul>
+	<!-- //대메뉴 (메뉴가 6개 이하인 경우) -->
+
+	<!-- 전체메뉴 -->
+	<div class="allmenu_bx">
+		<button class="btn_all" title="전체메뉴보기"><span class="blind">전체메뉴보기</span></button>
+	</div>
+	<div class="all_list" style="display:none">
+		<p class="all_list_tit">전체메뉴</p>
+	</div>
+	<!-- //전체메뉴 -->
+</div>
+
+                        </div>
+                    <!-- //SMPP 서비스 -->
+                </li>
+ 
+				
+	                
+	                <li id="topMenu2_a" >
+	                    <!-- 나의업무 -->
+	                    <a href='/mpe/home/user/selectMpeRedirectView.do' id="topMenu2">나의업무</a>
+	                    
+	                    
+	                        <div class="menu_bx after_login">
+	                            
+	                        </div>
+	                    
+	                    <!-- //나의업무 -->
+	                </li>
+				
+				
+                <li id="topMenu3_a" >
+                    <!-- 직접생산 -->
+
+                    <a href='javascript:void(0)' id="topMenu3" onclick="javascript:goBigMenu('3')">직접생산</a>
+                    
+                    
+                        <div class="menu_bx after_login">
+                            
+                        </div>
+                    
+                    <!-- //직접생산 -->
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="h_bar">
+            <div class="inner">
+                <div class="ut_bx">
+                    
+                    
+                    <!-- <a href="http://www.gov30.go.kr" class="link"  target="_blank">정부3.0</a>관리자로 로그인 시 미노출
+                    <a href="http://www.mss.go.kr" class="link type2"  target="_blank">중소벤처기업부</a>관리자로 로그인 시 미노출
+                    <a href="http://www.kbiz.or.kr" class="link type3"  target="_blank">KBIZ중소기업중앙회</a>관리자로 로그인 시 미노출 -->
+                    
+                    
+                   <!-- 검색박스 -->
+                   <div id="headerSerInputBox">
+                   		<span>
+		                   	<input class="commSearchInput" onclick="headerSerBoxOpen();" type="text" placeholder="검색어를 입력해주세요" style="height:31px;"> 
+		                    <img class="commSearchIcon" onclick="headerSerBoxOpen();" src="/img/ico_serach.svg" alt="메뉴검색아이콘" >
+	                    </span>
+                    </div>
+                    
+                    <a href="/smpp/cmm/sitemap.do" class="sitemap">사이트맵</a>
+                   	
+                    
+                    <a href="/mgr/indvdlinfoupdt/updateMberInfoVw.do" class="mypage">jium2635 님</a><!-- 로그인 후 노출 -->
+                    <a href="/uat/uia/actionLogout.do" class="login">로그아웃</a>
+      				                    
+                    
+                    
+                    
+                </div>
+
+                <!-- 170110 추가 -->
+                <div class="ut_bx2 ut_bx2M">
+                    <!-- 유저의 권한이 2개 이상일경우  -->
+                    
+                    
+                    
+                    <a href="#" class="btn_list btn_list_M on">권한목록</a>
+                    <div class="ut_list_bx" id="roleListArea">
+                    </div>
+                    <span class="tx" id="roleAuthorNmArea"></span>
+                    
+                    
+
+                    
+                    
+                </div>
+                <!-- //170110 추가 -->
+            </div>
+        </div>
+
+
+        <!-- 태블릿,모바일 메뉴 -->
+            <div class="m_menu_bx">
+                <h1 class="logo"><a href="/smpp/index.do"><img src="/img/logo.png" alt="공공구매종합정보"></a></h1>
+                <button id="showRight" class="btn_open sp" type="button">메뉴열기</button>
+                <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+                    <button id="showRight2" class="btn_clse" type="button"><span class="sp">메뉴닫기</span></button>
+                    <a href="/smpp/index.do" class="tx_num">HOME</a>
+                    <div class="m_menu_inner">
+                        
+                        
+                            <!-- 로그인 후 메뉴 -->
+                        
+                        
+                        
+                        
+                        <!--모바일에서 SMPP서비스 하위 메뉴 화면에 있을 때, SMPP서비스 우측 메뉴 호출 -->
+                        
+	                        
+	                            
+	                            
+	                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	var gnbMenuList=new Array;
+
+	
+		
+			
+				gnbMenuList.push({menuDepth:1,menuNo:2,upperMenuId:0,menuOrdr:2,menuNm:'나의업무',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:1,menuNo:3,upperMenuId:0,menuOrdr:3,menuNm:'직접생산',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:1,menuNo:5,upperMenuId:0,menuOrdr:1,menuNm:'SMPP서비스',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:104,upperMenuId:3,menuOrdr:373,menuNm:'부당행위신고',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:200,upperMenuId:2,menuOrdr:2000,menuNm:'회원서비스',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:201,upperMenuId:3,menuOrdr:200,menuNm:'직접생산 확인안내',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:203,upperMenuId:2,menuOrdr:550,menuNm:'기술개발제품우선구매',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:204,upperMenuId:2,menuOrdr:700,menuNm:'성능인증',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:205,upperMenuId:2,menuOrdr:800,menuNm:'소액수의계약추천',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:206,upperMenuId:2,menuOrdr:900,menuNm:'공동사업제품추천',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:211,upperMenuId:2,menuOrdr:100,menuNm:'기업정보 등록/변경',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:218,upperMenuId:2,menuOrdr:250,menuNm:'기업확인서 신청/발급',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:219,upperMenuId:2,menuOrdr:1100,menuNm:'입찰정보',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:222,upperMenuId:2,menuOrdr:1900,menuNm:'시범구매',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:224,upperMenuId:2,menuOrdr:1901,menuNm:'상생협력',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:227,upperMenuId:2,menuOrdr:1902,menuNm:'실증지원',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:228,upperMenuId:2,menuOrdr:1905,menuNm:'실증지원 매칭서비스',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:280,upperMenuId:2,menuOrdr:1120,menuNm:'공공구매론',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:313,upperMenuId:3,menuOrdr:313,menuNm:'직접생산증명서 신청',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:316,upperMenuId:3,menuOrdr:316,menuNm:'직접생산증명서 조회',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:318,upperMenuId:3,menuOrdr:318,menuNm:'수주 계약 정보',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:501,upperMenuId:5,menuOrdr:1,menuNm:'소개·알림',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:502,upperMenuId:5,menuOrdr:2,menuNm:'공공구매제도',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:503,upperMenuId:5,menuOrdr:3,menuNm:'중소기업 주요서비스',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:504,upperMenuId:5,menuOrdr:4,menuNm:'공공기관 주요서비스',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:2110,upperMenuId:218,menuOrdr:50,menuNm:'기업확인서 신청/발급 안내',progrmFileNm:'SelectMpeJ.do',progrmUrl:'/cst/smppInf/SelectMpeJ.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:2111,upperMenuId:218,menuOrdr:60,menuNm:'여성기업 확인',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:2113,upperMenuId:218,menuOrdr:70,menuNm:'장애인기업 확인',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:2116,upperMenuId:211,menuOrdr:30,menuNm:'기업정보 등록/변경',progrmFileNm:'selectGnrlInfoVw',progrmUrl:'/cop/corpinfomanage/selectGnrlInfoVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:2117,upperMenuId:211,menuOrdr:40,menuNm:'기업정보 등록/변경 내역',progrmFileNm:'SelectUpdateHistList',progrmUrl:'/cop/corpinfomanage/selectUpdateHistList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:2119,upperMenuId:211,menuOrdr:20,menuNm:'기업정보 등록/변경 안내',progrmFileNm:'SelectCstMgrE2',progrmUrl:'/cst/smppInf/SelectCstMgrE2.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:10112,upperMenuId:219,menuOrdr:8,menuNm:'My입찰정보',progrmFileNm:'MyBidList.do',progrmUrl:'/bidding/MyBidList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:10402,upperMenuId:104,menuOrdr:3,menuNm:'공공구매미이행',progrmFileNm:'selectPublicPurchsExecutoryListVw.do',progrmUrl:'/cst/injstcactionsttemnt/publicPurchsExecutory/selectPublicPurchsExecutoryListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:10403,upperMenuId:104,menuOrdr:1,menuNm:'직접생산위반',progrmFileNm:'SelectPrDpvioltMstrAplcntListVw',progrmUrl:'/smpp/cst/injstcactionsttemnt/prDpvioltMstr/selectPrDpvioltMstrAplcntListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:10407,upperMenuId:104,menuOrdr:4,menuNm:'참여제한대상기업(위장중소기업)',progrmFileNm:'SelectPrCmflgCmpnyInfoListVw.do',progrmUrl:'/cst/injstcactionsttemnt/prCmflgCmpnyInfo/SelectPrCmflgCmpnyInfoListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20000,upperMenuId:200,menuOrdr:20,menuNm:'회원정보수정',progrmFileNm:'updateMberInfoVw',progrmUrl:'/mgr/indvdlinfoupdt/updateMberInfoVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20001,upperMenuId:200,menuOrdr:90,menuNm:'회원탈퇴',progrmFileNm:'insertMberSecsnVw',progrmUrl:'/mgr/indvdlinfoupdt/insertMberSecsnVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20301,upperMenuId:203,menuOrdr:3,menuNm:'우선구매요청목록',progrmFileNm:'selectPuTdevprdtppurInfoListApplcntVw',progrmUrl:'/tec/selectPuTdevprdtppurInfoListApplcntVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20302,upperMenuId:203,menuOrdr:2,menuNm:'우선구매요청',progrmFileNm:'insertPuTdevprdtppurInfoVw',progrmUrl:'/tec/insertPuTdevprdtppurInfoVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20305,upperMenuId:203,menuOrdr:1,menuNm:'기술개발제품우선구매 안내',progrmFileNm:'SelectMpeB.do',progrmUrl:'/cst/smppInf/SelectMpeB.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20306,upperMenuId:203,menuOrdr:6,menuNm:'e카탈로그',progrmFileNm:'SelectTdPrdListVw3.do',progrmUrl:'/tec/SelectTdPrdListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20401,upperMenuId:204,menuOrdr:5,menuNm:'신청내역목록',progrmFileNm:'selectCrPfcrtfcInfoApplcntListVw',progrmUrl:'/epc/epc/selectCrPfcrtfcInfoApplcntListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20404,upperMenuId:204,menuOrdr:4,menuNm:'성능인증신청',progrmFileNm:'SelectCrPfcrtfcPblancListVw',progrmUrl:'/epc/epc/SelectCrPfcrtfcPblancListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20407,upperMenuId:204,menuOrdr:8,menuNm:'영문인증서발급신청',progrmFileNm:'selectEngCrPfcrtfctHistListVw',progrmUrl:'/epc/epc/selectEngCrPfcrtfctHistListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20408,upperMenuId:204,menuOrdr:1,menuNm:'성능인증 안내',progrmFileNm:'SelectMpeD3',progrmUrl:'/cst/smppInf/SelectMpeD3.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20411,upperMenuId:204,menuOrdr:44,menuNm:'문의답변',progrmFileNm:'SelectCrPfcrtfcQnaUserListVw.do',progrmUrl:'/epc/epc/qna/SelectCrPfcrtfcQnaUserListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20415,upperMenuId:204,menuOrdr:2,menuNm:'성능인증공지사항',progrmFileNm:'SelectCrPfcrtfcNoticeListVw',progrmUrl:'/epc/epc/notice/SelectCrPfcrtfcNoticeListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20423,upperMenuId:204,menuOrdr:47,menuNm:'성능인증 교육신청',progrmFileNm:'SelectEpcEduApplcntReqstListVw',progrmUrl:'/epc/edu/SelectEpcEduApplcntReqstListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20440,upperMenuId:204,menuOrdr:40,menuNm:'성능인증 수수료 수납',progrmFileNm:'SelectEpcFeeList ',progrmUrl:'/epc/fee/SelectEpcFeeList.do ',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20442,upperMenuId:204,menuOrdr:60,menuNm:'성능인증제품',progrmFileNm:'SelectEpcCertPrductListSmlpzVw',progrmUrl:'/epc/certPrduct/smlpz/SelectEpcCertPrductListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20500,upperMenuId:205,menuOrdr:3,menuNm:'MY신청내역',progrmFileNm:'selectMyApplyListVw',progrmUrl:'/spc/sbiz/selectMyApplyListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20501,upperMenuId:205,menuOrdr:2,menuNm:'신청가능목록',progrmFileNm:'selectPosApplyListVw',progrmUrl:'/spc/sbiz/selectPosApplyListVwNewNew.do?passKey=ok',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20502,upperMenuId:205,menuOrdr:11,menuNm:'알림서비스',progrmFileNm:'insertSmsNtcnSvcVw',progrmUrl:'/spc/sbiz/insertSmsNtcnSvcVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20505,upperMenuId:205,menuOrdr:7,menuNm:'요청목록',progrmFileNm:'selectRequstListSbizVw',progrmUrl:'/spc/sbiz/selectRequstListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20509,upperMenuId:205,menuOrdr:1,menuNm:'소액수의계약 안내',progrmFileNm:'SelectMpeE.do',progrmUrl:'/cst/smppInf/SelectMpeE.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20601,upperMenuId:206,menuOrdr:2,menuNm:'협업승인제품',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20602,upperMenuId:206,menuOrdr:3,menuNm:'공동브랜드지원제품',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20603,upperMenuId:206,menuOrdr:4,menuNm:'공통기술개발지원제품',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20604,upperMenuId:206,menuOrdr:5,menuNm:'특허개발지원제품',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:20605,upperMenuId:206,menuOrdr:6,menuNm:'단체표준인증제품',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:21111,upperMenuId:2111,menuOrdr:1,menuNm:'신청/발급',progrmFileNm:'SelectFnrssCnfirmReqListVw',progrmUrl:'/cop/newcorpreq/SelectFnrssCnfirmReqListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:21113,upperMenuId:2111,menuOrdr:3,menuNm:'담당기관 연락처',progrmFileNm:'SelectMpeF.do',progrmUrl:'/cst/smppInf/SelectMpeF.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:21131,upperMenuId:2113,menuOrdr:1,menuNm:'신청/발급',progrmFileNm:'SelectDsrprCnfirmReqListVw',progrmUrl:'/cop/newcorpreq/SelectDsrprCnfirmReqListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:21133,upperMenuId:2113,menuOrdr:3,menuNm:'장애인기업확인기관 연락처',progrmFileNm:'SelectMpeH.do',progrmUrl:'/cst/smppInf/SelectMpeH.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:21150,upperMenuId:218,menuOrdr:80,menuNm:'간주기업 확인',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:21151,upperMenuId:21150,menuOrdr:1,menuNm:'신청/발급',progrmFileNm:'SelectNfcrCnfirmReqListVw',progrmUrl:'/cop/newcorpreq/SelectNfcrCnfirmReqListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:21152,upperMenuId:21150,menuOrdr:2,menuNm:'간주기업확인기관 연락처',progrmFileNm:'SelectMpeNf.do',progrmUrl:'/cst/smppInf/SelectMpeNf.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:21900,upperMenuId:219,menuOrdr:1,menuNm:'입찰정보 소개',progrmFileNm:'SelectMpeG.do',progrmUrl:'/cst/smppInf/SelectMpeG.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:21901,upperMenuId:219,menuOrdr:4,menuNm:'맞춤 입찰정보신청',progrmFileNm:'MyBidMakeList.do',progrmUrl:'/bidding/MyBidMakeList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:21902,upperMenuId:219,menuOrdr:2,menuNm:'입찰정보',progrmFileNm:'BidCommList.do',progrmUrl:'/bidding/BidCommList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:21910,upperMenuId:219,menuOrdr:5,menuNm:'내서류함',progrmFileNm:'myFilingCabinet.do',progrmUrl:'/bidding/myFilingCabinet.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:21913,upperMenuId:219,menuOrdr:3,menuNm:'맞춤 입찰정보조회',progrmFileNm:'BidList.do',progrmUrl:'/bidding/BidList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:22405,upperMenuId:224,menuOrdr:18,menuNm:'가치창출과제 지원금신청',progrmFileNm:'SelectSprmnyReqstListVw',progrmUrl:'/cop/match/mngr/entrps/SelectSprmnyReqstListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:22412,upperMenuId:224,menuOrdr:14,menuNm:'확인서 신청하기',progrmFileNm:'SelectWnwnCoopPrductListVw',progrmUrl:'/cop/wnwncoop/SelectWnwnCoopApplyListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:22704,upperMenuId:227,menuOrdr:15,menuNm:'실증지원 공지사항',progrmFileNm:'InspNoticeListVw',progrmUrl:'/sol/insp/InspNoticeListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:22705,upperMenuId:227,menuOrdr:16,menuNm:'실증지원 문의답변',progrmFileNm:'InspQnaListVw',progrmUrl:'/sol/insp/InspQnaListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:22715,upperMenuId:227,menuOrdr:6,menuNm:'실증지원 사업신청',progrmFileNm:'SelectInspPrSolveList',progrmUrl:'/sol/insp/SelectInspPrSolveList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:22719,upperMenuId:227,menuOrdr:11,menuNm:'현장검증제품 정보 변경',progrmFileNm:'SelectInspPrductChangeHistListVw',progrmUrl:'/sol/insp/SelectInspPrductChangeHistListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:22720,upperMenuId:227,menuOrdr:14,menuNm:'현장검증 선정 관리',progrmFileNm:'SelectInspPrductListBizVw',progrmUrl:'/sol/insp/SelectInspPrductListBizVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:22721,upperMenuId:227,menuOrdr:10,menuNm:'현장검증비 신청',progrmFileNm:'SelectInspReqstBizListVw',progrmUrl:'/sol/insp/SelectInspReqstBizListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:22801,upperMenuId:228,menuOrdr:5,menuNm:'매칭서비스 매칭현황',progrmFileNm:'SelectSMtchgMainVw1',progrmUrl:'/sol/smatch/public/SelectsMtchgMainVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:22802,upperMenuId:228,menuOrdr:2,menuNm:'매칭서비스 공지사항',progrmFileNm:'SmatchNoticeListVw',progrmUrl:'/sol/smatch/SmatchNoticeListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:22803,upperMenuId:228,menuOrdr:3,menuNm:'매칭서비스 문의답변',progrmFileNm:'smatchQnaListVw',progrmUrl:'/sol/smatch/info/SmatchQnaListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:22805,upperMenuId:228,menuOrdr:6,menuNm:'매칭서비스 나의 의견 관리',progrmFileNm:'SmatchMyQnaListVw',progrmUrl:'/sol/smatch/qna/SmatchMyQnaListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:22806,upperMenuId:228,menuOrdr:7,menuNm:'매칭서비스 나의 스크랩',progrmFileNm:'SelectSmatchSupplyScrapListVw',progrmUrl:'/sol/smatch/private/SelectSMtchgSupplyScrapVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:22807,upperMenuId:228,menuOrdr:8,menuNm:'매칭서비스 공급 제안관리',progrmFileNm:'SelectsMtchgSupplyMngVw',progrmUrl:'/sol/smatch/private/SelectsMtchgSupplyMngVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:28006,upperMenuId:280,menuOrdr:6,menuNm:'마이페이지',progrmFileNm:'glab05_searchLoanEPMain',progrmUrl:'/smpploan/glab05/searchLoanEPMain.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:28007,upperMenuId:280,menuOrdr:7,menuNm:'공공구매론신청',progrmFileNm:'mgaa07_actionForm',progrmUrl:'/smpploan/mgaa07/actionForm.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:28008,upperMenuId:280,menuOrdr:8,menuNm:'진행상태조회',progrmFileNm:'mgaa01_searchLoneMainEp',progrmUrl:'/smpploan/mgaa01/searchLoneMainEP.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:28009,upperMenuId:280,menuOrdr:9,menuNm:'이용실적',progrmFileNm:'mgab05_searchForm',progrmUrl:'/smpploan/mgab05/searchForm.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:28010,upperMenuId:280,menuOrdr:10,menuNm:'임시저장목록',progrmFileNm:'mgaa07_searchTemplate',progrmUrl:'/smpploan/mgaa07/searchTemplate.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50101,upperMenuId:501,menuOrdr:1,menuNm:'개요',progrmFileNm:'SelectSmppInfoA.do',progrmUrl:'/cst/smppInf/SelectSmppInfoA.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50102,upperMenuId:501,menuOrdr:2,menuNm:'이용안내',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50103,upperMenuId:501,menuOrdr:3,menuNm:'공지사항',progrmFileNm:'selectNoticeListVw.do',progrmUrl:'/cst/notice/selectNoticeListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50104,upperMenuId:501,menuOrdr:4,menuNm:'법령정보',progrmFileNm:'selectInfUserListVw.do',progrmUrl:'/cst/inf/selectInfUserListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50105,upperMenuId:501,menuOrdr:5,menuNm:'자료실',progrmFileNm:'selectRecsroomListVw.do',progrmUrl:'/cst/recsroom/selectRecsroomListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50106,upperMenuId:501,menuOrdr:6,menuNm:'행정처분',progrmFileNm:'selectExaathrUserListVw.do',progrmUrl:'/cst/exaathr/selectExaathrUserListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50107,upperMenuId:501,menuOrdr:7,menuNm:'정보조회',progrmFileNm:'SelectSmlpzBtwnCmptprdListVw',progrmUrl:'/prd/prdinfo/smlpzbtwncmptprd/SelectSmlpzBtwnCmptprdListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50201,upperMenuId:502,menuOrdr:1,menuNm:'공공구매제도개요',progrmFileNm:'SelectLawA.do',progrmUrl:'/cst/smppInf/SelectLawA.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50202,upperMenuId:502,menuOrdr:2,menuNm:'구매목표비율제도',progrmFileNm:'selectPurchsPlanTotDetailVw',progrmUrl:'/pgr/smlpzPgrGoalInformation/selectPurchsPlanTotDetailVw.do?paramMenuNo=1011002',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50203,upperMenuId:502,menuOrdr:3,menuNm:'직접생산확인제도',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50204,upperMenuId:502,menuOrdr:4,menuNm:'기술개발제품 우선구매',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50205,upperMenuId:502,menuOrdr:5,menuNm:'시범구매제도',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50206,upperMenuId:502,menuOrdr:6,menuNm:'실증지원사업',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50207,upperMenuId:502,menuOrdr:7,menuNm:'성능인증제도',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50208,upperMenuId:502,menuOrdr:8,menuNm:'상생협력제도',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50209,upperMenuId:502,menuOrdr:9,menuNm:'공공구매 유공자 포상',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50210,upperMenuId:502,menuOrdr:10,menuNm:'소액수의계약',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50211,upperMenuId:502,menuOrdr:11,menuNm:'공동사업제품',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50212,upperMenuId:502,menuOrdr:12,menuNm:'평가/심사 부당행위 신고',progrmFileNm:'selectCstEvlMfcmmInjstcActionSttemntListVw',progrmUrl:'/cst/evl/injstc/selectCstEvlMfcmmInjstcActionSttemntListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50301,upperMenuId:503,menuOrdr:1,menuNm:'기업정보 등록/변경',progrmFileNm:'selectRegistCorpListVw.do',progrmUrl:'/cst/smppInf/SelectCstMgrE.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50302,upperMenuId:503,menuOrdr:2,menuNm:'기업확인서 신청/발급',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50303,upperMenuId:503,menuOrdr:3,menuNm:'공공구매론',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50304,upperMenuId:503,menuOrdr:4,menuNm:'입찰정보',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50401,upperMenuId:504,menuOrdr:1,menuNm:'기업 및 제품정보',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50402,upperMenuId:504,menuOrdr:2,menuNm:'확인서/증명서 정보',progrmFileNm:'SelectMiddlSslentrSchtwrListVw',progrmUrl:'/cop/middlsslentrschtwr/selectMiddlSslentrSchtwrListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50403,upperMenuId:504,menuOrdr:3,menuNm:'구매정보',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50501,upperMenuId:505,menuOrdr:1,menuNm:'개인정보처리방침',progrmFileNm:'SelectCstA.do',progrmUrl:'/cst/smppInf/SelectCstA.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50502,upperMenuId:505,menuOrdr:2,menuNm:'저작권보호정책',progrmFileNm:'SelectCstC.do',progrmUrl:'/cst/smppInf/SelectCstC.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50503,upperMenuId:505,menuOrdr:3,menuNm:'이용약관',progrmFileNm:'SelectCstB.do',progrmUrl:'/cst/smppInf/SelectCstB.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50504,upperMenuId:505,menuOrdr:4,menuNm:'전자우편무단수집거부',progrmFileNm:'SelectCstD.do',progrmUrl:'/cst/smppInf/SelectCstD.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50505,upperMenuId:505,menuOrdr:5,menuNm:'이용방법',progrmFileNm:'SelectSmppInfoUseMethod2.do',progrmUrl:'/cst/smppInf/SelectSmppInfoUseMethod2.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50506,upperMenuId:505,menuOrdr:6,menuNm:'사이트맵',progrmFileNm:'sitemap',progrmUrl:'/smpp/cmm/sitemap.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:50507,upperMenuId:505,menuOrdr:7,menuNm:'공공데이터 이용정책',progrmFileNm:'SelectCstE.do',progrmUrl:'/cst/smppInf/SelectCstE.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:200115,upperMenuId:200,menuOrdr:1,menuNm:'마이홈',progrmFileNm:'selectMpeRedirectView',progrmUrl:'/mpe/home/user/selectMpeRedirectView.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:200300,upperMenuId:200,menuOrdr:100,menuNm:'퀵메뉴관리',progrmFileNm:'selectBkmkMenuManageList',progrmUrl:'/sym/mnu/bmm/selectBkmkMenuManageList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:200400,upperMenuId:318,menuOrdr:100,menuNm:'수주 계약 등록',progrmFileNm:'insertRcvordMntrngVw',progrmUrl:'/dpc/request/insertRcvordMntrngVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:200410,upperMenuId:318,menuOrdr:7000,menuNm:'수주 계약 목록',progrmFileNm:'selectRcvordMntrngSbizListVw',progrmUrl:'/dpc/request/selectRcvordMntrngSbizListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:200500,upperMenuId:201,menuOrdr:40,menuNm:'직접생산 확인기준 개정건의',progrmFileNm:'SelectDpCnfirmStdAssListVw',progrmUrl:'/dpc/dpCnfirmStdAss/SelectDpCnfirmStdAssListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:201003,upperMenuId:313,menuOrdr:100,menuNm:'신청 전 자가진단',progrmFileNm:'SelectSelfDiagnosisVw',progrmUrl:'/dpc/request/SelectSelfDiagnosisVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:201004,upperMenuId:201,menuOrdr:30,menuNm:'직접생산 확인기준',progrmFileNm:'selectDpCnfirmStdrSmlpzListVw',progrmUrl:'/dpc/dpCnfirmCrtrSmlpz/selectDpCnfirmStdrSmlpzListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:201010,upperMenuId:313,menuOrdr:400,menuNm:'제출서류확인',progrmFileNm:'selectReqAttachListVw.do',progrmUrl:'/dpc/request/selectReqAttachListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:201045,upperMenuId:201201,menuOrdr:300,menuNm:'수수료 수납 및 환불',progrmFileNm:'SelectFeeList.do',progrmUrl:'/dpc/fee/SelectFeeList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:2,menuNo:201201,upperMenuId:3,menuOrdr:314,menuNm:'수수료',progrmFileNm:'dir',progrmUrl:'dir',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:202002,upperMenuId:313,menuOrdr:300,menuNm:'신청발급내역',progrmFileNm:'selectReqList',progrmUrl:'/dpc/request/selectReqList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:202003,upperMenuId:316,menuOrdr:100,menuNm:'증명서 출력',progrmFileNm:'selectDpcCrtSmlpzVw.do',progrmUrl:'/dpc/crtf/selectDpcCrtSmlpzVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:202004,upperMenuId:313,menuOrdr:200,menuNm:'신청',progrmFileNm:'insertStep1.do',progrmUrl:'/dpc/request/insertStep1.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:202103,upperMenuId:316,menuOrdr:200,menuNm:'증명서 반납',progrmFileNm:'selectReturnList.do',progrmUrl:'/dpc/request/selectReturnList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:202203,upperMenuId:316,menuOrdr:150,menuNm:'영문증명서 발급 신청',progrmFileNm:'SelectDpcEngCtftReqstVw',progrmUrl:'/dpc/dpcEngCtft/SelectDpcEngCtftReqstVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:205092,upperMenuId:104,menuOrdr:2,menuNm:'직접생산 민원접수(기타부당행위)',progrmFileNm:'selectSmallBusinessComplainListVw',progrmUrl:'/mgr/smallBusinessComplain/selectSmallBusinessComplainListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:209001,upperMenuId:201,menuOrdr:1,menuNm:'직접생산 확인제도란?',progrmFileNm:'SelectMpeI.do',progrmUrl:'/cst/smppInf/SelectMpeI.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:222001,upperMenuId:222,menuOrdr:100,menuNm:'시범구매 제도소개',progrmFileNm:'SelectDemoPurchaseInfo',progrmUrl:'/exmplPurchs/info/SelectDemoPurchaseInfo.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:222021,upperMenuId:222,menuOrdr:210,menuNm:'시범구매 공지사항',progrmFileNm:'selectDmpcNoticeListVw',progrmUrl:'/exmplPurchs/notice/selectDmpcNoticeListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:222031,upperMenuId:222,menuOrdr:310,menuNm:'시범구매 문의답변',progrmFileNm:'selectQnaUserListVw',progrmUrl:'/exmplPurchs/qna/selectQnaUserListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:222047,upperMenuId:222,menuOrdr:910,menuNm:'선정제품확인',progrmFileNm:'SelectSlctnPrductBizListVw',progrmUrl:'/exmplPurchs/slctnPrduct/SelectSlctnPrductBizListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:222048,upperMenuId:222,menuOrdr:2002,menuNm:'선정제품변경이력',progrmFileNm:'SelectSlctnPrductChangeHistListVw',progrmUrl:'/exmplPurchs/slctnPrduct/SelectSlctnPrductChangeHistListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:222053,upperMenuId:224,menuOrdr:3,menuNm:'상생협력 제도신청',progrmFileNm:'SelectWnwncoop',progrmUrl:'/cop/wnwncoop/SelectWnwncoopList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:222054,upperMenuId:224,menuOrdr:6,menuNm:'상생협력 문의답변',progrmFileNm:'WnwnQnaListVw',progrmUrl:'/cop/wnwncoop/WnwnQnaListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:222055,upperMenuId:224,menuOrdr:4,menuNm:'상생협력 공지사항',progrmFileNm:'WnwnNoticeListVw',progrmUrl:'/cop/wnwncoop/WnwnNoticeListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:222056,upperMenuId:224,menuOrdr:1,menuNm:'상생협력 제도소개',progrmFileNm:'SelectWnwncoopInfoA',progrmUrl:'/cop/wnwncoop/SelectWnwncoopInfoA.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:222061,upperMenuId:222,menuOrdr:610,menuNm:'시범구매 참여신청',progrmFileNm:'SelectExmplPurchsSmlpzListVw',progrmUrl:'/exmplPurchs/exmplPurchs/SelectExmplPurchsSmlpzListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:222063,upperMenuId:224,menuOrdr:2,menuNm:'상생협력 인증마크',progrmFileNm:'SelectWnwncoopInfoB',progrmUrl:'/cop/wnwncoop/SelectWnwncoopInfoB.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:2060101,upperMenuId:20601,menuOrdr:8,menuNm:'MY신청내역',progrmFileNm:'selectJointPpMyApplyListVw',progrmUrl:'/jep/sbiz/pp/selectMyApplyListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:2060103,upperMenuId:20601,menuOrdr:3,menuNm:'우선조달요청목록',progrmFileNm:'selectJointPpRequstListSbizVw',progrmUrl:'/jep/sbiz/pp/selectRequstListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:2060201,upperMenuId:20602,menuOrdr:8,menuNm:'MY신청내역',progrmFileNm:'selectJointCbMyApplyListVw',progrmUrl:'/jep/sbiz/cb/selectMyApplyListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:2060203,upperMenuId:20602,menuOrdr:3,menuNm:'우선조달요청목록',progrmFileNm:'selectJointCbRequstListSbizVw',progrmUrl:'/jep/sbiz/cb/selectRequstListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:2060301,upperMenuId:20603,menuOrdr:8,menuNm:'MY신청내역',progrmFileNm:'selectJointCtMyApplyListVw',progrmUrl:'/jep/sbiz/ct/selectMyApplyListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:2060303,upperMenuId:20603,menuOrdr:3,menuNm:'우선조달요청목록',progrmFileNm:'selectJointCtRequstListSbizVw',progrmUrl:'/jep/sbiz/ct/selectRequstListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:2060401,upperMenuId:20604,menuOrdr:8,menuNm:'MY신청내역',progrmFileNm:'selectJointPaMyApplyListVw',progrmUrl:'/jep/sbiz/pa/selectMyApplyListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:2060403,upperMenuId:20604,menuOrdr:3,menuNm:'우선조달요청목록',progrmFileNm:'selectJointPaRequstListSbizVw',progrmUrl:'/jep/sbiz/pa/selectRequstListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:2060501,upperMenuId:20605,menuOrdr:8,menuNm:'MY신청내역',progrmFileNm:'selectJointOsMyApplyListVw',progrmUrl:'/jep/sbiz/os/selectMyApplyListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:2060503,upperMenuId:20605,menuOrdr:3,menuNm:'우선조달요청목록',progrmFileNm:'selectJointOsRequstListSbizVw',progrmUrl:'/jep/sbiz/os/selectRequstListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5010201,upperMenuId:50102,menuOrdr:1,menuNm:'처음방문하셨나요',progrmFileNm:'SelectSmppFirstVisit',progrmUrl:'/cst/smppInf/SelectSmppFirstVisit.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5010202,upperMenuId:50102,menuOrdr:2,menuNm:'이용 매뉴얼',progrmFileNm:'selectManualListVw.do',progrmUrl:'/edu/eduOnlineAtn/selectManualListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5010301,upperMenuId:50103,menuOrdr:1,menuNm:'공공구매',progrmFileNm:'selectNoticeListVw.do',progrmUrl:'/cst/notice/selectNoticeListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5010302,upperMenuId:50103,menuOrdr:2,menuNm:'시범구매',progrmFileNm:'selectCstDmpcNoticeListVw',progrmUrl:'/cst/exmplPurchs/notice/selectDmpcNoticeListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5010303,upperMenuId:50103,menuOrdr:3,menuNm:'상생협력',progrmFileNm:'WnwnNoticeListVwEve',progrmUrl:'/cst/wnwncoop/info/WnwnNoticeListVwEve.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5010304,upperMenuId:50103,menuOrdr:4,menuNm:'성능인증',progrmFileNm:'SelectCrPfcrtfcNoticeListVw',progrmUrl:'/epc/epc/notice/SelectCrPfcrtfcNoticeListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5010305,upperMenuId:50103,menuOrdr:5,menuNm:'실증지원',progrmFileNm:'InspNoticeListVwEve',progrmUrl:'/cst/insp/info/InspNoticeListVwEve.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5010306,upperMenuId:50103,menuOrdr:6,menuNm:'평가위원',progrmFileNm:'selectEvlMfcmmCstNoticeListVw',progrmUrl:'/cst/evl/notice/selectEvlMfcmmCstNoticeListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5010701,upperMenuId:50107,menuOrdr:1,menuNm:'중소기업자간 경쟁제품',progrmFileNm:'SelectSmlpzBtwnCmptprdListVw',progrmUrl:'/prd/prdinfo/smlpzbtwncmptprd/SelectSmlpzBtwnCmptprdListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5010702,upperMenuId:50107,menuOrdr:2,menuNm:'공사용자재 대상품목',progrmFileNm:'SelectCwmDpurListVw',progrmUrl:'/prd/prdinfo/smlpzbtwncmptprd/SelectCwmDpurListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5010703,upperMenuId:50107,menuOrdr:3,menuNm:'조달청 제품목록',progrmFileNm:'selectB2bVw',progrmUrl:'/ext/g2b/selectG2bVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5010704,upperMenuId:50107,menuOrdr:4,menuNm:'기술개발제품',progrmFileNm:'SelectTdPrdListVw',progrmUrl:'/prd/prdinfo/tdprd/SelectTdPrdListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5010705,upperMenuId:50107,menuOrdr:5,menuNm:'소기업공동사업제품',progrmFileNm:'SelectAsscCopertnBsnsPrdListVw',progrmUrl:'/prd/prdinfo/assccopertnbsnsprd/SelectAsscCopertnBsnsPrdListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5010706,upperMenuId:50107,menuOrdr:6,menuNm:'적격조합현황',progrmFileNm:'SelectProperAsscConListVw',progrmUrl:'/ass/proper/all/SelectProperAsscConListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5010707,upperMenuId:50107,menuOrdr:7,menuNm:'성능인증 공개검증',progrmFileNm:'selectCrPfcrtfcInfoOthbcApplcntListVw',progrmUrl:'/cst/epc/selectCrPfcrtfcInfoOthbcApplcntListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020301,upperMenuId:50203,menuOrdr:1,menuNm:'직접생산 제도소개',progrmFileNm:'SelectMpeI2',progrmUrl:'/cst/smppInf/SelectMpeI2.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020302,upperMenuId:50203,menuOrdr:2,menuNm:'직접생산 확인기준',progrmFileNm:'SelectDpCnfirmStdrInfoListVw.do',progrmUrl:'/dpc/dpCnfirmCrtr/SelectDpCnfirmStdrInfoListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020303,upperMenuId:50203,menuOrdr:3,menuNm:'직접생산 제도신청',progrmFileNm:'insertStep1.do',progrmUrl:'/dpc/request/insertStep1.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020401,upperMenuId:50204,menuOrdr:1,menuNm:'우선구매 제도소개',progrmFileNm:'SelectMpeB2.do',progrmUrl:'/cst/smppInf/SelectMpeB2.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020402,upperMenuId:50204,menuOrdr:2,menuNm:'우선구매 제도신청',progrmFileNm:'insertPuTdevprdtppurInfoVw',progrmUrl:'/tec/insertPuTdevprdtppurInfoVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020501,upperMenuId:50205,menuOrdr:1,menuNm:'시범구매 제도소개',progrmFileNm:'SelectCstDemoPurchaseInfo',progrmUrl:'/cst/exmplPurchs/info/SelectDemoPurchaseInfo.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020502,upperMenuId:50205,menuOrdr:2,menuNm:'시범구매 제도신청',progrmFileNm:'SelectDemoPurchaseSmlpzInfo',progrmUrl:'/cst/exmplPurchs/info/SelectDemoPurchaseSmlpzInfo.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020503,upperMenuId:50205,menuOrdr:3,menuNm:'시범구매 구매기관',progrmFileNm:'selectCstEpPurgovCommList',progrmUrl:'/cst/exmplPurchs/info/selectEpPurgovCommList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020504,upperMenuId:50205,menuOrdr:4,menuNm:'선정제품 확인',progrmFileNm:'cstSelectSlctnPrductBizListVw',progrmUrl:'/cst/exmplPurchs/slctnPrduct/cstSelectSlctnPrductBizListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020601,upperMenuId:50206,menuOrdr:1,menuNm:'실증지원 사업소개',progrmFileNm:'SelectPrSolveInfoAEve',progrmUrl:'/cst/wnwncoop/info/SelectPrSolveInfoAEve.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020602,upperMenuId:50206,menuOrdr:2,menuNm:'실증지원 사업신청',progrmFileNm:'SelectInspPrSolveListEva',progrmUrl:'/sol/insp/SelectInspPrSolveList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020701,upperMenuId:50207,menuOrdr:1,menuNm:'성능인증 제도소개',progrmFileNm:'SelectMpeD.do',progrmUrl:'/cst/smppInf/SelectMpeD.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020702,upperMenuId:50207,menuOrdr:2,menuNm:'성능인증 제도신청',progrmFileNm:'SelectCrPfcrtfcPblancListVw',progrmUrl:'/epc/epc/SelectCrPfcrtfcPblancListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020801,upperMenuId:50208,menuOrdr:1,menuNm:'상생협력 제도소개',progrmFileNm:'SelectSmppInfoAEve',progrmUrl:'/cst/wnwncoop/info/SelectSmppInfoAEve.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020802,upperMenuId:50208,menuOrdr:2,menuNm:'상생협력 제도신청',progrmFileNm:'SelectWnwncoopListEve',progrmUrl:'/cst/wnwncoop/info/SelectWnwncoopListEve.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020901,upperMenuId:50209,menuOrdr:1,menuNm:'포상안내',progrmFileNm:'SelectLawC',progrmUrl:'/cst/smppInf/SelectLawC.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5020902,upperMenuId:50209,menuOrdr:2,menuNm:'포상신청',progrmFileNm:'SelectMerlterRwdReq',progrmUrl:'/rwd/rwdrequest/SelectMerlterRwdReq.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5021001,upperMenuId:50210,menuOrdr:1,menuNm:'소액수의계약 제도소개',progrmFileNm:'SelectMpeE2',progrmUrl:'/cst/smppInf/SelectMpeE2.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5021002,upperMenuId:50210,menuOrdr:2,menuNm:'소액수의계약 추천신청',progrmFileNm:'selectPosApplyListVw',progrmUrl:'/spc/sbiz/selectPosApplyListVwNewNew.do?passKey=ok',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5021003,upperMenuId:50210,menuOrdr:3,menuNm:'소액수의계약 추천요청',progrmFileNm:'insertRequstRegistVw',progrmUrl:'/spc/gov/insertRequstRegistVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5021101,upperMenuId:50211,menuOrdr:1,menuNm:'공동사업제품 제도소개',progrmFileNm:'selectRequstListVw.do',progrmUrl:'/cst/smppInf/SelectMpeL.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5021102,upperMenuId:50211,menuOrdr:2,menuNm:'공동사업제품 추천신청',progrmFileNm:'selectJointPpRequstListSbizVw',progrmUrl:'/jep/sbiz/pp/selectRequstListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5021103,upperMenuId:50211,menuOrdr:3,menuNm:'공동사업제품 추천요청',progrmFileNm:'insertJointPpRequstRegistVw',progrmUrl:'/jep/gov/pp/insertRequstRegistVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5030201,upperMenuId:50302,menuOrdr:1,menuNm:'중소기업확인서 신청/출력',progrmFileNm:'openSmba',progrmUrl:'/cop/corpinfomanage/openSmba.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5030202,upperMenuId:50302,menuOrdr:2,menuNm:'여성기업확인서 신청/출력',progrmFileNm:'SelectFnrssCnfirmReqListVw',progrmUrl:'/cop/newcorpreq/SelectFnrssCnfirmReqListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5030203,upperMenuId:50302,menuOrdr:3,menuNm:'장애인기업확인서 신청/출력',progrmFileNm:'SelectDsrprCnfirmReqListVw',progrmUrl:'/cop/newcorpreq/SelectDsrprCnfirmReqListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5030204,upperMenuId:50302,menuOrdr:4,menuNm:'창업기업확인서 신청/출력',progrmFileNm:'SelectFepcListVw2',progrmUrl:'/cop/SelectFepcListVw2.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5030301,upperMenuId:50303,menuOrdr:1,menuNm:'공공구매론 소개',progrmFileNm:'SelectSmppLoan.do',progrmUrl:'/cst/smppInf/SelectSmppLoan.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5030302,upperMenuId:50303,menuOrdr:2,menuNm:'공공구매론 신청',progrmFileNm:'mgaa07_actionFormMG',progrmUrl:'/smpploan/mgaa07/actionFormMG.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5030401,upperMenuId:50304,menuOrdr:1,menuNm:'입찰정보 소개',progrmFileNm:'SelectMpeG.do',progrmUrl:'/cst/smppInf/SelectMpeG.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5030402,upperMenuId:50304,menuOrdr:4,menuNm:'맞춤 입찰정보신청',progrmFileNm:'MyBidMakeList.do',progrmUrl:'/bidding/MyBidMakeList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5030403,upperMenuId:50304,menuOrdr:3,menuNm:'맞춤 입찰정보조회',progrmFileNm:'BidList.do',progrmUrl:'/bidding/BidList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5030404,upperMenuId:50304,menuOrdr:5,menuNm:'내서류함',progrmFileNm:'myFilingCabinet.do',progrmUrl:'/bidding/myFilingCabinet.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5030405,upperMenuId:50304,menuOrdr:2,menuNm:'입찰정보',progrmFileNm:'BidCommList.do',progrmUrl:'/bidding/BidCommList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5040101,upperMenuId:50401,menuOrdr:1,menuNm:'중소기업 정보조회',progrmFileNm:'SelectRegistCorpListVw',progrmUrl:'/cop/registcorp/selectRegistCorpListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5040102,upperMenuId:50401,menuOrdr:3,menuNm:'통합기업조회',progrmFileNm:'selectUnityCorpCnfirmInfoInqireListVw',progrmUrl:'/cop/unitycorpcnfirminfoinqire/selectUnityCorpCnfirmInfoInqireListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5040103,upperMenuId:50401,menuOrdr:4,menuNm:'제품통합검색',progrmFileNm:'SelectsTSearchMainVw',progrmUrl:'/sol/tsearch/public/SelectTotalSearchMainVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5040201,upperMenuId:50402,menuOrdr:1,menuNm:'중.소기업.소상공인',progrmFileNm:'SelectMiddlSslentrSchtwrListVw',progrmUrl:'/cop/middlsslentrschtwr/selectMiddlSslentrSchtwrListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5040202,upperMenuId:50402,menuOrdr:2,menuNm:'중견기업',progrmFileNm:'SelectMidCorpListVw',progrmUrl:'/cop/midcorp/selectMidCorpListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5040203,upperMenuId:50402,menuOrdr:3,menuNm:'여성기업',progrmFileNm:'SelectFnrssListVw',progrmUrl:'/cop/fnrss/selectFnrssListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5040204,upperMenuId:50402,menuOrdr:4,menuNm:'장애인기업',progrmFileNm:'SelectDsrprListVw',progrmUrl:'/cop/dsrpr/selectDsrprListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5040205,upperMenuId:50402,menuOrdr:5,menuNm:'직접생산',progrmFileNm:'SelectDpCnfrmnListVw',progrmUrl:'/cop/dpcnfrmn/selectDpCnfrmnListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5040206,upperMenuId:50402,menuOrdr:6,menuNm:'성능인증',progrmFileNm:'selectCrPfcrtfcInfoViewList',progrmUrl:'/cop/prdomnccrtfc/selectCrPfcrtfcInfoViewList.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5040207,upperMenuId:50402,menuOrdr:7,menuNm:'창업기업',progrmFileNm:'SelectFepcListVw',progrmUrl:'/cop/fepc/SelectFepcListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5040208,upperMenuId:50402,menuOrdr:8,menuNm:'간주기업',progrmFileNm:'SelectNprmListVw',progrmUrl:'/cop/nprm/SelectNprmListVw.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5040301,upperMenuId:50403,menuOrdr:1,menuNm:'구매정보 입력 안내',progrmFileNm:'selectPgrInformation.do',progrmUrl:'/pgr/pgrInformation/selectPgrInformation.do',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5040302,upperMenuId:50403,menuOrdr:2,menuNm:'구매계획 입력',progrmFileNm:'selectPurchsPlanRegistSummaryVw',progrmUrl:'/pgr/purchsPlanRegist/selectPurchsPlanSummaryVw.do?paramMenuNo=2080004',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:4,menuNo:5040303,upperMenuId:50403,menuOrdr:3,menuNm:'구매실적 입력',progrmFileNm:'selectTdprdPurchsAcmsltSumarryVw',progrmUrl:'/pgr/tdprdPurchsAcmsltRegist/selectTdprdPurchsAcmsltSumarryVw.do?paramMenuNo=2080114',gnbMenuNm:''});
+			
+			
+		
+	
+		
+			
+				gnbMenuList.push({menuDepth:3,menuNo:21100001,upperMenuId:218,menuOrdr:57,menuNm:'중.소기업(소상공인) 확인',progrmFileNm:'openSmba',progrmUrl:'/cop/corpinfomanage/openSmba.do',gnbMenuNm:''});
+			
+			
+		
+	
+
+	createGnbMenuMbl(gnbMenuList,Number('5'), '');
+   });
+
+</script>
+
+<div id="sub_menu_area_mbl_5">
+	<ul class="m_menu_list">
+
+	</ul>
+</div>
+
+						
+						
+						<!--모바일에서 나의업무 하위 메뉴 화면에 있을 때, 나의업무 우측 메뉴 호출 -->
+						
+						
+						<!--모바일에서 직접생산 하위 메뉴 화면에 있을 때, 직접생산 우측 메뉴 호출 -->
+						
+
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- //태블릿,모바일 메뉴 -->
+    </div>
+    
+	<div id="headerSearchDiv">
+	 	<div id="headerSearchSubDiv" style="display:flex; justify-content:center;">
+		 	<div style="margin-top:35px;">
+		 		<h2>검색</h2>
+           		<span style="position: relative;">
+             	   <input id="headerSerInput" class="commSearchInput" onkeypress="headerSerInput(event);" type="text" placeholder="검색어를 입력해주세요" style="width:500px; height:50px;"> 
+                   <img id="headerSerImg" class="commSearchIcon" onclick="headerSerImg();" src="/img/ico_serach.svg" alt="메뉴검색아이콘" style="width:25px; height:26px; top:165%; right:15px;" >
+                </span>
+            </div>
+	 	</div>
+	 	<button id="searchDivClse" type="button" onclick="headerSerBoxClose()">CLOSE</button>
+	 	<!-- <div id="moreSearchData" onclick="fn_moreSearchData();"><span>더보기</span></div> -->
+    </div>
+
+
+</div>
+<!-- //header -->
+
+<div class="indication" style="display:none">
+    <div class="inner">
+        <ul class="indication ul">
+        <li><a href="/smpp/index.do"><span class="sp">메인으로 이동</span></a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="breadcrumbWrap" style="display:none">
+	<div class="breadcrumb">
+		<div class="breadcrumb-list">
+			<div class="breadcrumb-home">
+				<a href="/smpp/index.do">
+					<img src="/img/epart/home-blue.png" width="13" height="13" />
+					<span>HOME</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+$(function(){if($(".subTitle").text() == "마이홈") $("#header").addClass('header');})
+
+</script>
+	
+		<!-- contentWrap -->
+		<div>					
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 2024 디자인리뉴얼 -->
+<link rel="stylesheet" type="text/css" href="/css/smpp/epart_main.css?ver=20250516">
+<script type="text/javaScript" language="javascript">
+
+$( document ).ready(function() {
+	$(".chatBot").css("display","block");
+	//빅배너 초기화
+	initBanner_big();
+	//중배너 초기화
+	initBanner_mid();
+	//리스트배너 초기화
+	initBanner_list();
+	//빅배너2 초기화
+	initBanner_big2();
+	var device = 'PC';
+	
+	if ( device != 'MOBILE' ) {
+		$(".contactList ul li").removeAttr("onclick"); // 모바일이 아닐경우 안내 전화번호 클릭 이벤트 제거
+		
+   
+		var authorCode = 'ROLE_SMLPZ';
+	    if (("2" == "16") && ("" != "04") && authorCode =='ROLE_EVL_MFCMM' ){
+
+	    	
+	    }
+	    
+	   
+	}
+	    
+	
+	
+});
+
+function fn_moveSpcApply(menuLink)
+{
+	//폼 post방식으로 화면 이동하게 변경
+	var params = getParam(menuLink);
+
+	if (menuLink.indexOf("?") > 0) {
+		menuLink = menuLink.slice(0,menuLink.indexOf("?"));
+	}
+
+	var $form = $('<form name="menuForm"></form>').attr('action',menuLink).attr('method', 'post').appendTo('body');
+	for (var i = 0; i < params.length; i++) {
+		var hash = params[i].split("=");
+		$form.append("<input type='hidden' name='" + hash[0] + "'  value='" + hash[1] + "' >");
+	}
+
+	$form.submit();
+}
+// 4개 좌측 메뉴 클릭시 로그 기록
+function fn_CountClick(menuNumber){
+	$.ajax({
+        url : '/mgr/mbersbscrbsearch/mainMenuCount2.do',
+        type: 'POST',
+        data: 'menuNumber=' + menuNumber,
+        async: false
+	});
+}
+
+</script>
+<div id="main_wrap" class="main_wrap">
+
+	<div class="main_top_tit">중소기업제품 공공구매 종합정보망</div>
+
+	<div class="main_top_area">
+		<div class="inner">
+			
+			
+
+
+			<div class="main_shortcutmenu">
+				<div class="item">
+						
+					
+					<a href="/mpe/home/user/selectPrDpRedirectView.do" onclick="fn_CountClick(1)">
+						<p class="tit">직접생산 바로가기</p>
+						<p class="btn">바로가기</p>
+					</a>
+						
+				</div>
+				<div class="item">
+					<a href="/bidding/BidCommList.do" onclick="fn_CountClick(2)">
+						<p class="tit">입찰공고 바로가기</p>
+						<p class="btn">바로가기</p>
+					</a>
+				</div>
+				<div class="item">
+					<a href="/prd/prdinfo/smlpzbtwncmptprd/SelectSmlpzBtwnCmptprdListVw.do" onclick="fn_CountClick(3)">
+						<p class="tit">정보조회 바로가기</p>
+						<p class="btn">바로가기</p>
+					</a>
+				</div>
+				<div class="item">
+					<a href="/cst/faq/selectFaqUserListVw.do" onclick="fn_CountClick(4)">
+						<p class="tit">제도문의 바로가기</p>
+						<p class="btn">바로가기</p>
+					</a>
+				</div>
+			</div>
+
+
+			<div class="main_banner">
+				<!-- 빅배너 롤링 영역 -->
+				<div class="mainCont bannerBox2">
+					<ul id="bigBannerImg">
+						
+							
+								
+								<li class="clone last">
+									<a href="https://www.smpp.go.kr/edu/eduOnlineAtn/selectManualListVw.do">
+										<img alt="공공구매종합정보망 빠른 업무 지원 업무 매뉴얼 바로가기"
+												onError="this.src='/img/hk_202309/550x440.jpg'"
+												src="/cmm/fms/FileDown.do?atchFileId=FILE_000000016016660&fileSn=0&.jpg" />
+									</a>
+								</li>
+							
+							<li>
+								<a href="/smpp/index.do">
+									<img alt="중소기업 제품 공공구매 종합정보망"
+											onError="this.src='/img/hk_202309/550x440.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000000002174&fileSn=0&.jpg"/>
+								</a>
+							</li>
+							
+						
+							
+							<li>
+								<a href="/smpp/index.do">
+									<img alt="공공구매제도와 중소기업공공구매 종합정보망이 항상 함께 합니다."
+											onError="this.src='/img/hk_202309/550x440.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000000002176&fileSn=0&.jpg"/>
+								</a>
+							</li>
+							
+						
+							
+							<li>
+								<a href="/smpp/index.do">
+									<img alt="공공기관이 중소기업제품을 구매하는데 적용되는 각종 법적 제도입니다."
+											onError="this.src='/img/hk_202309/550x440.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000000002177&fileSn=0&.jpg"/>
+								</a>
+							</li>
+							
+						
+							
+							<li>
+								<a href="https://www.smpp.go.kr/edu/eduOnlineAtn/selectManualListVw.do">
+									<img alt="공공구매종합정보망 빠른 업무 지원 업무 매뉴얼 바로가기"
+											onError="this.src='/img/hk_202309/550x440.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000016016660&fileSn=0&.jpg"/>
+								</a>
+							</li>
+							
+								<li class="clone frst">
+									<a href="/smpp/index.do">
+										<img alt="중소기업 제품 공공구매 종합정보망"
+												onError="this.src='/img/hk_202309/550x440.jpg'"
+												src="/cmm/fms/FileDown.do?atchFileId=FILE_000000000002174&fileSn=0&.jpg" />
+									</a>
+								</li>
+							
+						
+					</ul>
+					<div class="bannerControlBox">
+						<div class="pageNumber">
+							<span id="currentSliderNumber2"></span> / <span id="totalSliderLen2"></span>
+						</div>
+						<div class="bannerBtnArea2">
+							<button type="button" class="btnBanner2 prev" onclick="manualBanner_big('prev')"><span class="">이전</span></button>
+							<button type="button" class="autoBtn2" onclick="autoBanner_big('auto')"><span class="">재생/일시정지 버튼</span></button>
+							<button type="button" class="btnBanner2 next" onclick="manualBanner_big('next')"><span class="">다음</span></button>
+						</div>
+						
+					</div>
+				</div>
+				<!-- //빅배너 롤링 영역 -->
+				<!-- 빅배너 롤링 스크립트 -->
+				<script type="text/javascript">
+				//빅배너 이미지 가로사이즈
+				var bannerImgWidth_big = 550;
+				//빅배너 롤링 간격
+				var rollingTerm_big = 5000;
+				//빅배너 롤링 속도
+				var rollingSpeed_big = 500;
+				//빅배너 이동 속도
+				var moveSpeed_big = 500;
+				//빅배너 인덱스
+				var banner_idxx = 0;
+				
+				
+				/** [빅배너] init */
+				function initBanner_big(){
+					if($('#bigBannerImg li').length == 0)
+					{
+						//등록된 배너 없으면 clearInterval , 샘플 이미지 삽입
+						clearInterval(banner_timer2);
+						$('#bigBannerImg')
+							.empty()
+							.css("left", "0px")
+							.append('<li><a><img alt="bigBanner" src="/img/hk_202309/550x440.jpg" /></a></li>');
+					}
+					else
+					{
+						//imgArea width setting
+						var imgAreaWidth = bannerImgWidth_big * $('#bigBannerImg li').length;
+						$('#bigBannerImg').css("width", imgAreaWidth + "px");
+						
+						//spotArea width setting
+						var spotAreaWidth = 7 * ((2*$('#bigBannerImg li').not('.clone').length)-1);
+						$('#bigBannerSpot').css("width", spotAreaWidth + "px");
+						
+						//active spot
+						$('#bigBannerSpot > li > button.pageBtn2').first().addClass("on");
+						
+						//page, button show
+						$('.mainCont.bannerBox2 .bannerPageArea2').show();
+						$('.mainCont.bannerBox2 .bannerBtnArea2').show();
+
+						// 슬라이더 갯수 설정
+						var slider_len = $('#bigBannerImg li').not('.clone').length;
+						$('#totalSliderLen2').text(slider_len);
+
+						// 현재 슬라이더 인덱스 설정 (1-based index)
+			            $('#currentSliderNumber2').text(banner_idxx + 1);
+					}
+				}
+				
+				/** [빅배너] rolling */
+				function rollingBanner_big(val){
+					//빅배너 이미지 슬라이더
+					var slider = $('#bigBannerImg');
+					//슬라이더 갯수
+					var slider_len = slider.find('li').not('.clone').length;
+
+					if(!slider.is(':animated')){
+						(val == 'prev') ? ( banner_idxx-- ) : ( banner_idxx++ ) ;
+						slider.stop().animate({'left' : - bannerImgWidth_big * (banner_idxx+1) +'px'}, rollingSpeed_big, function(){
+							if(banner_idxx < 0) {
+								//첫번째 배너에서 이전 버튼 클릭 시
+								banner_idxx = slider_len -1;
+								slider.css({'left' : - bannerImgWidth_big * (banner_idxx+1) + 'px'});
+							} else if(banner_idxx >= slider_len) {
+								//마지막 배너에서 다음 버튼 클릭 시
+								banner_idxx = 0;
+								slider.css({'left' : - bannerImgWidth_big * (banner_idxx+1) + 'px'});
+							}
+
+							 // 현재 슬라이더 인덱스 업데이트 (1-based index)
+							$('#currentSliderNumber2').text(banner_idxx + 1);
+
+
+							$('#bigBannerSpot > li > button.pageBtn2').removeClass('on');
+							$('#bigBannerSpot > li > button.pageBtn2').eq(banner_idxx).addClass('on');
+						});
+					}
+				}
+				
+				/** [빅배너] interval **/
+				var banner_timer2 = setInterval('rollingBanner_big("next")', rollingTerm_big);
+				
+				/** [빅배너] move */
+				function moveBanner_big(imgIdx){
+					autoBanner_big("pause");
+					banner_idxx = imgIdx;
+					$('#bigBannerImg').stop().animate({'left' : - bannerImgWidth_big * (banner_idxx+1) + 'px'}, moveSpeed_big, function(){
+						$('#bigBannerSpot > li > button.pageBtn2').removeClass('on');
+						$('#bigBannerSpot > li > button.pageBtn2').eq(imgIdx).addClass('on');
+					});
+				}
+				
+				/** [빅배너] prev & next */
+				function manualBanner_big(value){
+					autoBanner_big("pause");
+					rollingBanner_big(value);
+				}
+				
+				/** [빅배너] play & pause */
+				function autoBanner_big(value){
+					$btn = $('.mainCont.bannerBox2 .bannerBtnArea2 .autoBtn2');
+					if(value == "pause"){
+						clearInterval(banner_timer2);
+						$btn.addClass("pause");
+					} else {
+						if($btn.hasClass('pause') == false){
+							clearInterval(banner_timer2);
+							$btn.addClass('pause');
+						}else{
+							banner_timer2 = setInterval('rollingBanner_big("next")', rollingTerm_big);
+							$btn.removeClass('pause');
+						}
+					}
+				}
+				</script>
+				<!-- //빅배너 롤링 스크립트 -->
+			</div>
+			
+			<div class="main_banner2" style="display:none;">
+				<!-- 빅배너2 롤링 영역 -->
+				<div class="mainCont bannerBox3">
+					<ul id="bigBannerImg2">
+						<li class="clone last">
+							<a href="#">
+								<img alt="대체텍스트"
+										src="/img/epart/bigBanner2-img-4.jpg"/>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img alt="대체텍스트"
+										src="/img/epart/bigBanner2-img-1.jpg"/>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img alt="대체텍스트"
+										src="/img/epart/bigBanner2-img-2.jpg"/>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img alt="대체텍스트"
+										src="/img/epart/bigBanner2-img-3.jpg"/>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img alt="대체텍스트"
+										src="/img/epart/bigBanner2-img-4.jpg"/>
+							</a>
+						</li>
+						<li class="clone first">
+							<a href="#">
+								<img alt="대체텍스트"
+										src="/img/epart/bigBanner2-img-1.jpg"/>
+							</a>
+						</li>
+						
+					</ul>
+					<div class="bannerControlBox">
+						<div class="pageNumber">
+							<span id="currentSliderNumber3"></span> / <span id="totalSliderLen3"></span>
+						</div>
+						<div class="bannerBtnArea3">
+							<button type="button" class="btnBanner3 prev" onclick="manualBanner_big2('prev')"><span class="">이전</span></button>
+							<button type="button" class="autoBtn3" onclick="autoBanner_big2('auto')"><span class="">재생/일시정지 버튼</span></button>
+							<button type="button" class="btnBanner3 next" onclick="manualBanner_big2('next')"><span class="">다음</span></button>
+						</div>
+						
+					</div>
+				</div>
+				<!-- //빅배너2 롤링 영역 -->
+				<!-- 빅배너2 롤링 스크립트 -->
+				<script type="text/javascript">
+				//빅배너2 이미지 가로사이즈
+				var bannerImgWidth_big2 = 440;
+				//빅배너2 롤링 간격
+				var rollingTerm_big2 = 5000;
+				//빅배너2 롤링 속도
+				var rollingSpeed_big2 = 200;
+				//빅배너2 이동 속도
+				var moveSpeed_big2 = 500;
+				//빅배너2 인덱스
+				var banner2_idxx = 0;
+				
+				
+				/** [빅배너2] init */
+				function initBanner_big2(){
+					if($('#bigBannerImg2 li').length == 0)
+					{
+						//등록된 배너 없으면 clearInterval , 샘플 이미지 삽입
+						clearInterval(banner_timer2);
+						$('#bigBannerImg2')
+							.empty()
+							.css("left", "0px")
+							.append('<li><a><img alt="bigBanner" src="/img/hk_202309/550x440.jpg" /></a></li>');
+					}
+					else
+					{
+						//imgArea width setting
+						var imgAreaWidth = bannerImgWidth_big2 * $('#bigBannerImg2 li').length;
+						$('#bigBannerImg2').css("width", imgAreaWidth + "px");
+						
+						//spotArea width setting
+						var spotAreaWidth = 7 * ((2*$('#bigBannerImg2 li').not('.clone').length)-1);
+						$('#bigBannerSpot2').css("width", spotAreaWidth + "px");
+						
+						//active spot
+						$('#bigBannerSpot2 > li > button.pageBtn3').first().addClass("on");
+						
+						//page, button show
+						$('.mainCont.bannerBox3 .bannerPageArea3').show();
+						$('.mainCont.bannerBox3 .bannerBtnArea3').show();
+
+						// 슬라이더 갯수 설정
+						var slider_len = $('#bigBannerImg2 li').not('.clone').length;
+						$('#totalSliderLen3').text(slider_len);
+
+						// 현재 슬라이더 인덱스 설정 (1-based index)
+			            $('#currentSliderNumber3').text(banner2_idxx + 1);
+					}
+				}
+				
+				/** [빅배너2] rolling */
+				function rollingBanner_big2(val){
+					//빅배너2 이미지 슬라이더
+					var slider = $('#bigBannerImg2');
+					//슬라이더 갯수
+					var slider_len = slider.find('li').not('.clone').length;
+
+					if(!slider.is(':animated')){
+						(val == 'prev') ? ( banner2_idxx-- ) : ( banner2_idxx++ ) ;
+						slider.stop().animate({'left' : - bannerImgWidth_big2 * (banner2_idxx+1) +'px'}, rollingSpeed_big2, function(){
+							if(banner2_idxx < 0) {
+								//첫번째 배너에서 이전 버튼 클릭 시
+								banner2_idxx = slider_len -1;
+								slider.css({'left' : - bannerImgWidth_big2 * (banner2_idxx+1) + 'px'});
+							} else if(banner2_idxx >= slider_len) {
+								//마지막 배너에서 다음 버튼 클릭 시
+								banner2_idxx = 0;
+								slider.css({'left' : - bannerImgWidth_big2 * (banner2_idxx+1) + 'px'});
+							}
+
+							 // 현재 슬라이더 인덱스 업데이트 (1-based index)
+							$('#currentSliderNumber3').text(banner2_idxx + 1);
+
+
+							$('#bigBannerSpot2 > li > button.pageBtn3').removeClass('on');
+							$('#bigBannerSpot2 > li > button.pageBtn3').eq(banner2_idxx).addClass('on');
+						});
+					}
+				}
+				
+				/** [빅배너2] interval **/
+				var banner_timer2 = setInterval('rollingBanner_big2("next")', rollingTerm_big2);
+				
+				/** [빅배너2] move */
+				function moveBanner_big2(imgIdx){
+					autoBanner_big2("pause");
+					banner2_idxx = imgIdx;
+					$('#bigBannerImg2').stop().animate({'left' : - bannerImgWidth_big2 * (banner2_idxx+1) + 'px'}, moveSpeed_big2, function(){
+						$('#bigBannerSpot2 > li > button.pageBtn3').removeClass('on');
+						$('#bigBannerSpot2 > li > button.pageBtn3').eq(imgIdx).addClass('on');
+					});
+				}
+				
+				/** [빅배너2] prev & next */
+				function manualBanner_big2(value){
+					autoBanner_big2("pause");
+					rollingBanner_big2(value);
+				}
+				
+				/** [빅배너2] play & pause */
+				function autoBanner_big2(value){
+					$btn = $('.mainCont.bannerBox3 .bannerBtnArea3 .autoBtn3');
+					if(value == "pause"){
+						clearInterval(banner_timer2);
+						$btn.addClass("pause");
+					} else {
+						if($btn.hasClass('pause') == false){
+							clearInterval(banner_timer2);
+							$btn.addClass('pause');
+						}else{
+							banner_timer2 = setInterval('rollingBanner_big2("next")', rollingTerm_big2);
+							$btn.removeClass('pause');
+						}
+					}
+				}
+				</script>
+				<!-- //빅배너2 롤링 스크립트 -->
+			</div>
+
+			<div class="contactList">
+				<ul>
+					<li onclick="document.location.href='tel:1533-0092'">
+						<div>
+							<p class="st1 st1-57">SMPP 이용안내</p>
+						</div>
+						<div>
+							<p class="st2">1533-0092</p>
+							<p class="st3">평일 09:00~18:00</p>
+						</div>
+					</li>
+					<li onclick="document.location.href='tel:02-2656-9988'">
+						<div>
+							<p class="st1 st1-97">직접생산확인 <br>증명 안내</p>
+						</div>
+						<div>
+							<p class="st2">02-2656-9988</p>
+							<p class="st3">평일 09:00~18:00</p>
+						</div>
+					</li>
+					<li onclick="document.location.href='tel:02-2038-8953'">
+						<div>
+							<p class="st1 st1-97">여성기업확인서 <br>발급 안내</p>
+						</div>
+						<div>
+							<p class="st2">02-2038-8953</p>
+							<p class="st3">평일 09:00~18:00</p>
+						</div>
+					</li>
+					<li onclick="document.location.href='tel:1588-6072'">
+						<div>
+							<p class="st1 st1-120">장애인기업확인서 <br>발급 안내</p>
+						</div>
+						<div>
+							<p class="st2">1588-6072</p>
+							<p class="st3">평일 09:00~18:00</p>
+						</div>
+					</li>
+					<p class="contactList-sub" style="display:none;">평일 09:00~18:00</p>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="main_sub_cont1">
+		<div class="inner">
+			<div class="m2">
+				<ul class="tab_list_bx">
+					<li class="on">
+						<p class="tit">공지사항</p>
+						<ul class="in_bx">
+						
+						
+							<!-- 리스트 클릭시 상세 페이지로 이동 -->
+							<li class ="main_add_tap">
+								<!-- 일반공지사항 -->
+								
+									<a href="/cst/notice/selectNoticeVw.do?seqNo=1245">
+										<em>2026년 「직접생산 확인기준」 개정 관련 공청회 개최 알림</em>
+										<strong class="ico_new">최신게시글</strong>
+									</a>
+								
+								<!-- 성능인증 공지사항 -->
+								
+								<!-- 시범구매 공지사항 -->
+								
+								<!-- 상생협력 공지사항 -->
+								
+								<!-- 실증지원 공지사항 -->
+								
+							</li>
+						
+						
+						
+							<!-- 리스트 클릭시 상세 페이지로 이동 -->
+							<li class ="main_add_tap">
+								<!-- 일반공지사항 -->
+								
+									<a href="/cst/notice/selectNoticeVw.do?seqNo=1244">
+										<em>시스템 안정화를 위한 보안 작업 및 서비스 일시 중단 안내</em>
+										
+									</a>
+								
+								<!-- 성능인증 공지사항 -->
+								
+								<!-- 시범구매 공지사항 -->
+								
+								<!-- 상생협력 공지사항 -->
+								
+								<!-- 실증지원 공지사항 -->
+								
+							</li>
+						
+						
+						
+							<!-- 리스트 클릭시 상세 페이지로 이동 -->
+							<li class ="main_add_tap">
+								<!-- 일반공지사항 -->
+								
+									<a href="/cst/notice/selectNoticeVw.do?seqNo=1243">
+										<em>「직접생산 확인기준」 고시 개정 시행 알림(중소벤처기업부 고시 제2025-116호, 2025. 11. 19.)</em>
+										
+									</a>
+								
+								<!-- 성능인증 공지사항 -->
+								
+								<!-- 시범구매 공지사항 -->
+								
+								<!-- 상생협력 공지사항 -->
+								
+								<!-- 실증지원 공지사항 -->
+								
+							</li>
+						
+						
+						
+							<!-- 리스트 클릭시 상세 페이지로 이동 -->
+							<li class ="main_add_tap">
+								<!-- 일반공지사항 -->
+								
+									<a href="/cst/notice/selectNoticeVw.do?seqNo=1242">
+										<em>「직접생산 확인기준」 개정을 위한 의견제출 요청</em>
+										
+									</a>
+								
+								<!-- 성능인증 공지사항 -->
+								
+								<!-- 시범구매 공지사항 -->
+								
+								<!-- 상생협력 공지사항 -->
+								
+								<!-- 실증지원 공지사항 -->
+								
+							</li>
+						
+						
+						
+							<!-- 리스트 클릭시 상세 페이지로 이동 -->
+							<li class ="main_add_tap">
+								<!-- 일반공지사항 -->
+								
+									<a href="/cst/notice/selectNoticeVw.do?seqNo=1241">
+										<em>시스템 안정화를 위한 보안 작업 및 서비스 일시 중단 안내</em>
+										
+									</a>
+								
+								<!-- 성능인증 공지사항 -->
+								
+								<!-- 시범구매 공지사항 -->
+								
+								<!-- 상생협력 공지사항 -->
+								
+								<!-- 실증지원 공지사항 -->
+								
+							</li>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						</ul>
+						<a href="/cst/notice/selectNoticeListVw.do" class="btn_more sp">더보기</a>
+					</li>
+					<li class="on">
+						<p class="tit">법령정보</p>
+						<ul class="in_bx">
+						
+							
+								<li class ="main_add_tap">
+									<a href="/cst/inf/selectInfUserVw.do?seqNo=32">
+										<em>('25. 11. 19. 시행) 「중소기업자간 경쟁제품 직접생산 확인기준」 (중소벤처기업부 고시 제2025-116호)</em>
+										
+										
+									</a>
+								</li>
+							
+						
+							
+								<li class ="main_add_tap">
+									<a href="/cst/inf/selectInfUserVw.do?seqNo=31">
+										<em>('25. 8. 29. 시행) 중소기업자간 경쟁제품 및 공사용자재 직접구매 대상 품목 지정 내역(중소벤처기업부 고시 제2025-96호)</em>
+										
+										
+									</a>
+								</li>
+							
+						
+							
+								<li class ="main_add_tap">
+									<a href="/cst/inf/selectInfUserVw.do?seqNo=30">
+										<em>('25. 4. 15 시행) 중소기업자간 경쟁제품 중 물품의 구매에 관한 계약이행능력심사 세부기준 (중소벤처기업부 고시 제2025-36호)</em>
+										
+										
+									</a>
+								</li>
+							
+						
+							
+								<li class ="main_add_tap">
+									<a href="/cst/inf/selectInfUserVw.do?seqNo=29">
+										<em>('25. 4. 1. 시행) 「중소기업기술개발제품 우선구매제도 운영 등에 관한 시행세칙」 (중소벤처기업부 고시 제2025-29호)</em>
+										
+										
+									</a>
+								</li>
+							
+						
+							
+								<li class ="main_add_tap">
+									<a href="/cst/inf/selectInfUserVw.do?seqNo=28">
+										<em>('25. 1. 1 시행) 중소기업자간 경쟁제품 및 공사용자재 직접구매 대상 품목 지정 내역(중소벤처기업부 고시 제2024-109호)</em>
+										
+										
+									</a>
+								</li>
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+						</ul>
+						<a href="/cst/inf/selectInfUserListVw.do" class="btn_more sp">더보기</a>
+					</li>
+					
+					<li class="on">
+						<p class="tit">행정처분</p>
+						<ul class="in_bx">
+						
+							
+								<li class ="main_add_tap">
+									<a  href="/cst/exaathr/selectExaathrUserVw.do?seqNo=2031">
+										<em2>'25년 11월 휴업 및 폐업 업체에 대한 구매정보망 기업정보등록 휴업 또는 폐업 및 회원정보 계정 정지 안내</em2>
+										<strong class="ico_new">최신게시글</strong>
+									</a>
+								</li>
+							
+						
+							
+								<li class ="main_add_tap">
+									<a  href="/cst/exaathr/selectExaathrUserVw.do?seqNo=2030">
+										<em2>주식회사엠케이글로벌컴퍼니 직접생산확인 취소</em2>
+										
+									</a>
+								</li>
+							
+						
+							
+								<li class ="main_add_tap">
+									<a  href="/cst/exaathr/selectExaathrUserVw.do?seqNo=2029">
+										<em2>(주)대명콘크리트 직접생산확인 취소</em2>
+										
+									</a>
+								</li>
+							
+						
+							
+								<li class ="main_add_tap">
+									<a  href="/cst/exaathr/selectExaathrUserVw.do?seqNo=2028">
+										<em2>(주)에스넷 직접생산확인 취소</em2>
+										
+									</a>
+								</li>
+							
+						
+							
+								<li class ="main_add_tap">
+									<a  href="/cst/exaathr/selectExaathrUserVw.do?seqNo=2027">
+										<em2>(주)백상 직접생산확인 취소</em2>
+										
+									</a>
+								</li>
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+						</ul>
+						<a href="/cst/exaathr/selectExaathrUserListVw.do" class="btn_more sp">더보기</a>
+					</li>
+					
+					<li class="on">
+						<p class="tit">자료실</p>
+						<ul class="in_bx">
+						
+							
+								<li class ="main_add_tap">
+									<a href="/cst/recsroom/selectRecsroomVw.do?seqNo=223">
+										<em>2025 조합추천 수의계약 제도 안내 책자</em>
+										
+										
+									</a>
+								</li>
+							
+						
+							
+								<li class ="main_add_tap">
+									<a href="/cst/recsroom/selectRecsroomVw.do?seqNo=220">
+										<em>2025년도 소기업 공동사업제품 우선구매제도 안내 리플렛(6.17 업데이트)</em>
+										
+										
+									</a>
+								</li>
+							
+						
+							
+								<li class ="main_add_tap">
+									<a href="/cst/recsroom/selectRecsroomVw.do?seqNo=219">
+										<em>직접생산 신기술 등 인증제품의 제조공정표 양식</em>
+										
+										
+									</a>
+								</li>
+							
+						
+							
+								<li class ="main_add_tap">
+									<a href="/cst/recsroom/selectRecsroomVw.do?seqNo=218">
+										<em>2025년도 소기업 공동사업제품 우선구매제도 안내 리플렛</em>
+										
+										
+									</a>
+								</li>
+							
+						
+							
+								<li class ="main_add_tap">
+									<a href="/cst/recsroom/selectRecsroomVw.do?seqNo=216">
+										<em>2025년 적격조합 사후관리를 위한 운영상황보고서 제출 요청</em>
+										
+										
+									</a>
+								</li>
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+						</ul>
+						<a href="/cst/recsroom/selectRecsroomListVw.do" class="btn_more sp">더보기</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="main_sub_cont2">
+		<div class="inner">
+			<div class="m3">
+				<ul class="link_v3">
+					<li><a href="/edu/eduOnlineAtn/selectManualListVw.do">매뉴얼</a></li>
+					<li><a href="/cst/qna/selectQnaUserListVw.do">문의 Q&A</a></li>
+					<li><a href="/cst/faq/selectFaqUserListVw.do">FAQ</a></li>
+					<li><a href="http://as82.kr/smpp/" target="_blank">원격지원</a></li>
+				</ul>
+			</div>
+			<div class="m1">
+				<!-- 중배너 롤링 영역 -->
+				<div class="mainCont bannerBox">
+					<ul id="midBannerImg">
+						
+							
+								
+								<li class="clone last">
+									<a href="/cst/evl/injstc/selectCstEvlMfcmmInjstcActionSttemntListVw.do">
+										<img alt="평가위원 안내사항"
+												onError="this.src='/img/hk_202309/255x226.jpg'"
+												src="/cmm/fms/FileDown.do?atchFileId=FILE_000000020334432&fileSn=0&.jpg" />
+									</a>
+								</li>
+							
+							<li>
+								<a href="https://www.smes.go.kr/pis/main/intro.do">
+									<img alt="납품대금 연동제 중배너"
+											onError="this.src='/img/hk_202309/255x226.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000016379907&fileSn=0&.jpg" />
+								</a>
+							</li>
+							
+						
+							
+							<li>
+								<a href="https://www.clean.go.kr/index.es?sid=a1 ">
+									<img alt="부패공익신고 1398"
+											onError="this.src='/img/hk_202309/255x226.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000014128796&fileSn=0&.jpg" />
+								</a>
+							</li>
+							
+						
+							
+							<li>
+								<a href="https://service.g2b.go.kr">
+									<img alt="조달청 서비스 이음장터"
+											onError="this.src='/img/hk_202309/255x226.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000013712443&fileSn=0&.jpg" />
+								</a>
+							</li>
+							
+						
+							
+							<li>
+								<a href="https://www.smpp.go.kr/bidding/BidList.do">
+									<img alt="입찰정보 바로가기"
+											onError="this.src='/img/hk_202309/255x226.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000012788433&fileSn=0&.jpg" />
+								</a>
+							</li>
+							
+						
+							
+							<li>
+								<a href="http://www.smpp.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000011865856&fileSn=0">
+									<img alt="모바일웹 활용"
+											onError="this.src='/img/hk_202309/255x226.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000011873109&fileSn=0&.jpg" />
+								</a>
+							</li>
+							
+						
+							
+							<li>
+								<a href="/edu/eduOnlineAtn/selectManualListVw.do">
+									<img alt="직생 수수료 매뉴얼"
+											onError="this.src='/img/hk_202309/255x226.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000011031238&fileSn=0&.jpg" />
+								</a>
+							</li>
+							
+						
+							
+							<li>
+								<a href="/cst/notice/selectNoticeVw.do?seqNo=1065">
+									<img alt="수주 후 직접생산확인 모니터링자료"
+											onError="this.src='/img/hk_202309/255x226.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000010746726&fileSn=0&.jpg" />
+								</a>
+							</li>
+							
+						
+							
+							<li>
+								<a href="https://blog.naver.com/bizinfo1357/222108415886">
+									<img alt="소재·부품의 국산화를 위한 공공조달 멘토제도 본격 추진"
+											onError="this.src='/img/hk_202309/255x226.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000012606711&fileSn=0&.jpg" />
+								</a>
+							</li>
+							
+						
+							
+							<li>
+								<a href="https://www.osmb.go.kr">
+									<img alt="옴부즈만 지원단 규제애로 신고배너 "
+											onError="this.src='/img/hk_202309/255x226.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000012120278&fileSn=0&.jpg" />
+								</a>
+							</li>
+							
+						
+							
+							<li>
+								<a href="https://www.youtube.com/watch?v=des2UjImrws">
+									<img alt="직접생산 확인제도 신청 매뉴얼 안내"
+											onError="this.src='/img/hk_202309/255x226.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000013792382&fileSn=0&.jpg" />
+								</a>
+							</li>
+							
+						
+							
+							<li>
+								<a href="/cst/evl/injstc/selectCstEvlMfcmmInjstcActionSttemntListVw.do">
+									<img alt="평가위원 안내사항"
+											onError="this.src='/img/hk_202309/255x226.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000020334432&fileSn=0&.jpg" />
+								</a>
+							</li>
+							
+								<li class="clone frst">
+									<a href="https://www.smes.go.kr/pis/main/intro.do">
+										<img alt="납품대금 연동제 중배너"
+												onError="this.src='/img/hk_202309/255x226.jpg'"
+												src="/cmm/fms/FileDown.do?atchFileId=FILE_000000016379907&fileSn=0&.jpg" />
+									</a>
+								</li>
+							
+						
+					</ul>
+					<div class="bannerControlBox">
+						<div class="pageNumber">
+							<span id="currentSliderNumber"></span> / <span id="totalSliderLen"></span>
+						</div>
+						<div class="bannerBtnArea">
+							<button type="button" class="btnBanner prev" onclick="manualBanner_mid('prev')"><span class="">이전</span></button>
+							<button type="button" class="autoBtn9" onclick="autoBanner_mid('auto')"><span class="">재생/일시정지 버튼</span></button>
+							<button type="button" class="btnBanner next" onclick="manualBanner_mid('next')"><span class="">다음</span></button>
+						</div>
+						
+					</div>
+				</div>
+				<!-- //중배너 롤링 영역 -->
+				<!-- 중배너 롤링 스크립트 -->
+				<script type="text/javascript">
+				//중배너 이미지 가로사이즈
+				var bannerImgWidth_mid = 450;
+				var bannerHeight_mid = 300;
+			
+				//중배너 롤링 간격
+				var rollingTerm_mid = 5000;
+				//중배너 롤링 속도
+				var rollingSpeed_mid = 500;
+				//중배너 이동 속도
+				var moveSpeed_mid = 500;
+				//중배너 인덱스
+				var banner_idx = 0;
+				
+				
+				/** [중배너] init */
+				function initBanner_mid(){
+					if ($(window).width() > 767) {
+						// 767px 이상일 때 기존 방식 유지
+						bannerImgWidth_mid = 450;
+						bannerHeight_mid = 300;
+					} else {
+						// 767px 이하일 때 반응형으로 처리
+						bannerImgWidth_mid = $('.mainCont.bannerBox').width();
+						bannerHeight_mid = bannerImgWidth_mid * (2 / 3);
+						$('.mainCont.bannerBox > ul > li').width(bannerImgWidth_mid);
+					}
+
+				   $('.mainCont.bannerBox').css({
+						'width': bannerImgWidth_mid + 'px',
+						'height': bannerHeight_mid + 'px'
+					});
+
+
+					if($('#midBannerImg li').length == 0) {
+						//등록된 배너 없으면 clearInterval , 샘플 이미지 삽입
+						clearInterval(banner_timer);
+						$('#midBannerImg')
+							.empty()
+							.css("left", "0px")
+							.append('<li><a><img alt="midBanner" src="/img/hk_202309/255x226.jpg" /></a></li>');
+					}
+					else
+					{
+						//imgArea width setting
+						var imgAreaWidth = bannerImgWidth_mid * $('#midBannerImg li').length;
+						$('#midBannerImg').css("width", imgAreaWidth + "px");
+					
+						//spotArea width setting
+						var spotAreaWidth = ( 8 * $('#midBannerImg li').not('.clone').length ) + ( 10 * ($('#midBannerImg li').not('.clone').length - 1) );
+						$('#midBannerSpot').css("width", spotAreaWidth + "px");
+
+						//active spot
+						$('#midBannerSpot > li > button.pageBtn').first().addClass("on");
+						
+						//page, button show
+						$('.mainCont.bannerBox .bannerPageArea').show();
+						$('.mainCont.bannerBox .bannerBtnArea').show();
+
+						// 슬라이더 갯수 설정
+						var slider_len = $('#midBannerImg li').not('.clone').length;
+						$('#totalSliderLen').text(slider_len);
+
+						// 현재 슬라이더 인덱스 설정 (1-based index)
+			            $('#currentSliderNumber').text(banner_idx + 1);
+					}
+				}
+				
+				/** [중배너] rolling */
+				function rollingBanner_mid(val){
+					//중배너 이미지 슬라이더
+					var slider = $('#midBannerImg');
+					//슬라이더 갯수
+					var slider_len = slider.find('li').not('.clone').length;
+					
+					if(!slider.is(':animated')){
+						(val == 'prev') ? ( banner_idx-- ) : ( banner_idx++ ) ;
+						slider.stop().animate({'left' : - bannerImgWidth_mid * (banner_idx+1) +'px'}, rollingSpeed_mid, function(){
+							if(banner_idx < 0) {
+								//첫번째 배너에서 이전 버튼 클릭 시
+								banner_idx = slider_len -1;
+								slider.css({'left' : - bannerImgWidth_mid * (banner_idx+1) + 'px'});
+							} else if(banner_idx >= slider_len) {
+								//마지막 배너에서 다음 버튼 클릭 시
+								banner_idx = 0;
+								slider.css({'left' : - bannerImgWidth_mid * (banner_idx+1) + 'px'});
+							}
+
+							// 현재 슬라이더 인덱스 설정 (1-based index)
+				            $('#currentSliderNumber').text(banner_idx + 1);
+
+							$('#midBannerSpot > li > button.pageBtn').removeClass('on');
+							$('#midBannerSpot > li > button.pageBtn').eq(banner_idx).addClass('on');
+						});
+					}
+				}
+				
+				/** [중배너] interval **/
+				var banner_timer = setInterval('rollingBanner_mid("next")', rollingTerm_mid);
+				
+				/** [중배너] move */
+				function moveBanner_mid(imgIdx){
+					autoBanner_mid("pause");
+					banner_idx = imgIdx;
+					$('#midBannerImg').stop().animate({'left' : - bannerImgWidth_mid * (banner_idx+1) + 'px'}, moveSpeed_mid, function(){
+						$('#midBannerSpot > li > button.pageBtn').removeClass('on');
+						$('#midBannerSpot > li > button.pageBtn').eq(imgIdx).addClass('on');
+					});
+				}
+				
+				/** [중배너] prev & next */
+				function manualBanner_mid(value){
+					autoBanner_mid("pause");
+					rollingBanner_mid(value);
+				}
+				
+				/** [중배너] play & pause */
+				function autoBanner_mid(value){
+					$btn = $('.mainCont.bannerBox .bannerBtnArea .autoBtn9');
+					if(value == "pause"){
+						clearInterval(banner_timer);
+						$btn.addClass("pause");
+					} else {
+						if($btn.hasClass('pause') == false){
+							clearInterval(banner_timer);
+							$btn.addClass('pause');
+						}else{
+							banner_timer = setInterval('rollingBanner_mid("next")', rollingTerm_mid);
+							$btn.removeClass('pause');
+						}
+					}
+				}
+				</script>
+				<!-- //중배너 롤링 스크립트 -->
+			</div>
+		
+
+		</div>
+	</div>
+
+
+		
+	
+		<!-- 리스트배너 롤링 영역 -->
+		<div class="mainBannerArea">
+			<div class="organBannerArea">
+				<div class="organBtnArea">
+					<button type="button" class="organBtn prev" onclick="manualBanner_list('prev')"><span class="sp">이전</span></button>
+					<button type="button" class="controlBtn pause" onclick="autoBanner_list('auto')"><span class="sp">재생/일시정지</span></button>
+					<button type="button" class="organBtn next" onclick="manualBanner_list('next')"><span class="sp">다음</span></button>
+				</div>
+				<div class="organBannerList">
+					<ul id="listBannerImg">
+						
+							<li>
+								<a href="https://www.smes.go.kr/pis/main/intro.do" target="_blank" title="납품대금 연동제">
+									<img alt="납품대금 연동제"
+											onError="this.src='/img/hk_202309/138x37.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000016379931&fileSn=0&.jpg" />
+								</a>
+							</li>
+						
+							<li>
+								<a href="http://www.dapa.go.kr" target="_blank" title="방위사업청">
+									<img alt="방위사업청"
+											onError="this.src='/img/hk_202309/138x37.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000000002178&fileSn=0&.jpg" />
+								</a>
+							</li>
+						
+							<li>
+								<a href="http://www.g2b.go.kr" target="_blank" title="나라장터">
+									<img alt="나라장터"
+											onError="this.src='/img/hk_202309/138x37.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000000002179&fileSn=0&.jpg" />
+								</a>
+							</li>
+						
+							<li>
+								<a href="http://www.8899.or.kr" target="_blank" title="노란우산공제">
+									<img alt="노란우산공제"
+											onError="this.src='/img/hk_202309/138x37.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000000002180&fileSn=0&.jpg" />
+								</a>
+							</li>
+						
+							<li>
+								<a href="http://www.s2b.kr" target="_blank" title="학교장터">
+									<img alt="학교장터"
+											onError="this.src='/img/hk_202309/138x37.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000000002201&fileSn=0&.jpg" />
+								</a>
+							</li>
+						
+							<li>
+								<a href="http://www.bizinfo.go.kr" target="_blank" title="기업마당">
+									<img alt="기업마당"
+											onError="this.src='/img/hk_202309/138x37.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000000002202&fileSn=0&.jpg" />
+								</a>
+							</li>
+						
+							<li>
+								<a href="http://sminfo.smba.go.kr" target="_blank" title="중소기업현황정보">
+									<img alt="중소기업현황정보"
+											onError="this.src='/img/hk_202309/138x37.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000000002204&fileSn=0&.jpg" />
+								</a>
+							</li>
+						
+							<li>
+								<a href="http://smenews.kbiz.or.kr" target="_blank" title="중소기업뉴스">
+									<img alt="중소기업뉴스"
+											onError="this.src='/img/hk_202309/138x37.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000000002205&fileSn=0&.jpg" />
+								</a>
+							</li>
+						
+							<li>
+								<a href="http://shopping.wbiz.or.kr" target="_blank" title="여성기업제품">
+									<img alt="여성기업제품"
+											onError="this.src='/img/hk_202309/138x37.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000000002206&fileSn=0&.jpg" />
+								</a>
+							</li>
+						
+							<li>
+								<a href="http://dream365.or.kr/" target="_blank" title="장애인기업제품">
+									<img alt="장애인기업제품"
+											onError="this.src='/img/hk_202309/138x37.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000011700434&fileSn=0&.jpg" />
+								</a>
+							</li>
+						
+							<li>
+								<a href="http://ppi.g2b.go.kr" target="_blank" title="조달청 혁신장터">
+									<img alt="조달청 혁신장터"
+											onError="this.src='/img/hk_202309/138x37.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000012233129&fileSn=0&.jpg" />
+								</a>
+							</li>
+						
+							<li>
+								<a href="https://sps-hongbo.kbiz.or.kr/" target="_blank" title="단체표준인증제품">
+									<img alt="단체표준인증제품"
+											onError="this.src='/img/hk_202309/138x37.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000013369524&fileSn=0&.jpg" />
+								</a>
+							</li>
+						
+							<li>
+								<a href="https://service.g2b.go.kr" target="_blank" title="이음장터">
+									<img alt="이음장터"
+											onError="this.src='/img/hk_202309/138x37.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000013712427&fileSn=0&.jpg" />
+								</a>
+							</li>
+						
+							<li>
+								<a href="https://portal.valuebuy.kr/" target="_blank" title="가치삽시다">
+									<img alt="가치삽시다"
+											onError="this.src='/img/hk_202309/138x37.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000014237796&fileSn=0&.jpg" />
+								</a>
+							</li>
+						
+							<li>
+								<a href="https://fanfandaero.kr/portal/main.do" target="_blank" title="판판대로">
+									<img alt="판판대로"
+											onError="this.src='/img/hk_202309/138x37.jpg'"
+											src="/cmm/fms/FileDown.do?atchFileId=FILE_000000014392292&fileSn=0&.jpg" />
+								</a>
+							</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //리스트배너 롤링 영역 -->
+		<!-- 리스트배너 롤링 스크립트 -->
+		<script type="text/javascript">
+		//리스트배너 이미지 가로사이즈
+		var bannerImgWidth_list = 140;
+		//리스트배너 롤링 간격
+		var rollingTerm_list = 3000;
+		//리스트배너 롤링 속도
+		var rollingSpeed_list = 500;
+		//리스트배너 인덱스
+		var logo_idx = 0;
+		
+		/** [리스트배너] init */
+		function initBanner_list(){
+			// slide clone
+			var slider = document.querySelector('#listBannerImg');
+			var slide = document.querySelectorAll('#listBannerImg li');
+			var slide_count = slide.length;
+			
+			for(var i=0; i<slide_count; i++){
+				var clone_slide =slide[i].cloneNode(true);
+				clone_slide.classList.add('clone');
+				slider.appendChild(clone_slide);
+			}
+			if(slide_count <= 6){
+				for(var i=0; i<slide_count; i++){
+					var clone_slide =slide[i].cloneNode(true);
+					clone_slide.classList.add('clone');
+					slider.appendChild(clone_slide);
+				}
+			}
+			for(var j=slide_count-1; j>=0; j--){
+				var clone_slide =slide[j].cloneNode(true);
+				clone_slide.classList.add('clone');
+				slider.prepend(clone_slide);
+			}
+			if(slide_count <= 6){
+				for(var j=slide_count-1; j>=0; j--){
+					var clone_slide =slide[j].cloneNode(true);
+					clone_slide.classList.add('clone');
+					slider.prepend(clone_slide);
+				}
+			}
+			
+			// imgArea width setting
+			var current_slide = document.querySelectorAll('#listBannerImg li');
+			var current_slide_count = current_slide.length;
+			var imgAreaWidth = (bannerImgWidth_list * current_slide_count) + "px";
+			slider.style.width = imgAreaWidth;
+			
+			// imgArea left setting
+			slider.style.left = - (bannerImgWidth_list * slide_count) + "px";
+		}
+		
+		
+		/** [리스트배너] rolling */
+		function rollingBanner_list(val){
+			//중배너 이미지 슬라이더
+			var slider = $('#listBannerImg');
+			//슬라이더 갯수
+			var slider_len = slider.find('li').not('.clone').length;
+			
+			if(!slider.is(':animated')){
+				(val == 'prev') ? ( logo_idx-- ) : ( logo_idx++ ) ;
+				slider.stop().animate({'left' : - bannerImgWidth_list * (logo_idx+slider_len) +'px'}, rollingSpeed_list, function(){
+					if(logo_idx < 0) {
+						//첫번째 배너에서 이전 버튼 클릭 시
+						logo_idx = slider_len -1;
+						slider.css({'left' : - bannerImgWidth_list * (logo_idx+slider_len) + 'px'});
+					} else if(logo_idx >= slider_len) {
+						//마지막 배너에서 다음 버튼 클릭 시
+						logo_idx = 0;
+						slider.css({'left' : - bannerImgWidth_list * slider_len + 'px'});
+					}
+				});
+			}
+		}
+		
+		/** [리스트배너] interval **/
+		var logo_timer = setInterval('rollingBanner_list("next")', rollingTerm_list);
+		
+		/** [리스트배너] prev & next */
+		function manualBanner_list(value){
+			autoBanner_list("pause");
+			rollingBanner_list(value);
+		}
+		
+		/** [빅배너] play & pause */
+		function autoBanner_list(value){
+			$btn = $('.mainBannerArea .organBannerArea .organBtnArea .controlBtn');
+			if(value == "pause"){
+				clearInterval(logo_timer);
+				$btn.addClass('play');
+			} else {
+				if($btn.hasClass('play') == false){
+					clearInterval(logo_timer);
+					$btn.addClass('play');
+				}else{
+					logo_timer = setInterval('rollingBanner_list("next")', rollingTerm_list);
+					$btn.removeClass('play');
+				}
+			}
+		}
+		</script>
+		<!-- //리스트배너 롤링 스크립트 -->
+	
+
+</div>
+			
+		</div>				
+		<!--  //contentWrap  -->
+					
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 2024 디자인 리뉴얼 -->
+<link rel="stylesheet" type="text/css" href="/css/smpp/epart_footer.css">
+
+<!-- 챗봇 관련 JS, CSS -->
+<script type="text/javascript" src="/js/smpp/chatBot.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/smpp/chatBot.css" />
+
+<script type="text/javascript">
+	
+	$(document).ready(function() {
+	
+	var mobl = "P";
+		var moblAuth = "";
+		if (moblAuth == "Y") {
+			if (mobl == "M")
+				moblViewP.style.display = "block";
+			if (mobl == "P")
+				moblViewM.style.display = "block";
+		}
+
+		// footer 에서 퀵메뉴 클릭 이벤트
+		if ($(".indication .ul").text().substr(25, 4) == "직접생산") {
+			parent.quicMenuMove();
+		}
+	
+	if (window.matchMedia("(max-width: 1120px)").matches) {
+			const fsec3Spans = $('.fsec3TextSpan');
+
+			$(fsec3Spans[2]).html('여성기업확인서'); // 여성기업확인서 발급 안내
+			$(fsec3Spans[1]).html('직접생산확인'); // 직접생산확인 증명 안내
+			$(fsec3Spans[0]).html('이용안내'); // SMPP 이용안내
+		}
+	});
+	
+	$(window).resize(function() {
+		const fsec3Spans = $('.fsec3TextSpan');
+
+		if (window.matchMedia("(max-width: 1120px)").matches) {
+			$(fsec3Spans[2]).html('여성기업확인서'); // 여성기업확인서 발급 안내
+			$(fsec3Spans[1]).html('직접생산확인'); // 직접생산확인 증명 안내
+			$(fsec3Spans[0]).html('이용안내'); // SMPP 이용안내
+
+		} else {
+			$(fsec3Spans[2]).html('여성기업확인서 발급 안내'); // 여성기업확인서 발급 안내
+			$(fsec3Spans[1]).html('직접생산확인 증명 안내'); // 직접생산확인 증명 안내
+			$(fsec3Spans[0]).html('SMPP 이용안내'); // SMPP 이용안내
+		}
+	});
+
+	function fn_mobile_view(mobl) {
+	
+	$("#mobl").val(mobl);
+		document.frmMobl.submit();
+	}
+
+	function link_SSO(strUrl) {
+		if (strUrl.length > 0) {
+			window.open(strUrl, "", "");
+		}
+	}
+	
+</script>
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+
+<script type="text/javascript">
+	if (!wcs_add)
+		var wcs_add = {};
+	wcs_add["wa"] = "209ba475c01728";
+	if (window.wcs) {
+		wcs_do();
+	}
+</script>
+<style>
+	
+</style>
+
+<form name="frmMobl" method="post" action="/com/moblPcViewChange.do">
+	<input type="hidden" name="mobl" id="mobl" value="">
+</form>
+
+<div class="ifooter">
+	<div class="ft_top">
+		<div class="indiv">
+			<ul class="top_menu">
+				<li>
+					<a href="javascript:location.href='/cst/smppInf/SelectCstA.do'">개인정보처리방침</a>
+				</li>
+				<li>
+					<a href="javascript:location.href='/cst/smppInf/SelectCstC.do'">저작권보호정책</a>
+				</li>
+				<li>
+					<a href="javascript:location.href='/cst/smppInf/SelectCstB.do'">이용약관</a>
+				</li>
+				<li>
+					<a href="javascript:location.href='/cst/smppInf/SelectCstD.do'">전자우편무단수집거부</a>
+				</li>
+				<li>
+					<a href="javascript:location.href='/cst/smppInf/SelectSmppInfoUseMethod2.do'">이용방법</a>
+				</li>
+				<li>
+					<a href="javascript:location.href='/smpp/cmm/sitemap.do'">사이트맵</a>
+				</li>
+				<li>
+					<a href="javascript:location.href='https://www.data.go.kr/ugs/selectPortalPolicyView.do'">공공데이터이용정책</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="ft_info">
+		<div class="indiv">
+			<div class="fsec1">
+				<div>
+					<img src="/img/foot_logo3.png" alt="중소벤처기업부">
+				</div>
+				<div>
+					<img src="/img/foot_logo4.png" alt="한국중소벤처기업유통원">
+				</div>
+			</div>
+			
+
+			<div class="fsec3">
+				<div class="fsec3_item">
+					<span class="fsec3TextSpan">SMPP 이용안내</span>
+					<h3>
+						<a>1533-0092</a>
+					</h3>
+					<span class="fsec3TimeSpan">평일 09:00~18:00</span>
+				</div>
+				<div class="fsec3_item">
+					<span class="fsec3TextSpan">직접생산확인 증명 안내</span>
+					<h3>
+						<a>02-2656-9988</a>
+					</h3>
+					<span class="fsec3TimeSpan">평일 09:00~18:00</span>
+				</div>
+				<div class="fsec3_item">
+					<span class="fsec3TextSpan">여성기업확인서 발급 안내</span>
+					<h3>
+						<a>02-2038-8953</a>
+					</h3>
+					<span class="fsec3TimeSpan">평일 09:00~18:00</span>
+				</div>
+				<div class="fsec3_item">
+					<span class="fsec3TextSpan">장애인기업확인서 발급 안내</span>
+					<h3>
+						<a>1588-6072</a>
+					</h3>
+					<span class="fsec3TimeSpan">평일 09:00~18:00</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="chatBotMainDiv">
+		<div class="chatBot" onclick="fn_chatBot();"></div>
+		<div class="chatBotText"><p>반갑습니다! <br> 챗봇 입니다.</p></div>
+	</div>
+	
+</div>
+
+<input type="hidden" name="USER_CI" value='' />
+<input type="hidden" name="BIZRNO" value='' />
+		<!-- 퀵메뉴 -->
+	    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+function fn_moveSpcApply(menuLink)
+{
+	//폼 post방식으로 화면 이동하게 변경
+	var params = getParam(menuLink);
+
+	if (menuLink.indexOf("?") > 0) {
+		menuLink = menuLink.slice(0,menuLink.indexOf("?"));
+	}
+
+	var $form = $('<form name="menuForm"></form>').attr('action',menuLink).attr('method', 'post').appendTo('body');
+	for (var i = 0; i < params.length; i++) {
+		var hash = params[i].split("=");
+		$form.append("<input type='hidden' name='" + hash[0] + "'  value='" + hash[1] + "' >");
+	}
+
+	$form.submit();
+}
+</script>
+<!-- Quick -->
+
+<div class="q_wrap">
+<div class="q_area" style="display:none;">
+	<h2 class="tit">QUICK<br>MENU</h2>
+	<ul class="q_list">
+		
+		<li>
+			
+				<a href="#" onclick="fn_moveSpcApply('/tec/insertPuTdevprdtppurInfoVw.do?menuId=20302');">기술개발제품우선구매 신청</a></li>	
+			
+		
+		<li>
+			
+				<a href="#" onclick="fn_moveSpcApply('/cop/corpinfomanage/selectGnrlInfoVw.do?menuId=2116');">기업정보변경</a></li>	
+			
+		
+		<li>
+				<br><button type="button" onclick="fn_moveSpcApply('/spc/sbiz/selectPosApplyListVwNewNew.do');" >소액수의계약 신청</button><br><br>
+			
+			
+		
+		<li>
+			
+				<a href="#" onclick="fn_moveSpcApply('/dpc/crtf/selectDpcCrtSmlpzVw.do?menuId=202003');">직접생산확인서</a></li>	
+			
+		
+		<li>
+			
+				<a href="#" onclick="fn_moveSpcApply('/dpc/request/insertStep1.do?menuId=20900');">직접생산확인신청</a></li>	
+			
+		
+		
+		<li><a href="/sym/mnu/bmm/selectBkmkMenuManageList.do" class="setting">설정</a></li>
+		
+	</ul>
+	<button class="btn_top"><span class="">TOP</span></button>
+
+</div>
+<button class="btn_clse"><span class="">퀵메뉴 닫기</span></button>
+</div>
+
+<!-- //Quick -->
+
+
+
+	</div>
+	<!--  //contents  -->
+</body>
+</html>

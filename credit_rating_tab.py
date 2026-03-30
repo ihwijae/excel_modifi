@@ -10,7 +10,7 @@ from PySide6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, Q
                                QTextEdit, QApplication, QDateEdit, QDialog, QComboBox,
                                QDialogButtonBox, QCheckBox)
 from PySide6.QtCore import Qt, QRect, QDate, QThread, Signal
-from PySide6.QtGui import QPixmap
+from PySide6.QtGui import QPixmap, QImage, QColor, QFont
 from PIL import Image
 import fitz  # PyMuPDF
 
@@ -84,7 +84,7 @@ class CreditRatingTab(QWidget):
         self.found_company_data = None
         self.setup_ui()
         self.connect_signals()
-        self.load_excel_paths()
+        self.load_paths()
         self.reset_ui()
 
     def create_viewer_panel(self):
@@ -135,41 +135,45 @@ class CreditRatingTab(QWidget):
     def create_controls_panel(self):
         panel = QWidget();
         layout = QVBoxLayout(panel);
-        panel.setFixedWidth(400)
+        panel.setFixedWidth(500)
+
+        # --- 폰트 정의 ---
+        group_font = QFont(); group_font.setPointSize(12)
+        label_font = QFont(); label_font.setPointSize(11)
+        entry_font = QFont(); entry_font.setPointSize(12)
 
         # [핵심 수정] self.file_box로 변경
-        self.file_box = QGroupBox("1. 신용평가 자료 선택")
+        self.file_box = QGroupBox("1. 신용평가 자료 선택"); self.file_box.setFont(group_font)
         file_layout = QHBoxLayout(self.file_box)
-        self.file_path_entry = QLineEdit();
+        self.file_path_entry = QLineEdit(); self.file_path_entry.setFont(entry_font)
         self.file_path_entry.setReadOnly(True)
         self.file_select_button = QPushButton("📁 파일 열기");
         file_layout.addWidget(self.file_path_entry);
         file_layout.addWidget(self.file_select_button)
 
-        original_data_box = QGroupBox("DB 원본 정보 (변경 전)");
+        original_data_box = QGroupBox("DB 원본 정보 (변경 전)"); original_data_box.setFont(group_font)
         original_layout = QGridLayout(original_data_box)
-        self.original_name_display = QLineEdit();
+        self.original_name_display = QLineEdit(); self.original_name_display.setFont(entry_font)
         self.original_name_display.setReadOnly(True)
-        self.original_rating_display = QTextEdit();
+        self.original_rating_display = QTextEdit(); self.original_rating_display.setFont(entry_font)
         self.original_rating_display.setReadOnly(True);
         self.original_rating_display.setFixedHeight(60)
-        original_layout.addWidget(QLabel("상호:"), 0, 0);
-        original_layout.addWidget(self.original_name_display, 0, 1)
-        original_layout.addWidget(QLabel("기존 신용평가:"), 1, 0);
-        original_layout.addWidget(self.original_rating_display, 1, 1)
+        original_layout.addWidget(QLabel("상호:"), 0, 0); original_layout.addWidget(self.original_name_display, 0, 1)
+        original_layout.addWidget(QLabel("기존 신용평가:"), 1, 0); original_layout.addWidget(self.original_rating_display, 1, 1)
 
-        roi_box = QGroupBox("데이터 영역 지정 및 입력 (변경 후)");
+        roi_box = QGroupBox("데이터 영역 지정 및 입력 (변경 후)"); roi_box.setFont(group_font)
         roi_layout = QGridLayout(roi_box)
         for row, field in enumerate(self.fields_to_extract.keys()):
             lbl, btn, entry = QLabel(f"{field}:"), QPushButton("지정"), QLineEdit();
+            lbl.setFont(label_font); entry.setFont(entry_font)
             btn.setProperty("field_name", field)
             roi_layout.addWidget(lbl, row, 0);
             roi_layout.addWidget(btn, row, 1);
             roi_layout.addWidget(entry, row, 2, 1, 3)
             self.fields_to_extract[field].update({"roi": None, "entry": entry, "button": btn})
-        self.period_label = QLabel("유효기간:");
-        self.start_date_edit = QDateEdit(calendarPopup=True);
-        self.end_date_edit = QDateEdit(calendarPopup=True)
+        self.period_label = QLabel("유효기간:"); self.period_label.setFont(label_font)
+        self.start_date_edit = QDateEdit(calendarPopup=True); self.start_date_edit.setFont(entry_font)
+        self.end_date_edit = QDateEdit(calendarPopup=True); self.end_date_edit.setFont(entry_font)
         self.start_date_edit.setDate(QDate.currentDate());
         self.end_date_edit.setDate(QDate.currentDate().addYears(1).addDays(-1))
         self.start_date_edit.setDisplayFormat("yyyy.MM.dd");
@@ -179,30 +183,27 @@ class CreditRatingTab(QWidget):
         roi_layout.addWidget(QLabel("~"), 2, 3, Qt.AlignCenter);
         roi_layout.addWidget(self.end_date_edit, 2, 4)
         self.combined_preview_label = QLabel("<b>최종 저장될 값 (신용평가):</b>")
-        self.combined_preview = QTextEdit();
+        self.combined_preview = QTextEdit(); self.combined_preview.setFont(entry_font)
         self.combined_preview.setReadOnly(True);
         self.combined_preview.setFixedHeight(60)
         roi_layout.addWidget(self.combined_preview_label, 3, 0, 1, 5);
         roi_layout.addWidget(self.combined_preview, 4, 0, 1, 5)
 
-        # [핵심 수정] self.archive_box로 변경
-        self.archive_box = QGroupBox("처리 완료 파일 보관 경로")
+        self.archive_box = QGroupBox("처리 완료 파일 보관 경로"); self.archive_box.setFont(group_font)
         archive_layout = QHBoxLayout(self.archive_box)
-        self.archive_path_entry = QLineEdit();
-        self.archive_path_entry.setPlaceholderText("보관할 최상위 폴더 선택")
-        self.archive_select_button = QPushButton("📂 선택");
-        archive_layout.addWidget(self.archive_path_entry);
-        archive_layout.addWidget(self.archive_select_button)
+        self.archive_path_entry = QLineEdit(); self.archive_path_entry.setFont(entry_font)
+        self.archive_path_entry.setReadOnly(True)
+        self.archive_path_entry.setPlaceholderText("경영 상태 분석 탭의 '경로 설정'에서 지정")
+        archive_layout.addWidget(self.archive_path_entry)
 
-        action_box = QGroupBox("실행");
+        action_box = QGroupBox("실행"); action_box.setFont(group_font)
         action_layout = QVBoxLayout(action_box)
         self.run_ocr_button = QPushButton("1. 이미지에서 글자 분석");
         self.lookup_button = QPushButton("2. 사업자번호로 업체 조회")
         self.data_only_checkbox = QCheckBox("자료 파일 없이 데이터만 저장")
         self.update_button = QPushButton("3. 업데이트 및 파일 보관");
         self.update_button.setStyleSheet("font-weight: bold; background-color: #1E8449; color: white;")
-        self.log_display = QTextEdit();
-        self.log_display.setReadOnly(True)
+        self.log_display = QTextEdit(); self.log_display.setReadOnly(True)
         action_layout.addWidget(self.run_ocr_button);
         action_layout.addWidget(self.lookup_button)
         action_layout.addWidget(self.data_only_checkbox)
@@ -225,7 +226,6 @@ class CreditRatingTab(QWidget):
         self.rotate_left_button.clicked.connect(lambda: self.rotate_image(-90))
         self.rotate_right_button.clicked.connect(lambda: self.rotate_image(90))
         self.file_select_button.clicked.connect(lambda: self.open_file())
-        self.archive_select_button.clicked.connect(self.select_archive_folder)
         self.image_label.roi_selected.connect(self.on_roi_selected)
         self.zoom_in_button.clicked.connect(lambda: self.zoom_image(1.2))
         self.zoom_out_button.clicked.connect(lambda: self.zoom_image(0.8))
@@ -236,6 +236,8 @@ class CreditRatingTab(QWidget):
             data['button'].clicked.connect(self.prepare_to_set_roi)
             if field == '신용평가등급':
                 data['entry'].textChanged.connect(self.update_combined_preview)
+            if field == '사업자등록번호':
+                data['entry'].textChanged.connect(self.format_biz_no_input)
         self.start_date_edit.dateChanged.connect(self.auto_set_end_date)
         self.end_date_edit.dateChanged.connect(self.update_combined_preview)
         self.data_only_checkbox.stateChanged.connect(self.toggle_file_inputs)
@@ -400,10 +402,6 @@ class CreditRatingTab(QWidget):
 
     # --- (이하 나머지 함수들은 이전 최종본과 동일) ---
     def setup_ui(self): main_layout = QHBoxLayout(self); viewer_panel = self.create_viewer_panel(); controls_panel = self.create_controls_panel(); main_layout.addWidget(viewer_panel, 1); main_layout.addWidget(controls_panel)
-    def select_archive_folder(self):
-        folder_path = QFileDialog.getExistingDirectory(self, "보관할 폴더 선택")
-        if folder_path:
-            self.archive_path_entry.setText(folder_path)
     def zoom_image(self, factor):
         if self.original_pixmap: self.scale_factor *= factor; self.image_label.setPixmap(self.original_pixmap.scaledToWidth(int(self.original_pixmap.width() * self.scale_factor), Qt.SmoothTransformation)); self.zoom_label.setText(f"{int(self.scale_factor * 100)}%")
     def fit_to_window(self):
@@ -420,11 +418,21 @@ class CreditRatingTab(QWidget):
         cleaned_text = text
         if field_name == '사업자등록번호': cleaned_text = ocr_utils.clean_biz_number(text)
         self.fields_to_extract[field_name]['entry'].setText(cleaned_text)
-    def load_excel_paths(self):
+    def load_paths(self):
         try:
+            # 설정 파일 기준으로 항상 최신 상태를 반영한다.
+            self.excel_paths.clear()
             if os.path.exists("ocr_config.json"):
-                with open("ocr_config.json", 'r', encoding='utf-8') as f: self.excel_paths = json.load(f)
-        except Exception as e: print(f"설정 파일 로드 오류: {e}")
+                with open("ocr_config.json", 'r', encoding='utf-8') as f:
+                    paths = json.load(f)
+                    self.excel_paths.update(paths)
+                    archive_path = paths.get("archive_path", "")
+                    self.archive_path_entry.setText(archive_path)
+        except Exception as e:
+            print(f"설정 파일 로드 오류: {e}")
+
+    def on_tab_activated(self):
+        self.load_paths()
     def auto_set_end_date(self):
         start_date = self.start_date_edit.date(); end_date = start_date.addYears(1).addDays(-1)
         self.end_date_edit.blockSignals(True); self.end_date_edit.setDate(end_date); self.end_date_edit.blockSignals(False)
@@ -433,7 +441,26 @@ class CreditRatingTab(QWidget):
         grade = self.fields_to_extract['신용평가등급']['entry'].text().strip(); start_date = self.start_date_edit.date().toString("yy.MM.dd"); end_date = self.end_date_edit.date().toString("yy.MM.dd")
         period = f"({start_date}~{end_date})"; combined_text = f"{grade}\n{period}"; self.combined_preview.setText(combined_text)
 
+    def format_biz_no_input(self, text):
+        sender = self.sender()
+        if not isinstance(sender, QLineEdit): return
+
+        cleaned_text = re.sub(r'[^0-9]', '', text)[:10]
+        formatted_text = cleaned_text
+        if len(cleaned_text) > 5:
+            formatted_text = f"{cleaned_text[:3]}-{cleaned_text[3:5]}-{cleaned_text[5:]}"
+        elif len(cleaned_text) > 3:
+            formatted_text = f"{cleaned_text[:3]}-{cleaned_text[3:]}"
+
+        if text != formatted_text:
+            sender.blockSignals(True)
+            sender.setText(formatted_text)
+            sender.blockSignals(False)
+            sender.end(False)
+
     def run_company_lookup(self):
+        # 조회 직전에 경로를 다시 읽어 최신 설정을 사용한다.
+        self.load_paths()
         biz_no = self.fields_to_extract['사업자등록번호']['entry'].text().strip()
         if not biz_no: QMessageBox.warning(self, "정보 부족", "사업자등록번호를 먼저 입력(또는 분석)해야 합니다."); return
         self.lookup_button.setText("조회 중...");
@@ -469,6 +496,8 @@ class CreditRatingTab(QWidget):
     # [credit_rating_tab.py 파일에서 이 함수를 찾아 통째로 교체]
 
     def run_final_update(self):
+        # 업데이트 직전에 경로를 다시 읽어 최신 설정을 사용한다.
+        self.load_paths()
         biz_no = self.fields_to_extract['사업자등록번호']['entry'].text().strip()
         if not biz_no:
             QMessageBox.warning(self, "정보 부족", "사업자등록번호가 필요합니다.");

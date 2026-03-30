@@ -19,7 +19,10 @@ a = Analysis(
         # easyocr가 사용하는 모델 파일들을 포함
         (str(easyocr_path / 'model'), 'easyocr/model'),
         # 사용자가 수정할 설정 파일을 포함
-        ('ocr_config.json', '.')
+        ('ocr_config.json', '.'),
+        # 아이콘 파일을 포함
+        ('icon.ico', '.')
+
     ],
     hiddenimports=[
         # PySide6(UI) 관련 숨겨진 import
@@ -53,7 +56,7 @@ exe = EXE(
     strip=False,
     upx=True,
     console=False,
-    icon=None, # 아이콘 파일이 있다면 'my_icon.ico' 와 같이 경로를 지정
+    icon='icon.ico', # 아이콘 파일이 있다면 'my_icon.ico' 와 같이 경로를 지정
 )
 
 coll = COLLECT(

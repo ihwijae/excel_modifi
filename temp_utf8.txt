@@ -1,0 +1,278 @@
+﻿from __future__ import annotations
+
+import os
+from collections import OrderedDict
+from typing import Dict, List, Optional
+
+from PySide6.QtWidgets import (
+    QDialog,
+    QVBoxLayout,
+    QGridLayout,
+    QLabel,
+    QLineEdit,
+    QPushButton,
+    QComboBox,
+    QFileDialog,
+    QHBoxLayout,
+    QProgressBar,
+    QTableWidget,
+    QTableWidgetItem,
+    QHeaderView,
+    QMessageBox,
+)
+from PySide6.QtCore import Qt
+
+import smpp_excel
+from smpp_service import CorpCheckResult
+from workers import SmppLookupWorker
+
+
+class SmppLookupDialog(QDialog):
+    def __init__(
+        self,
+        excel_paths: Optional[Dict[str, str]] = None,
+        default_excel_path: str = "",
+        parent=None,
+    ):
+        super().__init__(parent)
+        self.setWindowTitle("SMPP 以묒냼/?ъ꽦湲곗뾽 議고쉶")
+        self.resize(900, 600)
+
+        self.excel_paths = excel_paths or {}
+        self.selected_excel_path = default_excel_path
+        self.smpp_worker = None
+        self.smpp_result_map: "OrderedDict[str, Dict[str, str]]" = OrderedDict()
+        self.biz_numbers: List[str] = []
+
+        self._build_ui()
+        self._populate_excel_sources()
+        if self.selected_excel_path:
+            self.excel_path_entry.setText(self.selected_excel_path)
+
+    def _build_ui(self):
+        layout = QVBoxLayout(self)
+
+        # Excel 寃쎈줈 ?좏깮
+        path_group = QGridLayout()
+        self.db_combo = QComboBox()
+        self.excel_path_entry = QLineEdit()
+        self.excel_path_entry.setReadOnly(True)
+        self.browse_button = QPushButton("?뚯씪 ?좏깮")
+        path_group.addWidget(QLabel("DB ?좏깮:"), 0, 0)
+        path_group.addWidget(self.db_combo, 0, 1)
+        path_group.addWidget(self.browse_button, 0, 2)
+        path_group.addWidget(QLabel("?좏깮???뚯씪:"), 1, 0)
+        path_group.addWidget(self.excel_path_entry, 1, 1, 1, 2)
+        self.load_biz_button = QPushButton("????? ????")
+        path_group.addWidget(self.load_biz_button, 2, 0, 1, 3)
+        layout.addLayout(path_group)
+        self.biz_count_label = QLabel("? 0? ???")
+        layout.addWidget(self.biz_count_label)
+
+        # SMPP ?먭꺽 ?뺣낫
+        creds_layout = QGridLayout()
+        self.smpp_id_entry = QLineEdit()
+        self.smpp_password_entry = QLineEdit()
+        self.smpp_password_entry.setEchoMode(QLineEdit.Password)
+        creds_layout.addWidget(QLabel("SMPP ID"), 0, 0)
+        creds_layout.addWidget(self.smpp_id_entry, 0, 1)
+        creds_layout.addWidget(QLabel("SMPP PW"), 1, 0)
+        creds_layout.addWidget(self.smpp_password_entry, 1, 1)
+        layout.addLayout(creds_layout)
+
+        # ?ㅽ뻾 踰꾪듉
+        button_layout = QHBoxLayout()
+        self.smpp_women_button = QPushButton("?ъ꽦湲곗뾽 ?좏슚湲곌컙 議고쉶")
+        self.smpp_small_button = QPushButton("以묒냼湲곗뾽 ?좏슚湲곌컙 議고쉶")
+        button_layout.addWidget(self.smpp_women_button)
+        button_layout.addWidget(self.smpp_small_button)
+        layout.addLayout(button_layout)
+
+        # 吏꾪뻾 ?곹깭
+        progress_layout = QHBoxLayout()
+        self.smpp_progress_bar = QProgressBar()
+        self.smpp_status_label = QLabel("?湲?以?)
+        progress_layout.addWidget(self.smpp_progress_bar, 1)
+        progress_layout.addWidget(self.smpp_status_label)
+        layout.addLayout(progress_layout)
+
+        # 寃곌낵 ?뚯씠釉?
+        self.smpp_results_table = QTableWidget()
+        self.smpp_results_table.setColumnCount(4)
+        self.smpp_results_table.setHorizontalHeaderLabels(["?ъ뾽?먮벑濡앸쾲??, "?ъ꽦湲곗뾽", "以묒냼湲곗뾽", "鍮꾧퀬"])
+        self.smpp_results_table.verticalHeader().setVisible(False)
+        header = self.smpp_results_table.horizontalHeader()
+        header.setSectionResizeMode(0, QHeaderView.ResizeToContents)
+        header.setSectionResizeMode(1, QHeaderView.Stretch)
+        header.setSectionResizeMode(2, QHeaderView.Stretch)
+        header.setSectionResizeMode(3, QHeaderView.Stretch)
+        layout.addWidget(self.smpp_results_table, 1)
+
+        # ?リ린 踰꾪듉
+        self.close_button = QPushButton("?リ린")
+        layout.addWidget(self.close_button, alignment=Qt.AlignRight)
+
+        # ?쒓렇???곌껐
+        self.db_combo.currentIndexChanged.connect(self._on_db_combo_changed)
+        self.browse_button.clicked.connect(self._browse_excel_file)
+        self.load_biz_button.clicked.connect(self.load_biz_numbers)
+        self.smpp_women_button.clicked.connect(lambda: self.start_smpp_lookup("women"))
+        self.smpp_small_button.clicked.connect(lambda: self.start_smpp_lookup("small"))
+        self.close_button.clicked.connect(self.accept)
+
+    def _populate_excel_sources(self):
+        self.db_combo.clear()
+        self.db_combo.addItem("-- DB ?좏깮 --", "")
+        for key, path in self.excel_paths.items():
+            if path:
+                self.db_combo.addItem(f"{key} ({os.path.basename(path)})", path)
+
+    def _on_db_combo_changed(self, index: int):
+        path = self.db_combo.itemData(index) or ""
+        if path:
+            self.selected_excel_path = path
+            self.excel_path_entry.setText(path)
+
+    def _browse_excel_file(self):
+        file_path, _ = QFileDialog.getOpenFileName(
+            self,
+            "?묒? ?뚯씪 ?좏깮",
+            "",
+            "Excel Files (*.xlsx *.xls)",
+        )
+        if file_path:
+            self.selected_excel_path = file_path
+            self.excel_path_entry.setText(file_path)
+
+    def load_biz_numbers(self):
+        excel_path = self.selected_excel_path or self.excel_path_entry.text().strip()
+        if not excel_path:
+            QMessageBox.warning(self, "DB ??", "?? ??? ?? ??????.")
+            return
+        try:
+            biz_nos = smpp_excel.extract_biz_numbers_from_excel(excel_path)
+        except Exception as exc:
+            QMessageBox.critical(self, "????? ?? ??", str(exc))
+            return
+        if not biz_nos:
+            QMessageBox.warning(self, "????? ??", "??? ???? ???????? ?? ?????.")
+            return
+        self.selected_excel_path = excel_path
+        self.biz_numbers = [smpp_excel.normalize_biz_no(b) or b for b in biz_nos]
+        self.smpp_result_map.clear()
+        for biz in self.biz_numbers:
+            self.smpp_result_map[biz] = {"women": "", "small": "", "error": ""}
+        self.refresh_smpp_results_table()
+        self.smpp_progress_bar.setMaximum(len(self.biz_numbers))
+        self.smpp_progress_bar.setValue(0)
+        self.smpp_status_label.setText("????? ?? ??")
+        self.biz_count_label.setText(f"? {len(self.biz_numbers)}? ???")
+        QMessageBox.information(self, "????? ????", f"{len(self.biz_numbers)}?? ?????? ??????.")
+
+    def start_smpp_lookup(self, target_type: str):
+        if self.smpp_worker and self.smpp_worker.isRunning():
+            QMessageBox.warning(self, "?? ?", "?? SMPP ??? ?? ????.")
+            return
+
+        if not self.biz_numbers:
+            QMessageBox.warning(self, "????? ??", "?? '????? ????' ??? ?????.")
+            return
+
+        user_id = self.smpp_id_entry.text().strip()
+        password = self.smpp_password_entry.text().strip()
+        if not (user_id and password):
+            QMessageBox.warning(self, "SMPP ????", "SMPP ID? PW? ?? ??????.")
+            return
+
+        biz_nos = [biz.replace("-", "") for biz in self.biz_numbers]
+        for entry in self.smpp_result_map.values():
+            entry.update({"women": "", "small": "", "error": ""})
+        self.refresh_smpp_results_table()
+        self.smpp_progress_bar.setMaximum(len(biz_nos))
+        self.smpp_progress_bar.setValue(0)
+        self.smpp_status_label.setText("?? ?? ?...")
+        self._set_controls_enabled(False)
+
+        self.smpp_worker = SmppLookupWorker(user_id, password, biz_nos)
+        self.smpp_worker.progress.connect(self.update_smpp_progress)
+        self.smpp_worker.finished.connect(lambda results, error: self.on_smpp_finished(results, error, target_type))
+        self.smpp_worker.start()
+
+    def _set_controls_enabled(self, enabled: bool):
+        self.smpp_women_button.setEnabled(enabled)
+        self.smpp_small_button.setEnabled(enabled)
+        self.db_combo.setEnabled(enabled)
+        self.browse_button.setEnabled(enabled)
+        self.load_biz_button.setEnabled(enabled)
+        self.smpp_id_entry.setEnabled(enabled)
+        self.smpp_password_entry.setEnabled(enabled)
+        self.close_button.setEnabled(enabled)
+
+    def update_smpp_progress(self, idx: int, total: int, biz_no: str):
+        display_no = smpp_excel.normalize_biz_no(biz_no) or biz_no
+        self.smpp_progress_bar.setMaximum(total)
+        self.smpp_progress_bar.setValue(idx)
+        self.smpp_status_label.setText(f"{idx}/{total} - {display_no}")
+
+    def on_smpp_finished(self, results, error, target_type: str):
+        self._set_controls_enabled(True)
+        self.smpp_worker = None
+
+        if error:
+            QMessageBox.critical(self, "SMPP 議고쉶 ?ㅻ쪟", str(error))
+            self.smpp_status_label.setText("?ㅻ쪟 諛쒖깮")
+            return
+
+        self.merge_smpp_results(results, target_type)
+        self.refresh_smpp_results_table()
+        success = sum(1 for r in results if not r.error)
+        self.smpp_status_label.setText(f"{success}/{len(results)}媛??꾨즺")
+
+    def merge_smpp_results(self, results, target_type: str):
+        column_key = "women" if target_type == "women" else "small"
+        for result in results:
+            display_no = smpp_excel.normalize_biz_no(result.biz_no) or result.biz_no
+            entry = self.smpp_result_map.setdefault(display_no, {"women": "", "small": "", "error": ""})
+
+            if result.error:
+                entry[column_key] = ""
+                entry["error"] = result.error
+                continue
+
+            entry["error"] = ""
+            entry[column_key] = self.format_smpp_validity(result, column_key)
+
+    def refresh_smpp_results_table(self):
+        table = self.smpp_results_table
+        table.setRowCount(len(self.smpp_result_map))
+        for row, (biz_no, data) in enumerate(self.smpp_result_map.items()):
+            table.setItem(row, 0, QTableWidgetItem(biz_no))
+            table.setItem(row, 1, QTableWidgetItem(data.get("women") or ""))
+            table.setItem(row, 2, QTableWidgetItem(data.get("small") or ""))
+            table.setItem(row, 3, QTableWidgetItem(data.get("error") or ""))
+
+    def format_smpp_validity(self, result: CorpCheckResult, column_key: str) -> str:
+        features = result.features
+        if not features:
+            return ""
+
+        if column_key == "women":
+            exists = features.women_exists
+            confirm = features.women_confirm_date
+            expire = features.women_expire_date
+        else:
+            exists = features.small_exists
+            confirm = features.small_confirm_date
+            expire = features.small_expire_date
+
+        if not exists:
+            return "?대떦?ы빆 ?놁쓬"
+        if confirm and expire:
+            return f"{confirm}~{expire}"
+        return confirm or expire or "?뺣낫 ?놁쓬"
+
+    def reject(self):
+        if self.smpp_worker and self.smpp_worker.isRunning():
+            QMessageBox.warning(self, "吏꾪뻾 以?, "議고쉶媛 ?꾨즺???뚭퉴吏 湲곕떎?ㅼ＜?몄슂.")
+            return
+        super().reject()

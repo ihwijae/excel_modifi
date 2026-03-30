@@ -1,39 +1,58 @@
 import sys
-from PySide6.QtWidgets import QMainWindow, QTabWidget, QMessageBox
+from PySide6.QtWidgets import QMainWindow, QTabWidget, QMessageBox, QWidget
+from PySide6.QtGui import QIcon
 import easyocr
+
 from business_status_tab import BusinessStatusTab
 from credit_rating_tab import CreditRatingTab
-
+from smpp_dialog import SmppLookupDialog
 
 
 class MainWindow(QMainWindow):
-    def __init__(self):
+    def __init__(self, icon_path=None):
         super().__init__()
-        self.setWindowTitle("데이터 자동 업데이트 프로그램 v2.0 (탭 기능)")
+        self.setWindowTitle("엑셀업데이트 도구 v2.0 (베타)")
         self.setGeometry(100, 100, 1220, 820)
+        if icon_path:
+            self.setWindowIcon(QIcon(icon_path))
 
-        # EasyOCR 리더는 프로그램 시작 시 한 번만 생성하여 모든 탭에서 공유
         try:
-            self.reader = easyocr.Reader(['ko', 'en'], gpu=False)
-        except Exception as e:
-            QMessageBox.critical(self, "EasyOCR 로드 오류", f"EasyOCR 초기화 중 치명적 오류 발생: {e}")
+            self.reader = easyocr.Reader(["ko", "en"], gpu=False)
+        except Exception as exc:  # pylint: disable=broad-except
+            QMessageBox.critical(self, "EasyOCR 초기화 실패", f"EasyOCR 로딩 중 오류가 발생했습니다:\n{exc}")
             sys.exit()
 
-        # 탭 위젯 생성
         self.tabs = QTabWidget()
         self.setCentralWidget(self.tabs)
 
-        # 1. 경영상태 분석 탭 추가 (기존 OcrUpdaterWindow를 사용)
-        self.business_tab = BusinessStatusTab(self.reader) # reader를 전달
-        self.tabs.addTab(self.business_tab, "📄 경영상태 분석")
+        self.business_tab = BusinessStatusTab(self.reader)
+        self.tabs.addTab(self.business_tab, "1. 경영상태")
 
-        # 2. 신용평가 업데이트 탭 추가
         self.credit_tab = CreditRatingTab(self.reader)
-        self.tabs.addTab(self.credit_tab, "✨ 신용평가 일괄 업데이트")
+        self.tabs.addTab(self.credit_tab, "2. 신용평가 데이터")
 
-        # [핵심] 프로그램 내 모든 위젯의 폰트를 Pretendard로 강제 적용
-        from PySide6.QtGui import QFont
-        from PySide6.QtWidgets import QWidget
-        font = QFont("Pretendard")
-        for widget in self.findChildren(QWidget):
-            widget.setFont(font)
+        self.smpp_placeholder = QWidget()
+        self.smpp_tab_index = self.tabs.addTab(self.smpp_placeholder, "3. 중소/여성기업 조회")
+        self.last_tab_index = 0
+        self.tabs.currentChanged.connect(self.on_tab_changed)
+
+    def on_tab_changed(self, index: int):
+        if index == self.smpp_tab_index:
+            self.tabs.blockSignals(True)
+            self.tabs.setCurrentIndex(self.last_tab_index)
+            self.tabs.blockSignals(False)
+            self.open_smpp_dialog()
+        else:
+            if self.tabs.widget(index) is self.credit_tab:
+                self.credit_tab.on_tab_activated()
+            self.last_tab_index = index
+
+    def open_smpp_dialog(self):
+        excel_paths = self.business_tab.get_excel_paths()
+        default_excel = self.business_tab.get_selected_excel_path()
+        dialog = SmppLookupDialog(
+            excel_paths=excel_paths,
+            default_excel_path=default_excel,
+            parent=self,
+        )
+        dialog.exec()
