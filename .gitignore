@@ -1,4 +1,8 @@
 dist/
 build/
 __pycache__/
-*.pyc*.zip
+*.pyc
+.venv/
+.env
+.idea/
+.vscode/

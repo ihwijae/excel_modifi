@@ -1,0 +1,11 @@
+PySide6
+easyocr
+pdf2image
+numpy
+Pillow
+opencv-python
+openpyxl
+PyMuPDF
+requests
+beautifulsoup4
+pyinstaller
